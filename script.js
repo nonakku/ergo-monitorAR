@@ -8,6 +8,14 @@ const loading = document.getElementById('loading');
 // ボタンのテキスト部分のみ更新するための参照（SVGアイコンを消さないため）
 const startBtnLabel = startBtn.querySelector('.btn-label');
 
+// 映像エリアの状態表示：待機ガイダンス／エラー／映像上HUD（離れて読むための大型表示）
+const videoIdle = document.getElementById('video-idle');
+const videoError = document.getElementById('video-error');
+const videoErrorText = document.getElementById('video-error-text');
+const hud = document.getElementById('hud');
+const hudScore = document.getElementById('hud-score');
+const hudLevel = document.getElementById('hud-level');
+
 // UI要素参照：数値・ゲージ表示を更新する対象
 const scoreEl = document.getElementById('score');
 const loadLevelEl = document.getElementById('load-level');
@@ -117,13 +125,20 @@ function updateUI(landmarks) {
     const trunkStatus = getStatusClass(trunkAngle, [20, 40]);
     const loadStatus = getStatusClass(loadLevel, [30, 60]);
 
+    const levelText = loadLevel < 30 ? '良い' : loadLevel < 60 ? '注意' : '危険';
+
     scoreEl.textContent = score;
     scoreEl.className = `score-value status-${loadStatus}`;
 
-    loadLevelEl.textContent = loadLevel < 30 ? '良い' : loadLevel < 60 ? '注意' : '危険';
-    loadLevelEl.className = `metric-value status-${loadStatus}`;
+    loadLevelEl.textContent = levelText;
+    loadLevelEl.className = `status-pill pill-${loadStatus}`;
     loadBarEl.style.width = `${loadLevel}%`;
     loadBarEl.className = `metric-bar-fill bg-${loadStatus}`;
+
+    hudScore.textContent = score;
+    hudLevel.textContent = levelText;
+    hud.className = `hud hud-${loadStatus}`;
+    hud.hidden = false;
 
     trunkAngleEl.textContent = `${Math.round(trunkAngle)}°`;
     trunkAngleEl.className = `metric-value status-${trunkStatus}`;
@@ -249,6 +264,8 @@ async function startCamera() {
     if (isCameraRunning) return;
     startBtn.disabled = true;
     startBtnLabel.textContent = '起動中...';
+    videoIdle.hidden = true;
+    videoError.hidden = true;
     loading.style.display = 'block';
 
     try {
@@ -271,8 +288,14 @@ async function startCamera() {
         console.error('Camera error:', error);
         loading.style.display = 'none';
         startBtn.disabled = false;
-        startBtnLabel.textContent = 'カメラ起動に失敗';
-        alert('カメラの起動に失敗しました。カメラへのアクセスを許可してください。');
+        startBtnLabel.textContent = 'カメラを起動';
+        // モーダル(alert)は使わず、映像エリア内に原因と対処を表示する
+        if (error && (error.name === 'NotFoundError' || error.name === 'DevicesNotFoundError')) {
+            videoErrorText.textContent = 'カメラが見つかりませんでした。接続を確認して、もう一度お試しください。';
+        } else {
+            videoErrorText.textContent = 'ブラウザのアドレスバーからカメラへのアクセスを許可して、もう一度お試しください。';
+        }
+        videoError.hidden = false;
     }
 }
 
@@ -302,13 +325,20 @@ function stopCamera() {
     scoreEl.textContent = '--';
     scoreEl.className = 'score-value';
     loadLevelEl.textContent = '--';
-    loadLevelEl.className = 'metric-value';
+    loadLevelEl.className = 'status-pill';
     loadBarEl.style.width = '0%';
     loadBarEl.className = 'metric-bar-fill';
     trunkAngleEl.textContent = '--°';
     trunkAngleEl.className = 'metric-value';
     kneeAngleEl.textContent = '--°';
     kneeAngleEl.className = 'metric-value';
+
+    hud.hidden = true;
+    hud.className = 'hud';
+    hudScore.textContent = '--';
+    hudLevel.textContent = '--';
+    videoError.hidden = true;
+    videoIdle.hidden = false;
 
     isCameraRunning = false;
     stopBtn.disabled = true;

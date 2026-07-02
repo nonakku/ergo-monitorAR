@@ -37,6 +37,7 @@ python -m http.server 8000
 
 - `vendor/mediapipe/pose/` … MediaPipe Pose `0.5.1675469404`（バージョン固定）
 - `vendor/mediapipe/camera_utils/` … MediaPipe Camera Utils `0.3.1675466862`（バージョン固定）
+- `vendor/fonts/` … IBM Plex Mono（数値表示用の欧文等幅フォント、ローカル同梱のためオフラインで動作）
 - 姿勢推定モデルは、アプリが実際に使用する `pose_landmark_full.tflite`（`modelComplexity: 1` 用）のみ同梱しています。`script.js` の `modelComplexity` を `0` / `2` に変更する場合は、同バージョンの `pose_landmark_lite.tflite` / `pose_landmark_heavy.tflite` を `vendor/mediapipe/pose/` に追加してください（入手先例: `https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.5.1675469404/`）。
 
 ## オフライン動作の確認方法
