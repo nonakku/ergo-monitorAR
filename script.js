@@ -40,7 +40,6 @@ mirrorToggle.addEventListener('change', () => {
 applyMirror();
 
 // UI要素参照：数値・ゲージ表示を更新する対象
-const scoreEl = document.getElementById('score');
 const loadLevelEl = document.getElementById('load-level');
 const loadBarEl = document.getElementById('load-bar');
 const trunkAngleEl = document.getElementById('trunk-angle');
@@ -149,9 +148,6 @@ function updateUI(landmarks) {
     const loadStatus = getStatusClass(loadLevel, [30, 60]);
 
     const levelText = loadLevel < 30 ? '良い' : loadLevel < 60 ? '注意' : '危険';
-
-    scoreEl.textContent = score;
-    scoreEl.className = `score-value status-${loadStatus}`;
 
     loadLevelEl.textContent = levelText;
     loadLevelEl.className = `status-pill pill-${loadStatus}`;
@@ -345,8 +341,6 @@ function stopCamera() {
     }
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    scoreEl.textContent = '--';
-    scoreEl.className = 'score-value';
     loadLevelEl.textContent = '--';
     loadLevelEl.className = 'status-pill';
     loadBarEl.style.width = '0%';

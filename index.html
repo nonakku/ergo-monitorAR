@@ -18,8 +18,11 @@
             <canvas id="canvas"></canvas>
 
             <div class="hud" id="hud" hidden>
-                <span class="hud-score" id="hud-score">--</span>
-                <span class="hud-label" id="hud-level">--</span>
+                <div class="hud-caption">姿勢評価スコア（100が最良）</div>
+                <div class="hud-row">
+                    <span class="hud-score" id="hud-score">--</span>
+                    <span class="hud-label" id="hud-level">--</span>
+                </div>
             </div>
 
             <div class="video-message" id="video-idle">
@@ -42,16 +45,11 @@
         <div class="panel">
             <h2>姿勢評価</h2>
 
-            <div class="score-display">
-                <div class="score-label">姿勢評価スコア<span class="score-note">100に近いほど良好</span></div>
-                <div class="score-row">
-                    <span class="score-value" id="score">--</span><span class="score-unit">/100</span>
+            <div class="metric">
+                <div class="metric-head">
+                    <span class="metric-label">腰部負担推定</span>
                     <span class="status-pill" id="load-level">--</span>
                 </div>
-            </div>
-
-            <div class="metric">
-                <div class="metric-label">腰部負担推定</div>
                 <div class="metric-bar">
                     <div class="metric-bar-fill" id="load-bar"></div>
                     <span class="metric-tick" style="left: 30%"></span>
