@@ -1,6 +1,7 @@
 /* ============================================================
-   ErgoMonitor AR – 計測器・産業安全スタイル
-   地はニュートラル、色は状態（良い/注意/危険）にのみ使う。
+   ErgoMonitor AR – 安全衛生（緑十字）を軸にした計器スタイル
+   緑＝安全のアイデンティティ（ヘッダー/フッター/操作）を保ち、
+   計測値の状態は 緑（良い）/黄（注意）/赤（危険）で伝える。
    数値は IBM Plex Mono（ローカル同梱）のタブラー数字で計器風に。
    ============================================================ */
 
@@ -21,18 +22,19 @@
 }
 
 :root {
-    --ink: #1b1f1e;
-    --muted: #5a615e;
-    --paper: #eff0ee;
-    --panel: #fbfcfb;
-    --line: #c9cdc9;
-    --line-soft: #e0e3e0;
-    --accent: #2f5a78;
-    --accent-strong: #24485f;
-    --good: #1e8a52;
+    --ink: #1f2a24;
+    --muted: #5f6b64;
+    --paper: #f3f7f4;
+    --panel: #ffffff;
+    --surface-2: #f7fbf8;
+    --line: #d9e6dc;
+    --line-soft: #e6efe9;
+    --green: #1f8a5b;
+    --green-strong: #146944;
+    --good: #1f8a5b;
     --warn: #a86e00;
-    --danger: #c13b36;
-    --good-soft: #e3f0e8;
+    --danger: #c6373c;
+    --good-soft: #e2f1e8;
     --warn-soft: #f4ead3;
     --danger-soft: #f5e2e1;
     --mono: 'IBM Plex Mono', Consolas, 'Cascadia Mono', monospace;
@@ -54,16 +56,15 @@ body {
 }
 
 :focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--green-strong);
     outline-offset: 2px;
 }
 
 /* ---------- ヘッダー：左揃えの計器盤バー ---------- */
 
 .header {
-    background: var(--panel);
-    border-top: 3px solid var(--ink);
-    border-bottom: 1px solid var(--line);
+    background: var(--green);
+    border-bottom: 3px solid var(--green-strong);
     padding: 0.9rem 1.5rem;
     display: flex;
     align-items: baseline;
@@ -75,11 +76,12 @@ body {
     font-size: 1.15rem;
     font-weight: 700;
     letter-spacing: 0.02em;
+    color: #f6fff9;
 }
 
 .header p {
     font-size: 0.85rem;
-    color: var(--muted);
+    color: #d9f0e3;
 }
 
 /* ---------- メインレイアウト ---------- */
@@ -102,8 +104,8 @@ body {
     width: 640px;
     max-width: 100%;
     aspect-ratio: 4 / 3;
-    background: #14181a;
-    border: 1px solid var(--ink);
+    background: #0f1713;
+    border: 1px solid var(--green-strong);
     border-radius: 3px;
     overflow: hidden;
     flex: 1 1 480px;
@@ -115,7 +117,11 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* 自分の姿勢を見るための鏡像表示。canvasも同時に反転するので骨格の重畳はずれない */
+}
+
+/* 鏡像表示（トグル可）。videoとcanvasを同時に反転するので骨格の重畳はずれない */
+.video-container.mirrored #webcam,
+.video-container.mirrored #canvas {
     transform: scaleX(-1);
 }
 
@@ -248,7 +254,7 @@ body {
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.08em;
-    color: var(--muted);
+    color: var(--green-strong);
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--line);
     margin-bottom: 1rem;
@@ -390,7 +396,7 @@ body {
     border: 1px solid var(--line-soft);
     border-radius: 2px;
     padding: 0.5rem 0.7rem 0.6rem;
-    background: var(--paper);
+    background: var(--surface-2);
 }
 
 .metric-value {
@@ -417,9 +423,9 @@ body {
     font-size: 1rem;
     font-weight: 700;
     font-family: inherit;
-    background: var(--accent);
+    background: var(--green);
     color: #fff;
-    border: 1px solid var(--accent-strong);
+    border: 1px solid var(--green-strong);
     border-radius: 3px;
     cursor: pointer;
     transition: background 0.2s;
@@ -430,7 +436,7 @@ body {
 }
 
 .start-btn:hover {
-    background: var(--accent-strong);
+    background: var(--green-strong);
 }
 
 .start-btn:disabled {
@@ -475,6 +481,22 @@ body {
     flex: none;
 }
 
+/* 鏡像表示トグル */
+.mirror-toggle {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+    margin-top: 0.7rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.mirror-toggle input {
+    margin-top: 0.25em;
+    accent-color: var(--green);
+}
+
 /* ---------- 凡例・説明 ---------- */
 
 .info-box {
@@ -494,7 +516,7 @@ body {
 }
 
 .info-box a {
-    color: var(--accent);
+    color: var(--green-strong);
 }
 
 .legend {
@@ -520,17 +542,24 @@ body {
 
 /* ---------- フッター ---------- */
 
-.demo-page .footer,
+.demo-page .footer {
+    background: var(--green-strong);
+    text-align: center;
+    padding: 1rem;
+    color: #d9f0e3;
+    font-size: 0.8rem;
+}
+
+.demo-page .footer a {
+    color: #ffffff;
+}
+
 .rula-page .footer {
     border-top: 1px solid var(--line);
     text-align: center;
     padding: 1rem;
     color: var(--muted);
     font-size: 0.8rem;
-}
-
-.footer a {
-    color: var(--accent);
 }
 
 /* ---------- RULA説明ページ ---------- */
@@ -576,14 +605,14 @@ body {
     font-variant-numeric: tabular-nums;
     background: var(--paper);
     border: 1px solid var(--line-soft);
-    border-left: 3px solid var(--ink);
+    border-left: 3px solid var(--green);
     padding: 0.6rem 0.8rem;
     margin-top: 0.6rem;
     font-size: 0.88rem;
 }
 
 .link {
-    color: var(--accent);
+    color: var(--green-strong);
 }
 
 /* ---------- レスポンシブ ---------- */

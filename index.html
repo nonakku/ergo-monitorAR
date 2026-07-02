@@ -13,7 +13,7 @@
     </header>
 
     <div class="container">
-        <div class="video-container">
+        <div class="video-container mirrored">
             <video id="webcam" autoplay playsinline></video>
             <canvas id="canvas"></canvas>
 
@@ -84,6 +84,11 @@
                 <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><rect x="8.5" y="8.5" width="7" height="7" rx="1.2"/></svg>
                 <span class="btn-label">カメラ停止</span>
             </button>
+
+            <label class="mirror-toggle">
+                <input type="checkbox" id="mirror-toggle" checked>
+                <span>鏡像表示（映像の左右が実際と合わないとき、外部カメラ使用時はオフ）</span>
+            </label>
 
             <div class="info-box">
                 <h3>負荷レベルの見方</h3>

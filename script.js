@@ -16,6 +16,29 @@ const hud = document.getElementById('hud');
 const hudScore = document.getElementById('hud-score');
 const hudLevel = document.getElementById('hud-level');
 
+// 鏡像表示トグル：自分を映すWebカメラでは鏡像が直感的（既定ON）だが、
+// 外部カメラで他者や横からの映像を映す場合はオフにできるようにする
+const mirrorToggle = document.getElementById('mirror-toggle');
+const videoContainer = document.querySelector('.video-container');
+const MIRROR_KEY = 'ergomonitor-mirror';
+
+function applyMirror() {
+    videoContainer.classList.toggle('mirrored', mirrorToggle.checked);
+}
+
+try {
+    const saved = localStorage.getItem(MIRROR_KEY);
+    if (saved !== null) mirrorToggle.checked = saved === '1';
+} catch (e) { /* ストレージ不可の環境では既定値のまま */ }
+
+mirrorToggle.addEventListener('change', () => {
+    try {
+        localStorage.setItem(MIRROR_KEY, mirrorToggle.checked ? '1' : '0');
+    } catch (e) { /* 保存できなくても表示切替は行う */ }
+    applyMirror();
+});
+applyMirror();
+
 // UI要素参照：数値・ゲージ表示を更新する対象
 const scoreEl = document.getElementById('score');
 const loadLevelEl = document.getElementById('load-level');
