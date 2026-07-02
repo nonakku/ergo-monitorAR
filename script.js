@@ -5,6 +5,8 @@ const ctx = canvas.getContext('2d');
 const startBtn = document.getElementById('start-btn');
 const stopBtn = document.getElementById('stop-btn');
 const loading = document.getElementById('loading');
+// ボタンのテキスト部分のみ更新するための参照（SVGアイコンを消さないため）
+const startBtnLabel = startBtn.querySelector('.btn-label');
 
 // UI要素参照：数値・ゲージ表示を更新する対象
 const scoreEl = document.getElementById('score');
@@ -227,7 +229,7 @@ function onResults(results) {
 function initPose() {
     pose = new Pose({
         locateFile: (file) => {
-            return `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`;
+            return `./vendor/mediapipe/pose/${file}`;
         }
     });
 
@@ -246,7 +248,7 @@ function initPose() {
 async function startCamera() {
     if (isCameraRunning) return;
     startBtn.disabled = true;
-    startBtn.textContent = '起動中...';
+    startBtnLabel.textContent = '起動中...';
     loading.style.display = 'block';
 
     try {
@@ -263,13 +265,13 @@ async function startCamera() {
         await camera.start();
         isCameraRunning = true;
         loading.style.display = 'none';
-        startBtn.textContent = 'カメラ起動中';
+        startBtnLabel.textContent = 'カメラ起動中';
         stopBtn.disabled = false;
     } catch (error) {
         console.error('Camera error:', error);
         loading.style.display = 'none';
         startBtn.disabled = false;
-        startBtn.textContent = 'カメラ起動に失敗';
+        startBtnLabel.textContent = 'カメラ起動に失敗';
         alert('カメラの起動に失敗しました。カメラへのアクセスを許可してください。');
     }
 }
@@ -311,7 +313,7 @@ function stopCamera() {
     isCameraRunning = false;
     stopBtn.disabled = true;
     startBtn.disabled = false;
-    startBtn.textContent = 'カメラを起動';
+    startBtnLabel.textContent = 'カメラを起動';
     loading.style.display = 'none';
 }
 
