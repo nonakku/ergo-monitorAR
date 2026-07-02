@@ -8,13 +8,10 @@ const loading = document.getElementById('loading');
 // ボタンのテキスト部分のみ更新するための参照（SVGアイコンを消さないため）
 const startBtnLabel = startBtn.querySelector('.btn-label');
 
-// 映像エリアの状態表示：待機ガイダンス／エラー／映像上HUD（離れて読むための大型表示）
+// 映像エリアの状態表示：待機ガイダンス／エラー
 const videoIdle = document.getElementById('video-idle');
 const videoError = document.getElementById('video-error');
 const videoErrorText = document.getElementById('video-error-text');
-const hud = document.getElementById('hud');
-const hudScore = document.getElementById('hud-score');
-const hudLevel = document.getElementById('hud-level');
 
 // 鏡像表示トグル：自分を映すWebカメラでは鏡像が直感的（既定ON）だが、
 // 外部カメラで他者や横からの映像を映す場合はオフにできるようにする
@@ -40,6 +37,7 @@ mirrorToggle.addEventListener('change', () => {
 applyMirror();
 
 // UI要素参照：数値・ゲージ表示を更新する対象
+const scoreEl = document.getElementById('score');
 const loadLevelEl = document.getElementById('load-level');
 const loadBarEl = document.getElementById('load-bar');
 const trunkAngleEl = document.getElementById('trunk-angle');
@@ -149,15 +147,13 @@ function updateUI(landmarks) {
 
     const levelText = loadLevel < 30 ? '良い' : loadLevel < 60 ? '注意' : '危険';
 
+    scoreEl.textContent = score;
+    scoreEl.className = `score-value status-${loadStatus}`;
+
     loadLevelEl.textContent = levelText;
     loadLevelEl.className = `status-pill pill-${loadStatus}`;
     loadBarEl.style.width = `${loadLevel}%`;
     loadBarEl.className = `metric-bar-fill bg-${loadStatus}`;
-
-    hudScore.textContent = score;
-    hudLevel.textContent = levelText;
-    hud.className = `hud hud-${loadStatus}`;
-    hud.hidden = false;
 
     trunkAngleEl.textContent = `${Math.round(trunkAngle)}°`;
     trunkAngleEl.className = `metric-value status-${trunkStatus}`;
@@ -341,6 +337,8 @@ function stopCamera() {
     }
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    scoreEl.textContent = '--';
+    scoreEl.className = 'score-value';
     loadLevelEl.textContent = '--';
     loadLevelEl.className = 'status-pill';
     loadBarEl.style.width = '0%';
@@ -350,10 +348,6 @@ function stopCamera() {
     kneeAngleEl.textContent = '--°';
     kneeAngleEl.className = 'metric-value';
 
-    hud.hidden = true;
-    hud.className = 'hud';
-    hudScore.textContent = '--';
-    hudLevel.textContent = '--';
     videoError.hidden = true;
     videoIdle.hidden = false;
 

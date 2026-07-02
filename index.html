@@ -17,18 +17,10 @@
             <video id="webcam" autoplay playsinline></video>
             <canvas id="canvas"></canvas>
 
-            <div class="hud" id="hud" hidden>
-                <div class="hud-caption">姿勢評価スコア（100が最良）</div>
-                <div class="hud-row">
-                    <span class="hud-score" id="hud-score">--</span>
-                    <span class="hud-label" id="hud-level">--</span>
-                </div>
-            </div>
-
             <div class="video-message" id="video-idle">
                 <p class="video-message-title">カメラは停止中です</p>
                 <p>「カメラを起動」を押すと計測を開始します。</p>
-                <p class="video-hint">カメラに対して横向きに立つと、体幹の前傾と膝の角度を正しく計測できます。</p>
+                <p class="video-hint">カメラに対して横向きに立つと、体幹の前傾と膝の角度を正しく計測できます。計測中は骨格の線の色（緑→黄→赤）が負担の大きさを示します。</p>
             </div>
 
             <div class="video-message" id="video-error" hidden>
@@ -45,11 +37,16 @@
         <div class="panel">
             <h2>姿勢評価</h2>
 
-            <div class="metric">
-                <div class="metric-head">
-                    <span class="metric-label">腰部負担推定</span>
+            <div class="score-display">
+                <div class="score-label">姿勢評価スコア<span class="score-note">100に近いほど良好</span></div>
+                <div class="score-row">
+                    <span class="score-value" id="score">--</span><span class="score-unit">/100</span>
                     <span class="status-pill" id="load-level">--</span>
                 </div>
+            </div>
+
+            <div class="metric">
+                <div class="metric-label">腰部負担推定</div>
                 <div class="metric-bar">
                     <div class="metric-bar-fill" id="load-bar"></div>
                     <span class="metric-tick" style="left: 30%"></span>
