@@ -1,25 +1,33 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,600,0,0" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ErgoMonitor AR</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="demo-page">
-    <div class="header">
+    <header class="header">
         <h1>ErgoMonitor AR</h1>
         <p>腰部負担と姿勢の見える化（簡易版）</p>
-    </div>
+    </header>
 
     <div class="container">
-        <div class="video-container">
+        <div class="video-container mirrored">
             <video id="webcam" autoplay playsinline></video>
             <canvas id="canvas"></canvas>
+
+            <div class="video-message" id="video-idle">
+                <p class="video-message-title">カメラは停止中です</p>
+                <p>「カメラを起動」を押すと計測を開始します。</p>
+                <p class="video-hint">カメラに対して横向きに立つと、体幹の前傾と膝の角度を正しく計測できます。計測中は骨格の線の色（緑→黄→赤）が負担の大きさを示します。</p>
+            </div>
+
+            <div class="video-message" id="video-error" hidden>
+                <p class="video-message-title">カメラを起動できませんでした</p>
+                <p id="video-error-text">ブラウザのアドレスバーからカメラへのアクセスを許可して、もう一度お試しください。</p>
+            </div>
+
             <div class="loading" id="loading">
                 <div class="loading-spinner"></div>
                 <p>カメラ起動中...</p>
@@ -30,51 +38,67 @@
             <h2>姿勢評価</h2>
 
             <div class="score-display">
-                <div class="score-value" id="score">--</div>
-                <div class="score-label">姿勢評価スコア</div>
-            </div>
-
-            <div class="metric">
-                <div class="metric-label">腰部負担推定</div>
-                <div class="metric-value" id="load-level">--</div>
-                <div class="metric-bar">
-                    <div class="metric-bar-fill" id="load-bar"></div>
+                <div class="score-label">姿勢評価スコア<span class="score-note">100に近いほど良好</span></div>
+                <div class="score-row">
+                    <span class="score-value" id="score">--</span><span class="score-unit">/100</span>
+                    <span class="status-pill" id="load-level">--</span>
                 </div>
             </div>
 
             <div class="metric">
-                <div class="metric-label">体幹の前傾角度</div>
-                <div class="metric-value" id="trunk-angle">--°</div>
+                <div class="metric-label">腰部負担推定</div>
+                <div class="metric-bar">
+                    <div class="metric-bar-fill" id="load-bar"></div>
+                    <span class="metric-tick" style="left: 30%"></span>
+                    <span class="metric-tick" style="left: 60%"></span>
+                </div>
+                <div class="metric-scale">
+                    <span class="scale-0">0</span>
+                    <span class="scale-30">30</span>
+                    <span class="scale-60">60</span>
+                    <span class="scale-100">100</span>
+                </div>
             </div>
 
-            <div class="metric">
-                <div class="metric-label">膝の曲げ角度</div>
-                <div class="metric-value" id="knee-angle">--°</div>
+            <div class="readouts">
+                <div class="readout">
+                    <div class="metric-label">体幹の前傾角度</div>
+                    <div class="metric-value" id="trunk-angle">--°</div>
+                </div>
+                <div class="readout">
+                    <div class="metric-label">膝の曲げ角度</div>
+                    <div class="metric-value" id="knee-angle">--°</div>
+                </div>
             </div>
 
             <button class="start-btn" id="start-btn">
-                <span class="material-symbols-rounded" aria-hidden="true">videocam</span>
-                <span>カメラを起動</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2.8l3.4 2.6A1 1 0 0 0 21 15V9a1 1 0 0 0-1.6-.8L16 10.8V8a2 2 0 0 0-2-2H4Z"/></svg>
+                <span class="btn-label">カメラを起動</span>
             </button>
             <button class="stop-btn" id="stop-btn" disabled>
-                <span class="material-symbols-rounded" aria-hidden="true">stop_circle</span>
-                <span>カメラ停止</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><rect x="8.5" y="8.5" width="7" height="7" rx="1.2"/></svg>
+                <span class="btn-label">カメラ停止</span>
             </button>
+
+            <label class="mirror-toggle">
+                <input type="checkbox" id="mirror-toggle" checked>
+                <span>鏡像表示（映像の左右が実際と合わないとき、外部カメラ使用時はオフ）</span>
+            </label>
 
             <div class="info-box">
                 <h3>負荷レベルの見方</h3>
                 <div class="legend">
                     <div class="legend-item">
                         <div class="legend-dot bg-good"></div>
-                        <span>良い</span>
+                        <span>良い（30未満）</span>
                     </div>
                     <div class="legend-item">
                         <div class="legend-dot bg-warning"></div>
-                        <span>注意</span>
+                        <span>注意（30〜59）</span>
                     </div>
                     <div class="legend-item">
                         <div class="legend-dot bg-danger"></div>
-                        <span>危険</span>
+                        <span>危険（60以上）</span>
                     </div>
                 </div>
             </div>
@@ -93,10 +117,9 @@
         <p>Powered by <a href="https://ai.google.dev/edge/mediapipe/solutions/guide?hl=ja" target="_blank">MediaPipe</a></p>
     </div>
 
-    <!-- MediaPipe Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
+    <!-- MediaPipe Scripts（ローカル同梱・オフライン動作用） -->
+    <script src="vendor/mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="vendor/mediapipe/pose/pose.js"></script>
 
     <script src="script.js"></script>
 </body>

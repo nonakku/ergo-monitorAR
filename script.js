@@ -5,6 +5,36 @@ const ctx = canvas.getContext('2d');
 const startBtn = document.getElementById('start-btn');
 const stopBtn = document.getElementById('stop-btn');
 const loading = document.getElementById('loading');
+// ボタンのテキスト部分のみ更新するための参照（SVGアイコンを消さないため）
+const startBtnLabel = startBtn.querySelector('.btn-label');
+
+// 映像エリアの状態表示：待機ガイダンス／エラー
+const videoIdle = document.getElementById('video-idle');
+const videoError = document.getElementById('video-error');
+const videoErrorText = document.getElementById('video-error-text');
+
+// 鏡像表示トグル：自分を映すWebカメラでは鏡像が直感的（既定ON）だが、
+// 外部カメラで他者や横からの映像を映す場合はオフにできるようにする
+const mirrorToggle = document.getElementById('mirror-toggle');
+const videoContainer = document.querySelector('.video-container');
+const MIRROR_KEY = 'ergomonitor-mirror';
+
+function applyMirror() {
+    videoContainer.classList.toggle('mirrored', mirrorToggle.checked);
+}
+
+try {
+    const saved = localStorage.getItem(MIRROR_KEY);
+    if (saved !== null) mirrorToggle.checked = saved === '1';
+} catch (e) { /* ストレージ不可の環境では既定値のまま */ }
+
+mirrorToggle.addEventListener('change', () => {
+    try {
+        localStorage.setItem(MIRROR_KEY, mirrorToggle.checked ? '1' : '0');
+    } catch (e) { /* 保存できなくても表示切替は行う */ }
+    applyMirror();
+});
+applyMirror();
 
 // UI要素参照：数値・ゲージ表示を更新する対象
 const scoreEl = document.getElementById('score');
@@ -115,11 +145,13 @@ function updateUI(landmarks) {
     const trunkStatus = getStatusClass(trunkAngle, [20, 40]);
     const loadStatus = getStatusClass(loadLevel, [30, 60]);
 
+    const levelText = loadLevel < 30 ? '良い' : loadLevel < 60 ? '注意' : '危険';
+
     scoreEl.textContent = score;
     scoreEl.className = `score-value status-${loadStatus}`;
 
-    loadLevelEl.textContent = loadLevel < 30 ? '良い' : loadLevel < 60 ? '注意' : '危険';
-    loadLevelEl.className = `metric-value status-${loadStatus}`;
+    loadLevelEl.textContent = levelText;
+    loadLevelEl.className = `status-pill pill-${loadStatus}`;
     loadBarEl.style.width = `${loadLevel}%`;
     loadBarEl.className = `metric-bar-fill bg-${loadStatus}`;
 
@@ -227,7 +259,7 @@ function onResults(results) {
 function initPose() {
     pose = new Pose({
         locateFile: (file) => {
-            return `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`;
+            return `./vendor/mediapipe/pose/${file}`;
         }
     });
 
@@ -246,7 +278,9 @@ function initPose() {
 async function startCamera() {
     if (isCameraRunning) return;
     startBtn.disabled = true;
-    startBtn.textContent = '起動中...';
+    startBtnLabel.textContent = '起動中...';
+    videoIdle.hidden = true;
+    videoError.hidden = true;
     loading.style.display = 'block';
 
     try {
@@ -263,14 +297,20 @@ async function startCamera() {
         await camera.start();
         isCameraRunning = true;
         loading.style.display = 'none';
-        startBtn.textContent = 'カメラ起動中';
+        startBtnLabel.textContent = 'カメラ起動中';
         stopBtn.disabled = false;
     } catch (error) {
         console.error('Camera error:', error);
         loading.style.display = 'none';
         startBtn.disabled = false;
-        startBtn.textContent = 'カメラ起動に失敗';
-        alert('カメラの起動に失敗しました。カメラへのアクセスを許可してください。');
+        startBtnLabel.textContent = 'カメラを起動';
+        // モーダル(alert)は使わず、映像エリア内に原因と対処を表示する
+        if (error && (error.name === 'NotFoundError' || error.name === 'DevicesNotFoundError')) {
+            videoErrorText.textContent = 'カメラが見つかりませんでした。接続を確認して、もう一度お試しください。';
+        } else {
+            videoErrorText.textContent = 'ブラウザのアドレスバーからカメラへのアクセスを許可して、もう一度お試しください。';
+        }
+        videoError.hidden = false;
     }
 }
 
@@ -300,7 +340,7 @@ function stopCamera() {
     scoreEl.textContent = '--';
     scoreEl.className = 'score-value';
     loadLevelEl.textContent = '--';
-    loadLevelEl.className = 'metric-value';
+    loadLevelEl.className = 'status-pill';
     loadBarEl.style.width = '0%';
     loadBarEl.className = 'metric-bar-fill';
     trunkAngleEl.textContent = '--°';
@@ -308,10 +348,13 @@ function stopCamera() {
     kneeAngleEl.textContent = '--°';
     kneeAngleEl.className = 'metric-value';
 
+    videoError.hidden = true;
+    videoIdle.hidden = false;
+
     isCameraRunning = false;
     stopBtn.disabled = true;
     startBtn.disabled = false;
-    startBtn.textContent = 'カメラを起動';
+    startBtnLabel.textContent = 'カメラを起動';
     loading.style.display = 'none';
 }
 
