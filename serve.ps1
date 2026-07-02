@@ -4,6 +4,8 @@
 $ErrorActionPreference = 'Stop'
 
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
+# 前方一致の比較が兄弟ディレクトリ（例: ...\ergo-monitorAR-backup）を誤許可しないよう、末尾に区切り文字を付ける
+$rootPrefix = $root.TrimEnd('\', '/') + [System.IO.Path]::DirectorySeparatorChar
 
 # MediaPipe のアセット（.wasm / .data / .tflite / .binarypb）を正しく配信するためのMIMEマップ
 $mime = @{
@@ -57,7 +59,7 @@ while ($listener.IsListening) {
         if ($rel -eq '') { $rel = 'index.html' }
         $path = [System.IO.Path]::GetFullPath((Join-Path $root $rel))
         # 配信ルート外へのパストラバーサルを拒否
-        if (-not $path.StartsWith($root, [System.StringComparison]::OrdinalIgnoreCase) -or
+        if (-not $path.StartsWith($rootPrefix, [System.StringComparison]::OrdinalIgnoreCase) -or
             -not (Test-Path -LiteralPath $path -PathType Leaf)) {
             $res.StatusCode = 404
             $body = [System.Text.Encoding]::UTF8.GetBytes('404 Not Found')
