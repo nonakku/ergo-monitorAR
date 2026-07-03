@@ -86,15 +86,24 @@ body {
 
 /* ---------- メインレイアウト ---------- */
 
+/* ページ全体を縦フレックスにし、本文が余白を吸収してフッターを常に最下部へ */
+.demo-page,
+.rula-page {
+    display: flex;
+    flex-direction: column;
+}
+
 .demo-page .container {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
     gap: 1.25rem;
-    padding: 1.25rem 1.5rem 2rem;
-    max-width: 1080px;
+    padding: 1.25rem 1.5rem;
+    max-width: 1500px;
     margin: 0 auto;
+    width: 100%;
+    flex: 1 0 auto;
 }
 
 /* ---------- 映像エリア ---------- */
@@ -109,6 +118,17 @@ body {
     border-radius: 3px;
     overflow: hidden;
     flex: 1 1 480px;
+}
+
+/* 横並びが成立する幅（映像最小480＋パネル320＋gap20＋余白48）以上でのみ、
+   ビューポートの空き高さいっぱいまで4:3のまま拡大
+   （184px ≒ ヘッダー＋フッター＋本文の上下余白＋枠線、340px ＝ パネル320px＋gap） */
+@media (min-width: 868px) {
+    .video-container {
+        flex: 0 1 auto;
+        width: min(calc((100vh - 184px) * 4 / 3), calc(100% - 340px));
+        min-width: min(100%, 480px);
+    }
 }
 
 #webcam,
@@ -530,6 +550,8 @@ body {
     max-width: 760px;
     margin: 1.25rem auto 2rem;
     padding: 0 1rem;
+    width: 100%;
+    flex: 1 0 auto;
 }
 
 .card {
@@ -581,7 +603,7 @@ body {
 
 @media (max-width: 720px) {
     .demo-page .container {
-        padding: 0.9rem 0.9rem 1.5rem;
+        padding: 0.9rem;
     }
 
     .panel {
