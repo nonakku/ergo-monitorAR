@@ -1,10 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,600,0,0" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ErgoMonitor AR</title>
@@ -53,11 +49,15 @@
             </div>
 
             <button class="start-btn" id="start-btn">
-                <span class="material-symbols-rounded" aria-hidden="true">videocam</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4z"/>
+                </svg>
                 <span>カメラを起動</span>
             </button>
             <button class="stop-btn" id="stop-btn" disabled>
-                <span class="material-symbols-rounded" aria-hidden="true">stop_circle</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM9 9h6v6H9V9z"/>
+                </svg>
                 <span>カメラ停止</span>
             </button>
 
@@ -93,10 +93,9 @@
         <p>Powered by <a href="https://ai.google.dev/edge/mediapipe/solutions/guide?hl=ja" target="_blank">MediaPipe</a></p>
     </div>
 
-    <!-- MediaPipe Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
+    <!-- MediaPipe Scripts（オフライン版：ローカル同梱） -->
+    <script src="vendor/mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="vendor/mediapipe/pose/pose.js"></script>
 
     <script src="script.js"></script>
 </body>

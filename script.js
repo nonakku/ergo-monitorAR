@@ -226,8 +226,9 @@ function onResults(results) {
 // MediaPipe Poseの初期化（モデル設定含む）
 function initPose() {
     pose = new Pose({
+        // オフライン版：モデル本体（.wasm/.data/.binarypb/.tflite）をローカル同梱先から読み込む
         locateFile: (file) => {
-            return `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`;
+            return `./vendor/mediapipe/pose/${file}`;
         }
     });
 
