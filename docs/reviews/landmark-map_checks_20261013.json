@@ -1,0 +1,100 @@
+{
+  "checked_on": "2026-10-13",
+  "scope": "static number/name/connection/code correspondence and PNG visual inspection; not physical-camera precision",
+  "table_points_match_official": 33,
+  "svg_unique_points": 33,
+  "svg_drawn_numbered_points": 35,
+  "colors": {
+    "calculation_and_drawing": [
+      11,
+      12,
+      23,
+      24,
+      25,
+      27
+    ],
+    "drawing_only": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      26,
+      28
+    ],
+    "unused": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      29,
+      30,
+      31,
+      32
+    ]
+  },
+  "official_connection_count": 35,
+  "application_solid_connection_count": 12,
+  "application_unused_dashed_connection_count": 23,
+  "connections_all_match": true,
+  "angle_midpoints_match": {
+    "S": [
+      350.0,
+      200.0
+    ],
+    "H": [
+      325.0,
+      400.0
+    ]
+  },
+  "documented_name_differences": {
+    "9": {
+      "official": "MOUTH_LEFT",
+      "adopted_js": "LEFT_RIGHT"
+    },
+    "10": {
+      "official": "MOUTH_RIGHT",
+      "adopted_js": "RIGHT_LEFT"
+    }
+  },
+  "section_local_links_checked": 16,
+  "tracked_files_byte_identical_to_previous_handoff": 22,
+  "git_diff_empty": true,
+  "git_comparison_note": "serve.ps1/start-offline.bat worktree CRLF differs from normalized HEAD blob LF; no Git diff and bytes identical to previous handoff",
+  "figure_sha256": {
+    "docs/images/mediapipe_app_angle_points.png": "ae828211cea7a2402920e10260b35ed76ee61a7f999820f9d507767117d75e83",
+    "docs/images/mediapipe_pose_33_landmarks.svg": "2b677b68f7b823ca97f1bd7a3f19bd42f4929393759cb9ea6172cd4e63629594",
+    "docs/images/mediapipe_app_angle_points.svg": "bd3d926b07cd2b034e1f9232c13087c9606d7ff8485c864398253a5b79272265",
+    "docs/images/mediapipe_pose_33_landmarks.png": "85559281c74dbef334ddfdb29762299501130659d964bf6ee4918849d52e1a4d"
+  },
+  "independent_review": {
+    "reader_tasks_passed": [
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+    ],
+    "reader_report": "landmark-map_reader_final_20261013.md",
+    "audit_report": "landmark-map_audit_final_20261013.md",
+    "S_H_final_label_recheck": "both reviewers inspected final PNG; labels separated"
+  },
+  "unverified": [
+    "official website image itself",
+    "human reader comprehension",
+    "printing and grayscale/color-vision conditions",
+    "all Markdown renderers",
+    "physical-camera precision"
+  ]
+}

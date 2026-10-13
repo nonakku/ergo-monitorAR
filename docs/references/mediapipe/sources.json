@@ -1,0 +1,34 @@
+[
+  {
+    "file": "upstream-README.md",
+    "upstream_path": "README.md",
+    "url": "https://raw.githubusercontent.com/google-ai-edge/mediapipe/210cb240955256958c3376c34cfbaf34a5c86308/README.md",
+    "commit": "210cb240955256958c3376c34cfbaf34a5c86308",
+    "bytes": 8814,
+    "sha256": "451a5c70b2ec2fee1f0aa34612cd7da7754863e5d7d11e4f1b9c2cf051adb5a3"
+  },
+  {
+    "file": "legacy-pose.md",
+    "upstream_path": "docs/solutions/pose.md",
+    "url": "https://raw.githubusercontent.com/google-ai-edge/mediapipe/210cb240955256958c3376c34cfbaf34a5c86308/docs/solutions/pose.md",
+    "commit": "210cb240955256958c3376c34cfbaf34a5c86308",
+    "bytes": 23030,
+    "sha256": "afdba9b1952ae5950bd7201f784a2a6c7435cd8ebd7242f2529f19e2533e9e1e"
+  },
+  {
+    "file": "graphs.md",
+    "upstream_path": "docs/framework_concepts/graphs.md",
+    "url": "https://raw.githubusercontent.com/google-ai-edge/mediapipe/210cb240955256958c3376c34cfbaf34a5c86308/docs/framework_concepts/graphs.md",
+    "commit": "210cb240955256958c3376c34cfbaf34a5c86308",
+    "bytes": 14481,
+    "sha256": "517f30bd5aa65531727f77b8fb1369427525d3a5378229b04af1cedfc3f64f07"
+  },
+  {
+    "file": "LICENSE",
+    "upstream_path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/google-ai-edge/mediapipe/210cb240955256958c3376c34cfbaf34a5c86308/LICENSE",
+    "commit": "210cb240955256958c3376c34cfbaf34a5c86308",
+    "bytes": 12331,
+    "sha256": "8707eef0533987efc5b155d64761eeb6e20793f50b9bd1a68dad1cf4719d0ed8"
+  }
+]

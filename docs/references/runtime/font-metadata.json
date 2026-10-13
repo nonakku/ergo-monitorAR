@@ -1,0 +1,84 @@
+[
+  {
+    "file": "vendor/fonts/ibm-plex-mono-latin-400-normal.woff2",
+    "bytes": 14708,
+    "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+    "method": "fontTools.ttLib.TTFont, WOFF2 Brotli decoding using libbrotlidec.so.1 via ctypes; no font modification",
+    "name_records": {
+      "1": [
+        "IBM Plex Mono"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "4": [
+        "IBM Plex Mono Regular"
+      ],
+      "5": [
+        "Version 2.3"
+      ],
+      "6": [
+        "IBMPlexMono-Regular"
+      ],
+      "13": [],
+      "14": [
+        "http://scripts.sil.org/OFL"
+      ]
+    },
+    "unicode_codepoints": 229,
+    "contains_japanese_hiragana_a": false,
+    "digit_advance_widths": {
+      "0": 600,
+      "1": 600,
+      "2": 600,
+      "3": 600,
+      "4": 600,
+      "5": 600,
+      "6": 600,
+      "7": 600,
+      "8": 600,
+      "9": 600
+    }
+  },
+  {
+    "file": "vendor/fonts/ibm-plex-mono-latin-600-normal.woff2",
+    "bytes": 15620,
+    "sha256": "0d1f0b8d0722224e32e9f28261bdc86c79115be73444ae5eceb73976a1bcdf83",
+    "method": "fontTools.ttLib.TTFont, WOFF2 Brotli decoding using libbrotlidec.so.1 via ctypes; no font modification",
+    "name_records": {
+      "1": [
+        "IBM Plex Mono SemiBold"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "4": [
+        "IBM Plex Mono SemiBold"
+      ],
+      "5": [
+        "Version 2.3"
+      ],
+      "6": [
+        "IBMPlexMono-SemiBold"
+      ],
+      "13": [],
+      "14": [
+        "http://scripts.sil.org/OFL"
+      ]
+    },
+    "unicode_codepoints": 229,
+    "contains_japanese_hiragana_a": false,
+    "digit_advance_widths": {
+      "0": 600,
+      "1": 600,
+      "2": 600,
+      "3": 600,
+      "4": 600,
+      "5": 600,
+      "6": 600,
+      "7": 600,
+      "8": 600,
+      "9": 600
+    }
+  }
+]

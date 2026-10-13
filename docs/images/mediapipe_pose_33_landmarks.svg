@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1160" viewBox="0 0 1400 1160" role="img" aria-labelledby="title desc">
+<title id="title">MediaPipe Pose：人体とランドマーク番号（0〜32）</title><desc id="desc">正面から見た人物の模式図。人物の右が図の左、人物の左が図の右。顔と手は拡大して番号を示す。橙はアプリの角度計算に使う点、青は描画だけの点、灰はアプリで使わない点。実測座標ではない。</desc>
+<style>text{font-family:"Noto Sans CJK JP","Yu Gothic",sans-serif;fill:#243449} .title{font-size:29px;font-weight:700}.heading{font-size:22px;font-weight:700}.label{font-size:19px}.small{font-size:16px}.num{font-size:18px;font-weight:700;paint-order:stroke;stroke:white;stroke-width:5px;stroke-linejoin:round}</style>
+<rect width="1400" height="1160" fill="white"/>
+<text x="36" y="46" class="title" text-anchor="start">MediaPipe Pose — 人体と番号の対応（全33点）</text>
+<text x="36" y="82" class="label" text-anchor="start">正面の模式図：左・右は人物自身の側。形・間隔は説明用で、実測座標ではない。</text>
+<text x="105" y="130" class="heading" text-anchor="start">人物の右（RIGHT）</text>
+<text x="350" y="130" class="heading" text-anchor="start">人物の左（LEFT）</text>
+<ellipse cx="300" cy="205" rx="53" ry="62" fill="#f5f8fa" stroke="#bdc8d3" stroke-width="2"/>
+<line x1="380" y1="300" x2="220" y2="300" stroke="#adbac7" stroke-width="6" stroke-linecap="round"/>
+<line x1="380" y1="300" x2="445" y2="430" stroke="#adbac7" stroke-width="6" stroke-linecap="round"/>
+<line x1="445" y1="430" x2="475" y2="552" stroke="#adbac7" stroke-width="6" stroke-linecap="round"/>
+<line x1="220" y1="300" x2="155" y2="430" stroke="#adbac7" stroke-width="6" stroke-linecap="round"/>
+<line x1="155" y1="430" x2="125" y2="552" stroke="#adbac7" stroke-width="6" stroke-linecap="round"/>
+<line x1="380" y1="300" x2="357" y2="640" stroke="#adbac7" stroke-width="6" stroke-linecap="round"/>
+<line x1="220" y1="300" x2="243" y2="640" stroke="#adbac7" stroke-width="6" stroke-linecap="round"/>
+<line x1="357" y1="640" x2="243" y2="640" stroke="#adbac7" stroke-width="6" stroke-linecap="round"/>
+<line x1="357" y1="640" x2="380" y2="810" stroke="#adbac7" stroke-width="6" stroke-linecap="round"/>
+<line x1="380" y1="810" x2="395" y2="982" stroke="#adbac7" stroke-width="6" stroke-linecap="round"/>
+<line x1="243" y1="640" x2="220" y2="810" stroke="#adbac7" stroke-width="6" stroke-linecap="round"/>
+<line x1="220" y1="810" x2="205" y2="982" stroke="#adbac7" stroke-width="6" stroke-linecap="round"/>
+<line x1="395" y1="982" x2="374" y2="1022" stroke="#adbac7" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="374" y1="1022" x2="440" y2="1050" stroke="#adbac7" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="395" y1="982" x2="440" y2="1050" stroke="#adbac7" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="205" y1="982" x2="226" y2="1022" stroke="#adbac7" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="226" y1="1022" x2="160" y2="1050" stroke="#adbac7" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="205" y1="982" x2="160" y2="1050" stroke="#adbac7" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 6"/>
+<circle data-landmark="11" cx="380" cy="300" r="7" fill="#bb4f00" stroke="white" stroke-width="2"/>
+<text x="394" y="306" class="num" text-anchor="start" style="fill:#bb4f00">11</text>
+<circle data-landmark="12" cx="220" cy="300" r="7" fill="#bb4f00" stroke="white" stroke-width="2"/>
+<text x="185" y="306" class="num" text-anchor="start" style="fill:#bb4f00">12</text>
+<circle data-landmark="13" cx="445" cy="430" r="7" fill="#1973b8" stroke="white" stroke-width="2"/>
+<text x="459" y="436" class="num" text-anchor="start" style="fill:#1973b8">13</text>
+<circle data-landmark="14" cx="155" cy="430" r="7" fill="#1973b8" stroke="white" stroke-width="2"/>
+<text x="120" y="436" class="num" text-anchor="start" style="fill:#1973b8">14</text>
+<circle data-landmark="15" cx="475" cy="552" r="7" fill="#1973b8" stroke="white" stroke-width="2"/>
+<text x="489" y="558" class="num" text-anchor="start" style="fill:#1973b8">15</text>
+<circle data-landmark="16" cx="125" cy="552" r="7" fill="#1973b8" stroke="white" stroke-width="2"/>
+<text x="90" y="558" class="num" text-anchor="start" style="fill:#1973b8">16</text>
+<circle data-landmark="23" cx="357" cy="640" r="7" fill="#bb4f00" stroke="white" stroke-width="2"/>
+<text x="371" y="646" class="num" text-anchor="start" style="fill:#bb4f00">23</text>
+<circle data-landmark="24" cx="243" cy="640" r="7" fill="#bb4f00" stroke="white" stroke-width="2"/>
+<text x="208" y="646" class="num" text-anchor="start" style="fill:#bb4f00">24</text>
+<circle data-landmark="25" cx="380" cy="810" r="7" fill="#bb4f00" stroke="white" stroke-width="2"/>
+<text x="394" y="816" class="num" text-anchor="start" style="fill:#bb4f00">25</text>
+<circle data-landmark="26" cx="220" cy="810" r="7" fill="#1973b8" stroke="white" stroke-width="2"/>
+<text x="185" y="816" class="num" text-anchor="start" style="fill:#1973b8">26</text>
+<circle data-landmark="27" cx="395" cy="982" r="7" fill="#bb4f00" stroke="white" stroke-width="2"/>
+<text x="409" y="988" class="num" text-anchor="start" style="fill:#bb4f00">27</text>
+<circle data-landmark="28" cx="205" cy="982" r="7" fill="#1973b8" stroke="white" stroke-width="2"/>
+<text x="170" y="988" class="num" text-anchor="start" style="fill:#1973b8">28</text>
+<circle data-landmark="29" cx="374" cy="1022" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="388" y="1028" class="num" text-anchor="start" style="fill:#697684">29</text>
+<circle data-landmark="30" cx="226" cy="1022" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="191" y="1028" class="num" text-anchor="start" style="fill:#697684">30</text>
+<circle data-landmark="31" cx="440" cy="1050" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="454" y="1056" class="num" text-anchor="start" style="fill:#697684">31</text>
+<circle data-landmark="32" cx="160" cy="1050" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="125" y="1056" class="num" text-anchor="start" style="fill:#697684">32</text>
+<text x="300" y="200" class="small" text-anchor="middle">顔 0–10</text>
+<text x="300" y="224" class="small" text-anchor="middle">→ 右上に拡大</text>
+<text x="40" y="610" class="small" text-anchor="start">手 16・18・20・22</text>
+<text x="390" y="610" class="small" text-anchor="start">手 15・17・19・21</text>
+<text x="40" y="635" class="small" text-anchor="start">右の拡大図を参照</text>
+<text x="720" y="138" class="heading" text-anchor="start">顔の拡大：0–10</text>
+<ellipse cx="1020" cy="295" rx="240" ry="140" fill="#f5f8fa" stroke="#bdc8d3" stroke-width="2"/>
+<text x="835" y="190" class="small" text-anchor="start">人物の右</text>
+<text x="1130" y="190" class="small" text-anchor="start">人物の左</text>
+<line x1="1020" y1="290" x2="1060" y2="230" stroke="#adbac7" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="1060" y1="230" x2="1110" y2="225" stroke="#adbac7" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="1110" y1="225" x2="1160" y2="235" stroke="#adbac7" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="1160" y1="235" x2="1228" y2="282" stroke="#adbac7" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="1020" y1="290" x2="980" y2="230" stroke="#adbac7" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="980" y1="230" x2="930" y2="225" stroke="#adbac7" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="930" y1="225" x2="880" y2="235" stroke="#adbac7" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="880" y1="235" x2="812" y2="282" stroke="#adbac7" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="1070" y1="355" x2="970" y2="355" stroke="#adbac7" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+<circle data-landmark="0" cx="1020" cy="290" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="1032" y="297" class="num" text-anchor="start" style="fill:#697684">0</text>
+<circle data-landmark="1" cx="1060" cy="230" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="1072" y="217" class="num" text-anchor="start" style="fill:#697684">1</text>
+<circle data-landmark="2" cx="1110" cy="225" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="1122" y="212" class="num" text-anchor="start" style="fill:#697684">2</text>
+<circle data-landmark="3" cx="1160" cy="235" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="1172" y="222" class="num" text-anchor="start" style="fill:#697684">3</text>
+<circle data-landmark="4" cx="980" cy="230" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="954" y="217" class="num" text-anchor="start" style="fill:#697684">4</text>
+<circle data-landmark="5" cx="930" cy="225" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="904" y="212" class="num" text-anchor="start" style="fill:#697684">5</text>
+<circle data-landmark="6" cx="880" cy="235" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="854" y="222" class="num" text-anchor="start" style="fill:#697684">6</text>
+<circle data-landmark="7" cx="1228" cy="282" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="1240" y="289" class="num" text-anchor="start" style="fill:#697684">7</text>
+<circle data-landmark="8" cx="812" cy="282" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="786" y="289" class="num" text-anchor="start" style="fill:#697684">8</text>
+<circle data-landmark="9" cx="1070" cy="355" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="1082" y="362" class="num" text-anchor="start" style="fill:#697684">9</text>
+<circle data-landmark="10" cx="970" cy="355" r="7" fill="#697684" stroke="white" stroke-width="2"/>
+<text x="935" y="362" class="num" text-anchor="start" style="fill:#697684">10</text>
+<text x="1020" y="457" class="small" text-anchor="middle">9・10は口の左右の端</text>
+<text x="720" y="520" class="heading" text-anchor="start">手の拡大：15–22（番号で指す部位）</text>
+<text x="820" y="570" class="heading" text-anchor="middle">人物の右手</text>
+<text x="1150" y="570" class="heading" text-anchor="middle">人物の左手</text>
+<line x1="820" y1="620" x2="752" y2="770" stroke="#adbac7" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="820" y1="620" x2="852" y2="805" stroke="#adbac7" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="820" y1="620" x2="898" y2="715" stroke="#adbac7" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="752" y1="770" x2="852" y2="805" stroke="#adbac7" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="1150" y1="620" x2="1218" y2="770" stroke="#adbac7" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="1150" y1="620" x2="1118" y2="805" stroke="#adbac7" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="1150" y1="620" x2="1072" y2="715" stroke="#adbac7" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 6"/>
+<line x1="1218" y1="770" x2="1118" y2="805" stroke="#adbac7" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 6"/>
+<circle data-landmark="16" cx="820" cy="620" r="7" fill="#1973b8" stroke="white" stroke-width="2"/>
+<text x="833" y="628" class="num" text-anchor="start" style="fill:#1973b8">16</text>
+<circle data-landmark="18" cx="752" cy="770" r="7" fill="#1973b8" stroke="white" stroke-width="2"/>
+<text x="715" y="778" class="num" text-anchor="start" style="fill:#1973b8">18</text>
+<circle data-landmark="20" cx="852" cy="805" r="7" fill="#1973b8" stroke="white" stroke-width="2"/>
+<text x="865" y="813" class="num" text-anchor="start" style="fill:#1973b8">20</text>
+<circle data-landmark="22" cx="898" cy="715" r="7" fill="#1973b8" stroke="white" stroke-width="2"/>
+<text x="911" y="723" class="num" text-anchor="start" style="fill:#1973b8">22</text>
+<circle data-landmark="15" cx="1150" cy="620" r="7" fill="#1973b8" stroke="white" stroke-width="2"/>
+<text x="1163" y="628" class="num" text-anchor="start" style="fill:#1973b8">15</text>
+<circle data-landmark="17" cx="1218" cy="770" r="7" fill="#1973b8" stroke="white" stroke-width="2"/>
+<text x="1231" y="778" class="num" text-anchor="start" style="fill:#1973b8">17</text>
+<circle data-landmark="19" cx="1118" cy="805" r="7" fill="#1973b8" stroke="white" stroke-width="2"/>
+<text x="1131" y="813" class="num" text-anchor="start" style="fill:#1973b8">19</text>
+<circle data-landmark="21" cx="1072" cy="715" r="7" fill="#1973b8" stroke="white" stroke-width="2"/>
+<text x="1035" y="723" class="num" text-anchor="start" style="fill:#1973b8">21</text>
+<text x="820" y="855" class="small" text-anchor="middle">18 小指 / 20 人差し指 / 22 親指</text>
+<text x="1150" y="883" class="small" text-anchor="middle">17 小指 / 19 人差し指 / 21 親指</text>
+<line x1="720" y1="921" x2="757" y2="921" stroke="#adbac7" stroke-width="4" stroke-linecap="round"/>
+<text x="773" y="927" class="small" text-anchor="start">実線：アプリが描く12組（描画条件は本文）</text>
+<line x1="720" y1="948" x2="757" y2="948" stroke="#adbac7" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 6"/>
+<text x="773" y="954" class="small" text-anchor="start">破線：Poseの接続。アプリでは描かない線</text>
+<circle cx="45" cy="1110" r="8" fill="#bb4f00"/>
+<text x="64" y="1116" class="label" text-anchor="start">角度計算＋描画</text>
+<circle cx="475" cy="1110" r="8" fill="#1973b8"/>
+<text x="494" y="1116" class="label" text-anchor="start">描画のみ</text>
+<circle cx="875" cy="1110" r="8" fill="#697684"/>
+<text x="894" y="1116" class="label" text-anchor="start">アプリでは未使用</text>
+<text x="36" y="1146" class="small" text-anchor="start">作図根拠：公式旧Poseの33点定義、同梱pose.js:97、script.js:108–138 / 172–241。写真・画面画像ではない。</text>
+</svg>

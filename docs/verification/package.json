@@ -1,0 +1,7 @@
+{
+  "name": "ergomonitor-verification",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {"test": "node verify.cjs", "inventory": "node inventory.cjs"},
+  "dependencies": {"acorn": "8.15.0", "playwright": "1.62.1"}
+}

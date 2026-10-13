@@ -1,0 +1,558 @@
+{
+  "startedAt": "2026-10-13T00:25:14.619Z",
+  "dateJST": "2026-10-13",
+  "environment": {
+    "node": "v24.19.0",
+    "playwright": "1.62.1",
+    "acorn": "8.15.0",
+    "platform": "linux",
+    "python": "Python 3.12.14",
+    "chromium": "151.0.7922.173",
+    "chromiumPath": "/usr/bin/chromium",
+    "noSandbox": true
+  },
+  "assertions": [
+    {
+      "name": "AST: original 122 bindings / 20 functions and all original tables",
+      "status": "passed"
+    },
+    {
+      "name": "math: trunk/knee thresholds, rounding, normalized aspect, degenerate and NaN",
+      "status": "passed"
+    },
+    {
+      "name": "HTTP: app/MediaPipe/font assets return 200 with exact disk bytes",
+      "status": "passed"
+    },
+    {
+      "name": "browser: idle, mirror transform/persistence, 390px viewport",
+      "status": "passed"
+    },
+    {
+      "name": "browser: real MediaPipe/WASM fake camera start, stop and restart",
+      "status": "passed"
+    },
+    {
+      "name": "browser: UI, missing/short landmarks, invalid coordinates, visibility and skeleton boundary",
+      "status": "passed"
+    },
+    {
+      "name": "browser: explanation link and return, worksheet default/maximum, 56 Table C index states",
+      "status": "passed"
+    },
+    {
+      "name": "browser: injected denied/missing errors show inline UI; vendor alerts recorded and dismissed",
+      "status": "passed"
+    },
+    {
+      "name": "browser: zero external requests and zero HTTP asset failures",
+      "status": "passed"
+    }
+  ],
+  "pageErrors": [
+    {
+      "stage": "camera cycle 2",
+      "message": "memory access out of bounds"
+    },
+    {
+      "stage": "camera cycle 2",
+      "message": "Aborted(native code called abort())"
+    }
+  ],
+  "dialogs": [
+    {
+      "stage": "injected camera error",
+      "type": "alert",
+      "message": "Failed to acquire camera feed: NotAllowedError: test denied"
+    },
+    {
+      "stage": "injected camera error",
+      "type": "alert",
+      "message": "Failed to acquire camera feed: NotFoundError: test missing"
+    }
+  ],
+  "httpFailures": [],
+  "externalRequests": [],
+  "localRequests": [
+    "/",
+    "/style.css",
+    "/vendor/mediapipe/camera_utils/camera_utils.js",
+    "/vendor/mediapipe/pose/pose.js",
+    "/script.js",
+    "/vendor/fonts/ibm-plex-mono-latin-600-normal.woff2",
+    "/vendor/fonts/ibm-plex-mono-latin-400-normal.woff2",
+    "/",
+    "/style.css",
+    "/vendor/mediapipe/camera_utils/camera_utils.js",
+    "/vendor/mediapipe/pose/pose.js",
+    "/script.js",
+    "/vendor/fonts/ibm-plex-mono-latin-400-normal.woff2",
+    "/vendor/fonts/ibm-plex-mono-latin-600-normal.woff2",
+    "/vendor/mediapipe/pose/pose_landmark_full.tflite",
+    "/vendor/mediapipe/pose/pose_solution_packed_assets_loader.js",
+    "/vendor/mediapipe/pose/pose_solution_simd_wasm_bin.js",
+    "/vendor/mediapipe/pose/pose_web.binarypb",
+    "/vendor/mediapipe/pose/pose_solution_packed_assets.data",
+    "/vendor/mediapipe/pose/pose_solution_simd_wasm_bin.wasm",
+    "/vendor/mediapipe/pose/pose_landmark_full.tflite",
+    "/vendor/mediapipe/pose/pose_web.binarypb",
+    "/vendor/mediapipe/pose/pose_solution_packed_assets.data",
+    "/vendor/mediapipe/pose/pose_solution_simd_wasm_bin.wasm",
+    "/vendor/mediapipe/pose/pose_solution_packed_assets.data",
+    "/vendor/mediapipe/pose/pose_solution_simd_wasm_bin.wasm",
+    "/rula.html",
+    "/style.css",
+    "/vendor/fonts/ibm-plex-mono-latin-400-normal.woff2",
+    "/index.html",
+    "/style.css",
+    "/vendor/mediapipe/camera_utils/camera_utils.js",
+    "/vendor/mediapipe/pose/pose.js",
+    "/script.js",
+    "/vendor/fonts/ibm-plex-mono-latin-400-normal.woff2",
+    "/vendor/fonts/ibm-plex-mono-latin-600-normal.woff2",
+    "/RULAworkseet.html",
+    "/RULAworkseet.html"
+  ],
+  "limitations": [
+    "Synthetic camera; no verified human posture, real permission dialog, real OS camera, performance or clinical validity.",
+    "Expected defective input behavior is asserted separately; assertions passing does not mean the application is exception-free."
+  ],
+  "synthetic": {
+    "valid": {
+      "score": "0",
+      "trunk": "45°",
+      "knee": "180°",
+      "level": "危険",
+      "barWidth": "100%",
+      "loadStatus": "status-pill pill-danger",
+      "scoreStatus": "score-value status-danger",
+      "barStatus": "metric-bar-fill bg-danger"
+    },
+    "retained": "0",
+    "missingRetained": "0",
+    "shortError": "TypeError",
+    "invalid": {
+      "score": "0",
+      "trunk": "NaN°",
+      "level": "危険"
+    },
+    "colors": [
+      "#4ade80",
+      "#facc15",
+      "#facc15",
+      "#f87171"
+    ],
+    "strokes": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "tableC": [
+    {
+      "a": 1,
+      "b": 1,
+      "score": 1,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "score": 2,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 1,
+      "b": 3,
+      "score": 3,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 1,
+      "b": 4,
+      "score": 3,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 1,
+      "b": 5,
+      "score": 4,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 1,
+      "b": 6,
+      "score": 5,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 1,
+      "b": 7,
+      "score": 5,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "score": 2,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "score": 2,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "score": 3,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 2,
+      "b": 4,
+      "score": 4,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 2,
+      "b": 5,
+      "score": 4,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 2,
+      "b": 6,
+      "score": 5,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 2,
+      "b": 7,
+      "score": 5,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "score": 3,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "score": 3,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 3,
+      "b": 3,
+      "score": 3,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "score": 4,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 3,
+      "b": 5,
+      "score": 4,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 3,
+      "b": 6,
+      "score": 5,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 3,
+      "b": 7,
+      "score": 6,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 4,
+      "b": 1,
+      "score": 3,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "score": 3,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 4,
+      "b": 3,
+      "score": 3,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 4,
+      "b": 4,
+      "score": 4,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 4,
+      "b": 5,
+      "score": 5,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 4,
+      "b": 6,
+      "score": 6,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 4,
+      "b": 7,
+      "score": 6,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 5,
+      "b": 1,
+      "score": 4,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 5,
+      "b": 2,
+      "score": 4,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 5,
+      "b": 3,
+      "score": 4,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 5,
+      "b": 4,
+      "score": 5,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 5,
+      "b": 5,
+      "score": 6,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 5,
+      "b": 6,
+      "score": 7,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 5,
+      "b": 7,
+      "score": 7,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 6,
+      "b": 1,
+      "score": 4,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 6,
+      "b": 2,
+      "score": 4,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 6,
+      "b": 3,
+      "score": 5,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 6,
+      "b": 4,
+      "score": 6,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 6,
+      "b": 5,
+      "score": 6,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 6,
+      "b": 6,
+      "score": 7,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 6,
+      "b": 7,
+      "score": 7,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 7,
+      "b": 1,
+      "score": 5,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 7,
+      "b": 2,
+      "score": 5,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 7,
+      "b": 3,
+      "score": 6,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 7,
+      "b": 4,
+      "score": 6,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 7,
+      "b": 5,
+      "score": 7,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 7,
+      "b": 6,
+      "score": 7,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 7,
+      "b": 7,
+      "score": 7,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 8,
+      "b": 1,
+      "score": 5,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 8,
+      "b": 2,
+      "score": 5,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 8,
+      "b": 3,
+      "score": 6,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 8,
+      "b": 4,
+      "score": 7,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 8,
+      "b": 5,
+      "score": 7,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 8,
+      "b": 6,
+      "score": 7,
+      "highlight": true,
+      "count": 3
+    },
+    {
+      "a": 8,
+      "b": 7,
+      "score": 7,
+      "highlight": true,
+      "count": 3
+    }
+  ],
+  "worksheetInvalid": "TypeError",
+  "finishedAt": "2026-10-13T00:25:35.869Z",
+  "sourceHashes": {
+    "script.js": "9b16cc951058af215801028d8a3912ee66c862936ecae34fbcfdfe426b9d8fe9",
+    "index.html": "73b3e6e622444d102a3aea8c7f0a3606c644c111817eefb1026c159c62a0e5fe",
+    "rula.html": "0922b74bb5da327d6f3e78391953443d9a143b3f7622d3f461423d7276306033",
+    "RULAworkseet.html": "c8b1b7996210c35ebeec9b9f73eb948130950e4ce584f38913e2386113b28284",
+    "style.css": "789f245ebe35f0fdf45d7cc78d9c34ddfb900bfdfc0f0cca845f2e7fdc41e0b9"
+  },
+  "appFilesUnchanged": true,
+  "assertionStatus": "passed",
+  "applicationExceptionFree": false
+}

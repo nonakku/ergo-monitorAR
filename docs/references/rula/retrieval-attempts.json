@@ -1,0 +1,137 @@
+{
+  "review_date": "2026-10-13 JST",
+  "scope": "External RULA source retrieval attempts. Failures are not evidence of source contents or nonexistent URLs. The worksheet PDF and bibliographic URLs are candidates pending verification.",
+  "attempts": [
+    {
+      "url": "https://ergo.human.cornell.edu/ahRULA.html",
+      "request_method": "GET",
+      "verification": "default Python urllib HTTPS certificate verification; environment-provided proxy; no credentials supplied",
+      "attempt_time_jst": "2026-10-13T09:07:46.600554+09:00",
+      "state": "not_obtained",
+      "error_type": "URLError",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "source_text_saved": false
+    },
+    {
+      "url": "https://ergo.human.cornell.edu/Pub/AHquest/CURULA.pdf",
+      "request_method": "GET",
+      "verification": "default Python urllib HTTPS certificate verification; environment-provided proxy; no credentials supplied",
+      "attempt_time_jst": "2026-10-13T09:07:46.601091+09:00",
+      "state": "not_obtained",
+      "error_type": "URLError",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "source_text_saved": false
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15676903/",
+      "request_method": "GET",
+      "verification": "default Python urllib HTTPS certificate verification; environment-provided proxy; no credentials supplied",
+      "attempt_time_jst": "2026-10-13T09:07:46.601611+09:00",
+      "state": "not_obtained",
+      "error_type": "URLError",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "source_text_saved": false
+    },
+    {
+      "url": "https://doi.org/10.1016/0003-6870(93)90080-S",
+      "request_method": "GET",
+      "verification": "default Python urllib HTTPS certificate verification; environment-provided proxy; no credentials supplied",
+      "attempt_time_jst": "2026-10-13T09:07:46.602065+09:00",
+      "state": "not_obtained",
+      "error_type": "URLError",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "source_text_saved": false
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1016/0003-6870(93)90080-S",
+      "request_method": "GET",
+      "verification": "default Python urllib HTTPS certificate verification; environment-provided proxy; no credentials supplied",
+      "attempt_time_jst": "2026-10-13T09:07:46.603486+09:00",
+      "state": "not_obtained",
+      "error_type": "URLError",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "source_text_saved": false
+    },
+    {
+      "url": "https://api.openalex.org/works/https://doi.org/10.1016/0003-6870(93)90080-S",
+      "request_method": "GET",
+      "verification": "default Python urllib HTTPS certificate verification; environment-provided proxy; no credentials supplied",
+      "attempt_time_jst": "2026-10-13T09:07:46.611493+09:00",
+      "state": "not_obtained",
+      "error_type": "URLError",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "source_text_saved": false
+    },
+    {
+      "url": "https://www.ergonomics.co.uk/Rula/Ergo/index.html",
+      "request_method": "GET",
+      "verification": "default Python urllib HTTPS certificate verification; environment-provided proxy; no credentials supplied",
+      "attempt_time_jst": "2026-10-13T09:07:46.617591+09:00",
+      "state": "not_obtained",
+      "error_type": "URLError",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "source_text_saved": false
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/000368709390080S",
+      "request_method": "GET",
+      "verification": "default Python urllib HTTPS certificate verification; environment-provided proxy; no credentials supplied",
+      "attempt_time_jst": "2026-10-13T09:07:46.620480+09:00",
+      "state": "not_obtained",
+      "error_type": "URLError",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "source_text_saved": false
+    },
+    {
+      "url": "https://europepmc.org/article/MED/15676903",
+      "request_method": "GET",
+      "verification": "default Python urllib HTTPS certificate verification; environment-provided proxy; no credentials supplied",
+      "attempt_time_jst": "2026-10-13T09:07:46.622618+09:00",
+      "state": "not_obtained",
+      "error_type": "URLError",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "source_text_saved": false
+    },
+    {
+      "url": "https://www.hse.gov.uk/msd/risk.htm",
+      "request_method": "GET",
+      "verification": "default Python urllib HTTPS certificate verification; environment-provided proxy; no credentials supplied",
+      "attempt_time_jst": "2026-10-13T09:07:46.625389+09:00",
+      "state": "not_obtained",
+      "error_type": "URLError",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "source_text_saved": false
+    },
+    {
+      "url": "https://www.cdc.gov/niosh/docs/97-117/pdfs/97-117.pdf",
+      "request_method": "GET",
+      "verification": "default Python urllib HTTPS certificate verification; environment-provided proxy; no credentials supplied",
+      "attempt_time_jst": "2026-10-13T09:07:46.627809+09:00",
+      "state": "not_obtained",
+      "error_type": "URLError",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "source_text_saved": false
+    },
+    {
+      "url": "https://www.osha.gov/ergonomics",
+      "request_method": "GET",
+      "verification": "default Python urllib HTTPS certificate verification; environment-provided proxy; no credentials supplied",
+      "attempt_time_jst": "2026-10-13T09:07:46.630552+09:00",
+      "state": "not_obtained",
+      "error_type": "URLError",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "source_text_saved": false
+    },
+    {
+      "url": "https://osha.europa.eu/en/publications",
+      "request_method": "GET",
+      "verification": "default Python urllib HTTPS certificate verification; environment-provided proxy; no credentials supplied",
+      "attempt_time_jst": "2026-10-13T09:07:46.633322+09:00",
+      "state": "not_obtained",
+      "error_type": "URLError",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "source_text_saved": false
+    }
+  ],
+  "github_fallback": "Public GitHub search HTML fetched successfully; unauthenticated code search required sign-in and supplied no formal RULA table. Search HTML not adopted as a source."
+}

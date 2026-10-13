@@ -1,0 +1,42 @@
+[
+  {
+    "file": "docs/references/mediapipe/upstream-README.md",
+    "recorded_sha256": "451a5c70b2ec2fee1f0aa34612cd7da7754863e5d7d11e4f1b9c2cf051adb5a3",
+    "actual_sha256": "451a5c70b2ec2fee1f0aa34612cd7da7754863e5d7d11e4f1b9c2cf051adb5a3",
+    "identical": true,
+    "original_url": "https://raw.githubusercontent.com/google-ai-edge/mediapipe/210cb240955256958c3376c34cfbaf34a5c86308/README.md",
+    "original_commit": "210cb240955256958c3376c34cfbaf34a5c86308",
+    "original_retrieval_date_jst": "2026-10-10",
+    "checked_date_jst": "2026-10-13"
+  },
+  {
+    "file": "docs/references/mediapipe/legacy-pose.md",
+    "recorded_sha256": "afdba9b1952ae5950bd7201f784a2a6c7435cd8ebd7242f2529f19e2533e9e1e",
+    "actual_sha256": "afdba9b1952ae5950bd7201f784a2a6c7435cd8ebd7242f2529f19e2533e9e1e",
+    "identical": true,
+    "original_url": "https://raw.githubusercontent.com/google-ai-edge/mediapipe/210cb240955256958c3376c34cfbaf34a5c86308/docs/solutions/pose.md",
+    "original_commit": "210cb240955256958c3376c34cfbaf34a5c86308",
+    "original_retrieval_date_jst": "2026-10-10",
+    "checked_date_jst": "2026-10-13"
+  },
+  {
+    "file": "docs/references/mediapipe/graphs.md",
+    "recorded_sha256": "517f30bd5aa65531727f77b8fb1369427525d3a5378229b04af1cedfc3f64f07",
+    "actual_sha256": "517f30bd5aa65531727f77b8fb1369427525d3a5378229b04af1cedfc3f64f07",
+    "identical": true,
+    "original_url": "https://raw.githubusercontent.com/google-ai-edge/mediapipe/210cb240955256958c3376c34cfbaf34a5c86308/docs/framework_concepts/graphs.md",
+    "original_commit": "210cb240955256958c3376c34cfbaf34a5c86308",
+    "original_retrieval_date_jst": "2026-10-10",
+    "checked_date_jst": "2026-10-13"
+  },
+  {
+    "file": "docs/references/mediapipe/LICENSE",
+    "recorded_sha256": "8707eef0533987efc5b155d64761eeb6e20793f50b9bd1a68dad1cf4719d0ed8",
+    "actual_sha256": "8707eef0533987efc5b155d64761eeb6e20793f50b9bd1a68dad1cf4719d0ed8",
+    "identical": true,
+    "original_url": "https://raw.githubusercontent.com/google-ai-edge/mediapipe/210cb240955256958c3376c34cfbaf34a5c86308/LICENSE",
+    "original_commit": "210cb240955256958c3376c34cfbaf34a5c86308",
+    "original_retrieval_date_jst": "2026-10-10",
+    "checked_date_jst": "2026-10-13"
+  }
+]

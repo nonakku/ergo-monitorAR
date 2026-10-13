@@ -1,0 +1,26 @@
+commit de23eda725605702af63a04f900d412c147d69b0
+Author:     Claude <noreply@anthropic.com>
+AuthorDate: Thu Jul 2 23:39:23 2026 +0000
+Commit:     Claude <noreply@anthropic.com>
+CommitDate: Thu Jul 2 23:39:23 2026 +0000
+
+    安全緑のアイデンティティに回帰し、鏡像表示をトグル化
+    
+    デザイン修正：日本の安全衛生では緑＝安全（緑十字）であり、
+    前回の「ニュートラル基調＋スチールブルー」はこの題材の色言語を
+    損なっていた。ヘッダー/フッターの緑バンド、緑の起動ボタン、
+    緑基調の配色（元デザインのパレット）に戻す。計器的な改善
+    （タブラー数字・閾値目盛り・HUD・ガイダンス・インラインエラー）
+    は維持。
+    
+    UX修正：鏡像表示を ON/OFF トグル化（既定ON）。外部カメラで
+    他者や横からの映像を映す場合はオフにできる。設定は
+    localStorage に保存し次回起動時も維持。
+    
+    Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_018ke6A8kT3qajxUwp6ThFob
+
+ index.html |  7 ++++-
+ script.js  | 23 +++++++++++++++
+ style.css  | 97 ++++++++++++++++++++++++++++++++++++++++----------------------
+ 3 files changed, 92 insertions(+), 35 deletions(-)

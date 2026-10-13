@@ -1,0 +1,18 @@
+commit de9e788f6e5569e21c013a671eb22e2c8a37edc8
+Author:     Claude <noreply@anthropic.com>
+AuthorDate: Thu Jul 2 13:50:20 2026 +0000
+Commit:     Claude <noreply@anthropic.com>
+CommitDate: Thu Jul 2 13:50:20 2026 +0000
+
+    serve.ps1: パストラバーサル判定の前方一致バグを修正
+    
+    ルートパスの前方一致だけで判定していたため、兄弟ディレクトリ
+    （例: ergo-monitorAR-backup）がルート名と同じ接頭辞を持つ場合に
+    ルート外のファイルを配信し得た。末尾にパス区切り文字を付けた
+    プレフィックスで比較するよう修正。
+    
+    Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_018ke6A8kT3qajxUwp6ThFob
+
+ serve.ps1 | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
