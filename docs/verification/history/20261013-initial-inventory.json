@@ -1,0 +1,5851 @@
+{
+  "counting": "variables + parameters + catch bindings; functions include anonymous callbacks; usageLines resolve lexical bindings, exclude declarations and noncomputed property keys, include shorthand references",
+  "rows": [
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 2,
+      "column": 6,
+      "name": "video",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.getElementById('webcam')",
+      "usageLines": [
+        249,
+        250,
+        289,
+        291,
+        329,
+        333
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 3,
+      "column": 6,
+      "name": "canvas",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.getElementById('canvas')",
+      "usageLines": [
+        4,
+        168,
+        214,
+        215,
+        226,
+        227,
+        235,
+        236,
+        249,
+        250,
+        339
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 4,
+      "column": 6,
+      "name": "ctx",
+      "kind": "variable",
+      "scope": "top",
+      "init": "canvas.getContext('2d')",
+      "usageLines": [
+        168,
+        205,
+        206,
+        207,
+        213,
+        214,
+        215,
+        216,
+        221,
+        224,
+        225,
+        230,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        339
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 5,
+      "column": 6,
+      "name": "startBtn",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.getElementById('start-btn')",
+      "usageLines": [
+        9,
+        280,
+        305,
+        356,
+        362
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 6,
+      "column": 6,
+      "name": "stopBtn",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.getElementById('stop-btn')",
+      "usageLines": [
+        301,
+        355,
+        363
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 7,
+      "column": 6,
+      "name": "loading",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.getElementById('loading')",
+      "usageLines": [
+        284,
+        299,
+        304,
+        358
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 9,
+      "column": 6,
+      "name": "startBtnLabel",
+      "kind": "variable",
+      "scope": "top",
+      "init": "startBtn.querySelector('.btn-label')",
+      "usageLines": [
+        281,
+        300,
+        306,
+        357
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 12,
+      "column": 6,
+      "name": "videoIdle",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.getElementById('video-idle')",
+      "usageLines": [
+        282,
+        352
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 13,
+      "column": 6,
+      "name": "videoError",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.getElementById('video-error')",
+      "usageLines": [
+        283,
+        313,
+        351
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 14,
+      "column": 6,
+      "name": "videoErrorText",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.getElementById('video-error-text')",
+      "usageLines": [
+        309,
+        311
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 18,
+      "column": 6,
+      "name": "mirrorToggle",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.getElementById('mirror-toggle')",
+      "usageLines": [
+        23,
+        28,
+        31,
+        33
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 19,
+      "column": 6,
+      "name": "videoContainer",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.querySelector('.video-container')",
+      "usageLines": [
+        23
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 20,
+      "column": 6,
+      "name": "MIRROR_KEY",
+      "kind": "variable",
+      "scope": "top",
+      "init": "'ergomonitor-mirror'",
+      "usageLines": [
+        27,
+        33
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 27,
+      "column": 10,
+      "name": "saved",
+      "kind": "variable",
+      "scope": "top",
+      "init": "localStorage.getItem(MIRROR_KEY)",
+      "usageLines": [
+        28
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 29,
+      "column": 9,
+      "name": "e",
+      "kind": "catch",
+      "scope": "top/catch@29",
+      "init": "捕捉した例外",
+      "usageLines": []
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 34,
+      "column": 13,
+      "name": "e",
+      "kind": "catch",
+      "scope": "anonymous@31/catch@34",
+      "init": "捕捉した例外",
+      "usageLines": []
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 40,
+      "column": 6,
+      "name": "scoreEl",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.getElementById('score')",
+      "usageLines": [
+        150,
+        151,
+        340,
+        341
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 41,
+      "column": 6,
+      "name": "loadLevelEl",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.getElementById('load-level')",
+      "usageLines": [
+        153,
+        154,
+        342,
+        343
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 42,
+      "column": 6,
+      "name": "loadBarEl",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.getElementById('load-bar')",
+      "usageLines": [
+        155,
+        156,
+        344,
+        345
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 43,
+      "column": 6,
+      "name": "trunkAngleEl",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.getElementById('trunk-angle')",
+      "usageLines": [
+        158,
+        159,
+        346,
+        347
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 44,
+      "column": 6,
+      "name": "kneeAngleEl",
+      "kind": "variable",
+      "scope": "top",
+      "init": "document.getElementById('knee-angle')",
+      "usageLines": [
+        161,
+        348,
+        349
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 46,
+      "column": 4,
+      "name": "pose",
+      "kind": "variable",
+      "scope": "top",
+      "init": "undefined",
+      "usageLines": [
+        260,
+        266,
+        274,
+        291,
+        335,
+        336
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 47,
+      "column": 4,
+      "name": "camera",
+      "kind": "variable",
+      "scope": "top",
+      "init": "undefined",
+      "usageLines": [
+        289,
+        297,
+        322,
+        323
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 48,
+      "column": 4,
+      "name": "isCameraRunning",
+      "kind": "variable",
+      "scope": "top",
+      "init": "false",
+      "usageLines": [
+        279,
+        298,
+        319,
+        354
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 51,
+      "column": 24,
+      "name": "a",
+      "kind": "parameter",
+      "scope": "calculateAngle",
+      "init": "呼出時の引数",
+      "usageLines": [
+        52
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 51,
+      "column": 27,
+      "name": "b",
+      "kind": "parameter",
+      "scope": "calculateAngle",
+      "init": "呼出時の引数",
+      "usageLines": [
+        52
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 51,
+      "column": 30,
+      "name": "c",
+      "kind": "parameter",
+      "scope": "calculateAngle",
+      "init": "呼出時の引数",
+      "usageLines": [
+        52
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 52,
+      "column": 10,
+      "name": "radians",
+      "kind": "variable",
+      "scope": "calculateAngle",
+      "init": "Math.atan2(c.y - b.y, c.x - b.x) - Math.atan2(a.y - b.y, a.x - b.x)",
+      "usageLines": [
+        53
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 53,
+      "column": 8,
+      "name": "angle",
+      "kind": "variable",
+      "scope": "calculateAngle",
+      "init": "Math.abs(radians * 180 / Math.PI)",
+      "usageLines": [
+        54,
+        55
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 59,
+      "column": 29,
+      "name": "shoulder",
+      "kind": "parameter",
+      "scope": "calculateTrunkAngle",
+      "init": "呼出時の引数",
+      "usageLines": [
+        60,
+        61
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 59,
+      "column": 39,
+      "name": "hip",
+      "kind": "parameter",
+      "scope": "calculateTrunkAngle",
+      "init": "呼出時の引数",
+      "usageLines": [
+        60,
+        61
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 60,
+      "column": 10,
+      "name": "dx",
+      "kind": "variable",
+      "scope": "calculateTrunkAngle",
+      "init": "hip.x - shoulder.x",
+      "usageLines": [
+        62
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 61,
+      "column": 10,
+      "name": "dy",
+      "kind": "variable",
+      "scope": "calculateTrunkAngle",
+      "init": "hip.y - shoulder.y",
+      "usageLines": [
+        62
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 62,
+      "column": 10,
+      "name": "angle",
+      "kind": "variable",
+      "scope": "calculateTrunkAngle",
+      "init": "Math.atan2(dx, dy) * 180 / Math.PI",
+      "usageLines": [
+        63
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 70,
+      "column": 27,
+      "name": "trunkAngle",
+      "kind": "parameter",
+      "scope": "estimateLoadLevel",
+      "init": "呼出時の引数",
+      "usageLines": [
+        75,
+        77,
+        79
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 70,
+      "column": 39,
+      "name": "kneeAngle",
+      "kind": "parameter",
+      "scope": "estimateLoadLevel",
+      "init": "呼出時の引数",
+      "usageLines": [
+        87,
+        89
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 71,
+      "column": 8,
+      "name": "loadScore",
+      "kind": "variable",
+      "scope": "estimateLoadLevel",
+      "init": "0",
+      "usageLines": [
+        76,
+        78,
+        80,
+        82,
+        88,
+        90,
+        93
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 97,
+      "column": 24,
+      "name": "value",
+      "kind": "parameter",
+      "scope": "getStatusClass",
+      "init": "呼出時の引数",
+      "usageLines": [
+        98,
+        99
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 97,
+      "column": 31,
+      "name": "thresholds",
+      "kind": "parameter",
+      "scope": "getStatusClass",
+      "init": "呼出時の引数",
+      "usageLines": [
+        98,
+        99
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 104,
+      "column": 18,
+      "name": "landmarks",
+      "kind": "parameter",
+      "scope": "updateUI",
+      "init": "呼出時の引数",
+      "usageLines": [
+        105,
+        119,
+        120,
+        123,
+        124,
+        132,
+        133,
+        134
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 108,
+      "column": 10,
+      "name": "LEFT_SHOULDER",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "11",
+      "usageLines": [
+        119,
+        120
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 109,
+      "column": 10,
+      "name": "RIGHT_SHOULDER",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "12",
+      "usageLines": [
+        119,
+        120
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 110,
+      "column": 10,
+      "name": "LEFT_HIP",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "23",
+      "usageLines": [
+        123,
+        124,
+        132
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 111,
+      "column": 10,
+      "name": "RIGHT_HIP",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "24",
+      "usageLines": [
+        123,
+        124
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 112,
+      "column": 10,
+      "name": "LEFT_KNEE",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "25",
+      "usageLines": [
+        133
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 113,
+      "column": 10,
+      "name": "RIGHT_KNEE",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "26",
+      "usageLines": []
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 114,
+      "column": 10,
+      "name": "LEFT_ANKLE",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "27",
+      "usageLines": [
+        134
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 115,
+      "column": 10,
+      "name": "RIGHT_ANKLE",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "28",
+      "usageLines": []
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 118,
+      "column": 10,
+      "name": "shoulder",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "{\n        x: (landmarks[LEFT_SHOULDER].x + landmarks[RIGHT_SHOULDER].x) / 2,\n        y: (landmarks[LEFT_SHOULDER].y + landmarks[RIGHT_SHOULDER].y) / 2\n    }",
+      "usageLines": [
+        128
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 122,
+      "column": 10,
+      "name": "hip",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "{\n        x: (landmarks[LEFT_HIP].x + landmarks[RIGHT_HIP].x) / 2,\n        y: (landmarks[LEFT_HIP].y + landmarks[RIGHT_HIP].y) / 2\n    }",
+      "usageLines": [
+        128
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 128,
+      "column": 10,
+      "name": "trunkAngle",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "calculateTrunkAngle(shoulder, hip)",
+      "usageLines": [
+        138,
+        145,
+        158
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 131,
+      "column": 10,
+      "name": "kneeAngle",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "calculateAngle(\n        landmarks[LEFT_HIP],\n        landmarks[LEFT_KNEE],\n        landmarks[LEFT_ANKLE]\n    )",
+      "usageLines": [
+        138,
+        161
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 138,
+      "column": 10,
+      "name": "loadLevel",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "estimateLoadLevel(trunkAngle, kneeAngle)",
+      "usageLines": [
+        142,
+        146,
+        148,
+        155
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 142,
+      "column": 10,
+      "name": "score",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "Math.round(100 - loadLevel)",
+      "usageLines": [
+        150
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 145,
+      "column": 10,
+      "name": "trunkStatus",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "getStatusClass(trunkAngle, [20, 40])",
+      "usageLines": [
+        159
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 146,
+      "column": 10,
+      "name": "loadStatus",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "getStatusClass(loadLevel, [30, 60])",
+      "usageLines": [
+        151,
+        154,
+        156
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 148,
+      "column": 10,
+      "name": "levelText",
+      "kind": "variable",
+      "scope": "updateUI",
+      "init": "loadLevel < 30 ? '良い' : loadLevel < 60 ? '注意' : '危険'",
+      "usageLines": [
+        153
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 165,
+      "column": 22,
+      "name": "landmarks",
+      "kind": "parameter",
+      "scope": "drawSkeleton",
+      "init": "呼出時の引数",
+      "usageLines": [
+        166,
+        188,
+        189,
+        192,
+        193,
+        210,
+        211,
+        222
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 171,
+      "column": 10,
+      "name": "connections",
+      "kind": "variable",
+      "scope": "drawSkeleton",
+      "init": "[\n        [11, 12], // 肩\n        [11, 13], [13, 15], // 左腕\n        [12, 14], [14, 16], // 右腕\n        [11, 23], [12, 24], // 胴体\n        [23, 24], // 腰\n        [23, 25], [25, 27], // 左脚\n        [24, 26], [26, 28], // 右脚\n    ]",
+      "usageLines": [
+        209
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 182,
+      "column": 10,
+      "name": "LEFT_SHOULDER",
+      "kind": "variable",
+      "scope": "drawSkeleton",
+      "init": "11",
+      "usageLines": [
+        188,
+        189
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 183,
+      "column": 10,
+      "name": "RIGHT_SHOULDER",
+      "kind": "variable",
+      "scope": "drawSkeleton",
+      "init": "12",
+      "usageLines": [
+        188,
+        189
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 184,
+      "column": 10,
+      "name": "LEFT_HIP",
+      "kind": "variable",
+      "scope": "drawSkeleton",
+      "init": "23",
+      "usageLines": [
+        192,
+        193
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 185,
+      "column": 10,
+      "name": "RIGHT_HIP",
+      "kind": "variable",
+      "scope": "drawSkeleton",
+      "init": "24",
+      "usageLines": [
+        192,
+        193
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 187,
+      "column": 10,
+      "name": "shoulder",
+      "kind": "variable",
+      "scope": "drawSkeleton",
+      "init": "{\n        x: (landmarks[LEFT_SHOULDER].x + landmarks[RIGHT_SHOULDER].x) / 2,\n        y: (landmarks[LEFT_SHOULDER].y + landmarks[RIGHT_SHOULDER].y) / 2\n    }",
+      "usageLines": [
+        195
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 191,
+      "column": 10,
+      "name": "hip",
+      "kind": "variable",
+      "scope": "drawSkeleton",
+      "init": "{\n        x: (landmarks[LEFT_HIP].x + landmarks[RIGHT_HIP].x) / 2,\n        y: (landmarks[LEFT_HIP].y + landmarks[RIGHT_HIP].y) / 2\n    }",
+      "usageLines": [
+        195,
+        235,
+        236
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 195,
+      "column": 10,
+      "name": "trunkAngle",
+      "kind": "variable",
+      "scope": "drawSkeleton",
+      "init": "calculateTrunkAngle(shoulder, hip)",
+      "usageLines": [
+        199,
+        201
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 198,
+      "column": 8,
+      "name": "lineColor",
+      "kind": "variable",
+      "scope": "drawSkeleton",
+      "init": "'#4ade80'",
+      "usageLines": [
+        200,
+        202,
+        205,
+        240,
+        242
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 209,
+      "column": 26,
+      "name": "i",
+      "kind": "parameter",
+      "scope": "anonymous@209",
+      "init": "呼出時の引数",
+      "usageLines": [
+        210
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 209,
+      "column": 29,
+      "name": "j",
+      "kind": "parameter",
+      "scope": "anonymous@209",
+      "init": "呼出時の引数",
+      "usageLines": [
+        211
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 210,
+      "column": 14,
+      "name": "p1",
+      "kind": "variable",
+      "scope": "anonymous@209",
+      "init": "landmarks[i]",
+      "usageLines": [
+        212,
+        214
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 211,
+      "column": 14,
+      "name": "p2",
+      "kind": "variable",
+      "scope": "anonymous@209",
+      "init": "landmarks[j]",
+      "usageLines": [
+        212,
+        215
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 222,
+      "column": 23,
+      "name": "landmark",
+      "kind": "parameter",
+      "scope": "anonymous@222",
+      "init": "呼出時の引数",
+      "usageLines": [
+        223,
+        226,
+        227
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 222,
+      "column": 33,
+      "name": "i",
+      "kind": "parameter",
+      "scope": "anonymous@222",
+      "init": "呼出時の引数",
+      "usageLines": [
+        223
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 235,
+      "column": 10,
+      "name": "hipX",
+      "kind": "variable",
+      "scope": "drawSkeleton",
+      "init": "hip.x * canvas.width",
+      "usageLines": [
+        239
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 236,
+      "column": 10,
+      "name": "hipY",
+      "kind": "variable",
+      "scope": "drawSkeleton",
+      "init": "hip.y * canvas.height",
+      "usageLines": [
+        239
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 248,
+      "column": 19,
+      "name": "results",
+      "kind": "parameter",
+      "scope": "onResults",
+      "init": "呼出時の引数",
+      "usageLines": [
+        252,
+        253,
+        254
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 261,
+      "column": 21,
+      "name": "file",
+      "kind": "parameter",
+      "scope": "anonymous@261",
+      "init": "呼出時の引数",
+      "usageLines": [
+        262
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 302,
+      "column": 13,
+      "name": "error",
+      "kind": "catch",
+      "scope": "startCamera/catch@302",
+      "init": "捕捉した例外",
+      "usageLines": [
+        303,
+        308
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 325,
+      "column": 13,
+      "name": "error",
+      "kind": "catch",
+      "scope": "stopCamera/catch@325",
+      "init": "捕捉した例外",
+      "usageLines": [
+        326
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 329,
+      "column": 10,
+      "name": "stream",
+      "kind": "variable",
+      "scope": "stopCamera",
+      "init": "video.srcObject",
+      "usageLines": [
+        330,
+        331
+      ]
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 331,
+      "column": 36,
+      "name": "track",
+      "kind": "parameter",
+      "scope": "anonymous@331",
+      "init": "呼出時の引数",
+      "usageLines": [
+        331
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 219,
+      "column": 6,
+      "name": "tableA_data",
+      "kind": "variable",
+      "scope": "top",
+      "init": "[\n  [[[1,2],[2,2],[2,3],[3,3]], [[2,2],[2,2],[3,3],[3,3]], [[2,3],[3,3],[3,3],[4,4]]],\n  [[[2,3],[3,3],[3,4],[4,4]], [[3,3],[3,3],[3,4],[4,4]], [[3,4],[4,4],[4,4],[5,5]]],\n  [[[3,3],[4,4],[4,4],[5,5]], [[3,4],[4,4],[4,4],[5,5]], [[4,4],[4,4],[4,5],[5,5]]],\n  [[[4,4],[4,4],[4,5],[5,5]], [[4,4],[4,4],[4,5],[5,5]], [[4,4],[4,5],[5,5],[6,6]]],\n  [[[5,5],[5,5],[5,6],[6,7]], [[5,6],[6,6],[6,7],[7,7]], [[6,6],[6,7],[7,7],[7,8]]],\n  [[[7,7],[7,7],[7,8],[8,9]], [[8,8],[8,8],[8,9],[9,9]], [[9,9],[9,9],[9,9],[9,9]]]\n]",
+      "usageLines": [
+        257,
+        329
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 227,
+      "column": 6,
+      "name": "tableB_data",
+      "kind": "variable",
+      "scope": "top",
+      "init": "[\n  [[1,3],[2,3],[3,4],[5,5],[6,6],[7,7]],\n  [[2,3],[2,3],[4,5],[5,5],[6,7],[7,7]],\n  [[3,3],[3,4],[4,5],[5,6],[6,7],[7,7]],\n  [[5,5],[5,6],[6,7],[7,7],[7,7],[8,8]],\n  [[7,7],[7,7],[7,8],[8,8],[8,8],[8,8]],\n  [[8,8],[8,8],[8,8],[8,9],[9,9],[9,9]]\n]",
+      "usageLines": [
+        282,
+        346
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 235,
+      "column": 6,
+      "name": "tableC_data",
+      "kind": "variable",
+      "scope": "top",
+      "init": "[\n  [1,2,3,3,4,5,5], [2,2,3,4,4,5,5], [3,3,3,4,4,5,6], [3,3,3,4,5,6,6],\n  [4,4,4,5,6,7,7], [4,4,5,6,6,7,7], [5,5,6,6,7,7,7], [5,5,6,7,7,7,7]\n]",
+      "usageLines": [
+        302,
+        363
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 241,
+      "column": 4,
+      "name": "htmlA",
+      "kind": "variable",
+      "scope": "top",
+      "init": "'<table style=\"border-collapse: collapse; width: 100%; font-size: 11px;\">'",
+      "usageLines": [
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        252,
+        253,
+        254,
+        257,
+        260,
+        263,
+        264
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 246,
+      "column": 8,
+      "name": "i",
+      "kind": "variable",
+      "scope": "top/for@246",
+      "init": "0",
+      "usageLines": [
+        246
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 248,
+      "column": 8,
+      "name": "i",
+      "kind": "variable",
+      "scope": "top/for@248",
+      "init": "0",
+      "usageLines": [
+        248
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 250,
+      "column": 8,
+      "name": "u",
+      "kind": "variable",
+      "scope": "top/for@250",
+      "init": "1",
+      "usageLines": [
+        250,
+        253,
+        257
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 251,
+      "column": 10,
+      "name": "l",
+      "kind": "variable",
+      "scope": "top/for@250/for@251",
+      "init": "1",
+      "usageLines": [
+        251,
+        253,
+        254,
+        257
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 255,
+      "column": 12,
+      "name": "w",
+      "kind": "variable",
+      "scope": "top/for@250/for@251/for@255",
+      "init": "1",
+      "usageLines": [
+        255,
+        257
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 256,
+      "column": 14,
+      "name": "t",
+      "kind": "variable",
+      "scope": "top/for@250/for@251/for@255/for@256",
+      "init": "1",
+      "usageLines": [
+        256,
+        257
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 267,
+      "column": 4,
+      "name": "htmlB",
+      "kind": "variable",
+      "scope": "top",
+      "init": "'<table style=\"border-collapse: collapse; width: 100%; font-size: 11px;\">'",
+      "usageLines": [
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        279,
+        282,
+        285,
+        287,
+        288
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 271,
+      "column": 8,
+      "name": "t",
+      "kind": "variable",
+      "scope": "top/for@271",
+      "init": "1",
+      "usageLines": [
+        271
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 274,
+      "column": 8,
+      "name": "t",
+      "kind": "variable",
+      "scope": "top/for@274",
+      "init": "1",
+      "usageLines": [
+        274
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 276,
+      "column": 8,
+      "name": "t",
+      "kind": "variable",
+      "scope": "top/for@276",
+      "init": "1",
+      "usageLines": [
+        276
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 278,
+      "column": 8,
+      "name": "n",
+      "kind": "variable",
+      "scope": "top/for@278",
+      "init": "1",
+      "usageLines": [
+        278,
+        279,
+        282
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 280,
+      "column": 10,
+      "name": "t",
+      "kind": "variable",
+      "scope": "top/for@278/for@280",
+      "init": "1",
+      "usageLines": [
+        280,
+        282
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 281,
+      "column": 12,
+      "name": "l",
+      "kind": "variable",
+      "scope": "top/for@278/for@280/for@281",
+      "init": "1",
+      "usageLines": [
+        281,
+        282
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 291,
+      "column": 4,
+      "name": "htmlC",
+      "kind": "variable",
+      "scope": "top",
+      "init": "'<table style=\"border-collapse: collapse; width: 100%; font-size: 11px;\">'",
+      "usageLines": [
+        292,
+        293,
+        294,
+        295,
+        296,
+        298,
+        299,
+        300,
+        302,
+        304,
+        306,
+        307
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 295,
+      "column": 8,
+      "name": "i",
+      "kind": "variable",
+      "scope": "top/for@295",
+      "init": "1",
+      "usageLines": [
+        295
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 297,
+      "column": 8,
+      "name": "r",
+      "kind": "variable",
+      "scope": "top/for@297",
+      "init": "1",
+      "usageLines": [
+        297,
+        299,
+        300,
+        302
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 301,
+      "column": 10,
+      "name": "c",
+      "kind": "variable",
+      "scope": "top/for@297/for@301",
+      "init": "1",
+      "usageLines": [
+        301,
+        302
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 310,
+      "column": 14,
+      "name": "id",
+      "kind": "parameter",
+      "scope": "getV",
+      "init": "呼出時の引数",
+      "usageLines": [
+        311
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 311,
+      "column": 8,
+      "name": "el",
+      "kind": "variable",
+      "scope": "getV",
+      "init": "document.getElementById(id)",
+      "usageLines": [
+        312,
+        313
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 317,
+      "column": 6,
+      "name": "upper",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "Math.max(1, Math.min(6, getV('a1') + getV('a1_adj1') + getV('a1_adj2') - getV('a1_adj3')))",
+      "usageLines": [
+        318,
+        329,
+        356
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 320,
+      "column": 6,
+      "name": "lower",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "Math.max(1, Math.min(3, getV('a2') + getV('a2_adj')))",
+      "usageLines": [
+        321,
+        329,
+        356
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 323,
+      "column": 6,
+      "name": "wrist",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "Math.max(1, Math.min(4, getV('a3') + getV('a3_adj')))",
+      "usageLines": [
+        324,
+        329,
+        356
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 326,
+      "column": 6,
+      "name": "twist",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "getV('a4')",
+      "usageLines": [
+        327,
+        329,
+        356
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 329,
+      "column": 6,
+      "name": "scoreA",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "tableA_data[upper-1][lower-1][wrist-1][twist-1]",
+      "usageLines": [
+        330,
+        334
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 332,
+      "column": 6,
+      "name": "muscA",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "getV('a6')",
+      "usageLines": [
+        332,
+        334
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 333,
+      "column": 6,
+      "name": "frcA",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "getV('a7')",
+      "usageLines": [
+        333,
+        334
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 334,
+      "column": 6,
+      "name": "finalA",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "scoreA + muscA + frcA",
+      "usageLines": [
+        335,
+        359
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 337,
+      "column": 6,
+      "name": "neck",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "Math.max(1, Math.min(6, getV('b9') + getV('b9_adj1') + getV('b9_adj2')))",
+      "usageLines": [
+        338,
+        346,
+        357
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 340,
+      "column": 6,
+      "name": "trunk",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "Math.max(1, Math.min(6, getV('b10') + getV('b10_adj1') + getV('b10_adj2')))",
+      "usageLines": [
+        341,
+        346,
+        357
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 343,
+      "column": 6,
+      "name": "leg",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "getV('b11')",
+      "usageLines": [
+        344,
+        346,
+        357
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 346,
+      "column": 6,
+      "name": "scoreB",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "tableB_data[neck-1][trunk-1][leg-1]",
+      "usageLines": [
+        347,
+        351
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 349,
+      "column": 6,
+      "name": "muscB",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "getV('b13')",
+      "usageLines": [
+        349,
+        351
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 350,
+      "column": 6,
+      "name": "frcB",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "getV('b14')",
+      "usageLines": [
+        350,
+        351
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 351,
+      "column": 6,
+      "name": "finalB",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "scoreB + muscB + frcB",
+      "usageLines": [
+        352,
+        360
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 354,
+      "column": 42,
+      "name": "td",
+      "kind": "parameter",
+      "scope": "anonymous@354",
+      "init": "呼出時の引数",
+      "usageLines": [
+        354
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 359,
+      "column": 6,
+      "name": "idxA",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "Math.max(1, Math.min(8, finalA))",
+      "usageLines": [
+        361,
+        363
+      ]
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 360,
+      "column": 6,
+      "name": "idxB",
+      "kind": "variable",
+      "scope": "calcRULA",
+      "init": "Math.max(1, Math.min(7, finalB))",
+      "usageLines": [
+        361,
+        363
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 2,
+      "column": 6,
+      "name": "fs",
+      "kind": "variable",
+      "scope": "top",
+      "init": "require('node:fs')",
+      "usageLines": [
+        7,
+        81
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 2,
+      "column": 31,
+      "name": "path",
+      "kind": "variable",
+      "scope": "top",
+      "init": "require('node:path')",
+      "usageLines": [
+        3,
+        7,
+        81
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 2,
+      "column": 60,
+      "name": "acorn",
+      "kind": "variable",
+      "scope": "top",
+      "init": "require('acorn')",
+      "usageLines": [
+        11
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 3,
+      "column": 6,
+      "name": "root",
+      "kind": "variable",
+      "scope": "top",
+      "init": "path.resolve(__dirname, '../..')",
+      "usageLines": [
+        7
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 5,
+      "column": 8,
+      "name": "rows",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "[]",
+      "usageLines": [
+        14,
+        45,
+        77,
+        78
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 5,
+      "column": 19,
+      "name": "functions",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "[]",
+      "usageLines": [
+        24,
+        78
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 5,
+      "column": 35,
+      "name": "tables",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "{}",
+      "usageLines": [
+        29,
+        78
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 6,
+      "column": 13,
+      "name": "file",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "undefined",
+      "usageLines": [
+        7,
+        8,
+        9,
+        14,
+        24,
+        45
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 7,
+      "column": 10,
+      "name": "raw",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "fs.readFileSync(path.join(root, file), 'utf8')",
+      "usageLines": [
+        8
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 8,
+      "column": 10,
+      "name": "scripts",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "file.endsWith('.html') ? [...raw.matchAll(/<script\\b[^>]*>([\\s\\S]*?)<\\/script>/gi)].map(m => ({code:m[1], offset:raw.slice(0,m.index + m[0].indexOf('>') + 1).split('\\n').length - 1})) : [{code:raw, offset:0}]",
+      "usageLines": [
+        10
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 8,
+      "column": 108,
+      "name": "m",
+      "kind": "parameter",
+      "scope": "anonymous@8:108",
+      "init": "呼出時の引数",
+      "usageLines": [
+        8
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 9,
+      "column": 10,
+      "name": "category",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "file.startsWith('docs/') ? 'verification' : 'application'",
+      "usageLines": [
+        14,
+        23,
+        24,
+        29
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 10,
+      "column": 16,
+      "name": "code",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "undefined",
+      "usageLines": [
+        11,
+        14,
+        24,
+        29
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 10,
+      "column": 22,
+      "name": "offset",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "undefined",
+      "usageLines": [
+        14,
+        23,
+        24,
+        26,
+        31,
+        45,
+        73
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 11,
+      "column": 12,
+      "name": "ast",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "acorn.parse(code, {ecmaVersion:'latest', locations:true})",
+      "usageLines": [
+        38,
+        70
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 12,
+      "column": 20,
+      "name": "n",
+      "kind": "parameter",
+      "scope": "bind",
+      "init": "呼出時の引数",
+      "usageLines": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 12,
+      "column": 23,
+      "name": "kind",
+      "kind": "parameter",
+      "scope": "bind",
+      "init": "呼出時の引数",
+      "usageLines": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 12,
+      "column": 29,
+      "name": "scope",
+      "kind": "parameter",
+      "scope": "bind",
+      "init": "呼出時の引数",
+      "usageLines": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 12,
+      "column": 36,
+      "name": "init",
+      "kind": "parameter",
+      "scope": "bind",
+      "init": "呼出時の引数",
+      "usageLines": [
+        14
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 15,
+      "column": 63,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@15:63",
+      "init": "呼出時の引数",
+      "usageLines": [
+        15
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 16,
+      "column": 66,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@16:66",
+      "init": "呼出時の引数",
+      "usageLines": [
+        16
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 20,
+      "column": 20,
+      "name": "n",
+      "kind": "parameter",
+      "scope": "walk",
+      "init": "呼出時の引数",
+      "usageLines": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        32
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 20,
+      "column": 23,
+      "name": "scope",
+      "kind": "parameter",
+      "scope": "walk",
+      "init": "'top'",
+      "usageLines": [
+        24,
+        25,
+        26,
+        28,
+        31,
+        34,
+        35
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 23,
+      "column": 16,
+      "name": "name",
+      "kind": "variable",
+      "scope": "walk",
+      "init": "n.id?.name || 'anonymous@'+(n.loc.start.line+offset)+(category==='verification' ? ':'+n.loc.start.column : '')",
+      "usageLines": [
+        24,
+        25
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 24,
+      "column": 170,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@24:170",
+      "init": "呼出時の引数",
+      "usageLines": [
+        24
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 25,
+      "column": 41,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@25:41",
+      "init": "呼出時の引数",
+      "usageLines": [
+        25
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 32,
+      "column": 20,
+      "name": "key",
+      "kind": "variable",
+      "scope": "walk",
+      "init": "undefined",
+      "usageLines": [
+        33
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 32,
+      "column": 24,
+      "name": "value",
+      "kind": "variable",
+      "scope": "walk",
+      "init": "undefined",
+      "usageLines": [
+        34,
+        35
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 34,
+      "column": 50,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@34:50",
+      "init": "呼出時の引数",
+      "usageLines": [
+        34
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 40,
+      "column": 12,
+      "name": "references",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "[]",
+      "usageLines": [
+        63,
+        71
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 40,
+      "column": 27,
+      "name": "declared",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "new WeakSet()",
+      "usageLines": [
+        44,
+        63
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 41,
+      "column": 23,
+      "name": "n",
+      "kind": "parameter",
+      "scope": "declare",
+      "init": "呼出時の引数",
+      "usageLines": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 41,
+      "column": 26,
+      "name": "env",
+      "kind": "parameter",
+      "scope": "declare",
+      "init": "呼出時の引数",
+      "usageLines": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 45,
+      "column": 44,
+      "name": "row",
+      "kind": "parameter",
+      "scope": "anonymous@45:44",
+      "init": "呼出時の引数",
+      "usageLines": [
+        45
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 46,
+      "column": 61,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@46:61",
+      "init": "呼出時の引数",
+      "usageLines": [
+        46
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 47,
+      "column": 62,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@47:62",
+      "init": "呼出時の引数",
+      "usageLines": [
+        47
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 51,
+      "column": 23,
+      "name": "n",
+      "kind": "parameter",
+      "scope": "lexical",
+      "init": "呼出時の引数",
+      "usageLines": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        59,
+        60,
+        61,
+        63,
+        64,
+        66,
+        67
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 51,
+      "column": 26,
+      "name": "env",
+      "kind": "parameter",
+      "scope": "lexical",
+      "init": "呼出時の引数",
+      "usageLines": [
+        53,
+        55,
+        56,
+        57,
+        60,
+        63,
+        66,
+        67
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 51,
+      "column": 31,
+      "name": "parent",
+      "kind": "parameter",
+      "scope": "lexical",
+      "init": "呼出時の引数",
+      "usageLines": [
+        63
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 51,
+      "column": 39,
+      "name": "key",
+      "kind": "parameter",
+      "scope": "lexical",
+      "init": "呼出時の引数",
+      "usageLines": [
+        63
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 56,
+      "column": 110,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@56:110",
+      "init": "呼出時の引数",
+      "usageLines": [
+        56
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 60,
+      "column": 14,
+      "name": "target",
+      "kind": "variable",
+      "scope": "lexical",
+      "init": "env",
+      "usageLines": [
+        60,
+        61
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 61,
+      "column": 33,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@61:33",
+      "init": "呼出時の引数",
+      "usageLines": [
+        61
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 64,
+      "column": 19,
+      "name": "field",
+      "kind": "variable",
+      "scope": "lexical",
+      "init": "undefined",
+      "usageLines": [
+        65,
+        66,
+        67
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 64,
+      "column": 25,
+      "name": "value",
+      "kind": "variable",
+      "scope": "lexical",
+      "init": "undefined",
+      "usageLines": [
+        66,
+        67
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 66,
+      "column": 48,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@66:48",
+      "init": "呼出時の引数",
+      "usageLines": [
+        66
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 71,
+      "column": 17,
+      "name": "n",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "undefined",
+      "usageLines": [
+        72,
+        73
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 71,
+      "column": 19,
+      "name": "env",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "undefined",
+      "usageLines": [
+        72
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 72,
+      "column": 12,
+      "name": "target",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "env",
+      "usageLines": [
+        72,
+        73
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 73,
+      "column": 14,
+      "name": "row",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "target?.bindings.get(n.name)",
+      "usageLines": [
+        73
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 77,
+      "column": 13,
+      "name": "row",
+      "kind": "variable",
+      "scope": "inventory",
+      "init": "undefined",
+      "usageLines": [
+        77
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 81,
+      "column": 8,
+      "name": "result",
+      "kind": "variable",
+      "scope": "top",
+      "init": "inventory()",
+      "usageLines": [
+        81,
+        82
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 82,
+      "column": 13,
+      "name": "category",
+      "kind": "variable",
+      "scope": "top",
+      "init": "undefined",
+      "usageLines": [
+        82
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 82,
+      "column": 98,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@82:98",
+      "init": "呼出時の引数",
+      "usageLines": [
+        82
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 82,
+      "column": 169,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@82:169",
+      "init": "呼出時の引数",
+      "usageLines": [
+        82
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 2,
+      "column": 6,
+      "name": "fs",
+      "kind": "variable",
+      "scope": "top",
+      "init": "require('node:fs')",
+      "usageLines": [
+        8,
+        20,
+        25,
+        45,
+        133
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 2,
+      "column": 31,
+      "name": "path",
+      "kind": "variable",
+      "scope": "top",
+      "init": "require('node:path')",
+      "usageLines": [
+        5,
+        8,
+        20,
+        25,
+        45,
+        133
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 2,
+      "column": 60,
+      "name": "assert",
+      "kind": "variable",
+      "scope": "top",
+      "init": "require('node:assert/strict')",
+      "usageLines": [
+        17,
+        18,
+        19,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        45,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        71,
+        73,
+        74,
+        92,
+        93,
+        96,
+        97,
+        100,
+        101,
+        110,
+        111,
+        112,
+        121,
+        125
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 3,
+      "column": 6,
+      "name": "vm",
+      "kind": "variable",
+      "scope": "top",
+      "init": "require('node:vm')",
+      "usageLines": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 3,
+      "column": 31,
+      "name": "crypto",
+      "kind": "variable",
+      "scope": "top",
+      "init": "require('node:crypto')",
+      "usageLines": [
+        8
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 3,
+      "column": 65,
+      "name": "spawn",
+      "kind": "variable",
+      "scope": "top",
+      "init": "undefined",
+      "usageLines": [
+        35,
+        43
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 4,
+      "column": 7,
+      "name": "chromium",
+      "kind": "variable",
+      "scope": "top",
+      "init": "undefined",
+      "usageLines": [
+        49
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 4,
+      "column": 42,
+      "name": "inventory",
+      "kind": "variable",
+      "scope": "top",
+      "init": "require('./inventory.cjs')",
+      "usageLines": [
+        16,
+        110
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 5,
+      "column": 6,
+      "name": "root",
+      "kind": "variable",
+      "scope": "top",
+      "init": "path.resolve(__dirname,'../..')",
+      "usageLines": [
+        8,
+        25,
+        35,
+        45
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 6,
+      "column": 6,
+      "name": "result",
+      "kind": "variable",
+      "scope": "top",
+      "init": "{startedAt:new Date().toISOString(), dateJST:new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo'}).format(new Date()), environment:{node:process.version,playwright:require('playwright/package.json').version,acorn:require('acorn/package.json').version,platform:process.platform}, assertions:[], pageErrors:[], dialogs:[], httpFailures:[], externalRequests:[], localRequests:[], limitations:['Synthetic camera; no verified human posture, real permission dialog, real OS camera, performance or clinical validity.','Expected defective input behavior is asserted separately; assertions passing does not mean the application is exception-free.']}",
+      "usageLines": [
+        11,
+        12,
+        43,
+        50,
+        53,
+        54,
+        55,
+        56,
+        79,
+        92,
+        93,
+        102,
+        110,
+        111,
+        112,
+        116,
+        117,
+        118,
+        125,
+        130,
+        131,
+        132,
+        133,
+        134
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 7,
+      "column": 6,
+      "name": "appFiles",
+      "kind": "variable",
+      "scope": "top",
+      "init": "['script.js','index.html','rula.html','RULAworkseet.html','style.css']",
+      "usageLines": [
+        8,
+        45
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 8,
+      "column": 59,
+      "name": "file",
+      "kind": "parameter",
+      "scope": "anonymous@8:59",
+      "init": "呼出時の引数",
+      "usageLines": [
+        8
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 9,
+      "column": 6,
+      "name": "before",
+      "kind": "variable",
+      "scope": "top",
+      "init": "hashes()",
+      "usageLines": [
+        131
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 10,
+      "column": 21,
+      "name": "name",
+      "kind": "parameter",
+      "scope": "check",
+      "init": "呼出時の引数",
+      "usageLines": [
+        11,
+        12
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 10,
+      "column": 27,
+      "name": "action",
+      "kind": "parameter",
+      "scope": "check",
+      "init": "呼出時の引数",
+      "usageLines": [
+        11
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 12,
+      "column": 9,
+      "name": "error",
+      "kind": "catch",
+      "scope": "check/catch@12",
+      "init": "捕捉した例外",
+      "usageLines": [
+        12
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 16,
+      "column": 10,
+      "name": "data",
+      "kind": "variable",
+      "scope": "anonymous@15:82",
+      "init": "inventory()",
+      "usageLines": [
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 17,
+      "column": 34,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@17:34",
+      "init": "呼出時の引数",
+      "usageLines": [
+        17
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 18,
+      "column": 39,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@18:39",
+      "init": "呼出時の引数",
+      "usageLines": [
+        18
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 19,
+      "column": 92,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@19:92",
+      "init": "呼出時の引数",
+      "usageLines": [
+        19
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 23,
+      "column": 10,
+      "name": "element",
+      "kind": "variable",
+      "scope": "anonymous@22:93",
+      "init": "()=>({classList:{toggle(){},add(){},remove(){}},style:{},querySelector:()=>element(),addEventListener(){},getContext:()=>({}),checked:true})",
+      "usageLines": [
+        23,
+        24
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 24,
+      "column": 10,
+      "name": "context",
+      "kind": "variable",
+      "scope": "anonymous@22:93",
+      "init": "vm.createContext({document:{getElementById:()=>element(),querySelector:()=>element()},localStorage:{getItem:()=>null},console})",
+      "usageLines": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 26,
+      "column": 16,
+      "name": "t",
+      "kind": "variable",
+      "scope": "anonymous@22:93",
+      "init": "undefined",
+      "usageLines": [
+        26
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 26,
+      "column": 18,
+      "name": "k",
+      "kind": "variable",
+      "scope": "anonymous@22:93",
+      "init": "undefined",
+      "usageLines": [
+        26
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 26,
+      "column": 20,
+      "name": "expected",
+      "kind": "variable",
+      "scope": "anonymous@22:93",
+      "init": "undefined",
+      "usageLines": [
+        26
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 35,
+      "column": 8,
+      "name": "server",
+      "kind": "variable",
+      "scope": "main",
+      "init": "spawn(process.env.PYTHON || 'python3',['-u','-m','http.server','0','--bind','127.0.0.1','--directory',root],{stdio:['ignore','pipe','pipe']})",
+      "usageLines": [
+        40,
+        41,
+        127
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 36,
+      "column": 6,
+      "name": "browser",
+      "kind": "variable",
+      "scope": "main",
+      "init": "undefined",
+      "usageLines": [
+        49,
+        50,
+        51,
+        115,
+        127
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 38,
+      "column": 10,
+      "name": "base",
+      "kind": "variable",
+      "scope": "main",
+      "init": "await new Promise((resolve,reject)=>{\n      const timer = setTimeout(()=>reject(new Error('HTTP server did not report its port')),10000);\n      server.stdout.on('data',chunk=>{const port=String(chunk).match(/port (\\d+)/);if(port){clearTimeout(timer);resolve('http://127.0.0.1:'+port[1]);}});\n      server.once('error',error=>{clearTimeout(timer);reject(error);}); server.once('exit',code=>{clearTimeout(timer);reject(new Error('HTTP server exited: '+code));});\n    })",
+      "usageLines": [
+        45,
+        55,
+        57,
+        96,
+        97,
+        116,
+        120
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 38,
+      "column": 36,
+      "name": "resolve",
+      "kind": "parameter",
+      "scope": "anonymous@38:35",
+      "init": "呼出時の引数",
+      "usageLines": [
+        40
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 38,
+      "column": 44,
+      "name": "reject",
+      "kind": "parameter",
+      "scope": "anonymous@38:35",
+      "init": "呼出時の引数",
+      "usageLines": [
+        39,
+        41
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 39,
+      "column": 12,
+      "name": "timer",
+      "kind": "variable",
+      "scope": "anonymous@38:35",
+      "init": "setTimeout(()=>reject(new Error('HTTP server did not report its port')),10000)",
+      "usageLines": [
+        40,
+        41
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 40,
+      "column": 30,
+      "name": "chunk",
+      "kind": "parameter",
+      "scope": "anonymous@40:30",
+      "init": "呼出時の引数",
+      "usageLines": [
+        40
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 40,
+      "column": 44,
+      "name": "port",
+      "kind": "variable",
+      "scope": "anonymous@40:30",
+      "init": "String(chunk).match(/port (\\d+)/)",
+      "usageLines": [
+        40
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 41,
+      "column": 26,
+      "name": "error",
+      "kind": "parameter",
+      "scope": "anonymous@41:26",
+      "init": "呼出時の引数",
+      "usageLines": [
+        41
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 41,
+      "column": 91,
+      "name": "code",
+      "kind": "parameter",
+      "scope": "anonymous@41:91",
+      "init": "呼出時の引数",
+      "usageLines": [
+        41
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 43,
+      "column": 51,
+      "name": "resolve",
+      "kind": "parameter",
+      "scope": "anonymous@43:51",
+      "init": "呼出時の引数",
+      "usageLines": [
+        43
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 43,
+      "column": 65,
+      "name": "text",
+      "kind": "variable",
+      "scope": "anonymous@43:51",
+      "init": "''",
+      "usageLines": [
+        43
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 43,
+      "column": 79,
+      "name": "child",
+      "kind": "variable",
+      "scope": "anonymous@43:51",
+      "init": "spawn(process.env.PYTHON || 'python3',['--version'])",
+      "usageLines": [
+        43
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 43,
+      "column": 161,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@43:161",
+      "init": "呼出時の引数",
+      "usageLines": [
+        43
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 45,
+      "column": 17,
+      "name": "file",
+      "kind": "variable",
+      "scope": "anonymous@44:95",
+      "init": "undefined",
+      "usageLines": [
+        45
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 45,
+      "column": 101,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@45:101",
+      "init": "呼出時の引数",
+      "usageLines": [
+        45
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 45,
+      "column": 234,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@45:234",
+      "init": "呼出時の引数",
+      "usageLines": [
+        45
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 47,
+      "column": 10,
+      "name": "args",
+      "kind": "variable",
+      "scope": "main",
+      "init": "['--use-fake-device-for-media-stream','--use-fake-ui-for-media-stream']",
+      "usageLines": [
+        48,
+        49
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 51,
+      "column": 10,
+      "name": "context",
+      "kind": "variable",
+      "scope": "main",
+      "init": "await browser.newContext({permissions:['camera'],viewport:{width:1280,height:960}})",
+      "usageLines": [
+        51,
+        55,
+        56
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 51,
+      "column": 105,
+      "name": "page",
+      "kind": "variable",
+      "scope": "main",
+      "init": "await context.newPage()",
+      "usageLines": [
+        53,
+        54,
+        57,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        66,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        79,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        112
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 52,
+      "column": 8,
+      "name": "stage",
+      "kind": "variable",
+      "scope": "main",
+      "init": "'initial'",
+      "usageLines": [
+        53,
+        54,
+        69,
+        77
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 53,
+      "column": 24,
+      "name": "error",
+      "kind": "parameter",
+      "scope": "anonymous@53:24",
+      "init": "呼出時の引数",
+      "usageLines": [
+        53
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 54,
+      "column": 27,
+      "name": "dialog",
+      "kind": "parameter",
+      "scope": "anonymous@54:21",
+      "init": "呼出時の引数",
+      "usageLines": [
+        54
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 55,
+      "column": 25,
+      "name": "request",
+      "kind": "parameter",
+      "scope": "anonymous@55:25",
+      "init": "呼出時の引数",
+      "usageLines": [
+        55
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 56,
+      "column": 26,
+      "name": "response",
+      "kind": "parameter",
+      "scope": "anonymous@56:26",
+      "init": "呼出時の引数",
+      "usageLines": [
+        56
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 61,
+      "column": 58,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@61:58",
+      "init": "呼出時の引数",
+      "usageLines": [
+        61
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 63,
+      "column": 58,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@63:58",
+      "init": "呼出時の引数",
+      "usageLines": [
+        63
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 66,
+      "column": 58,
+      "name": "original",
+      "kind": "variable",
+      "scope": "anonymous@66:24",
+      "init": "onResults",
+      "usageLines": [
+        66
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 66,
+      "column": 87,
+      "name": "r",
+      "kind": "parameter",
+      "scope": "anonymous@66:87",
+      "init": "呼出時の引数",
+      "usageLines": [
+        66
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 68,
+      "column": 17,
+      "name": "cycle",
+      "kind": "variable",
+      "scope": "anonymous@67:83",
+      "init": "undefined",
+      "usageLines": [
+        69
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 73,
+      "column": 69,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@73:69",
+      "init": "呼出時の引数",
+      "usageLines": [
+        73
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 80,
+      "column": 14,
+      "name": "points",
+      "kind": "variable",
+      "scope": "anonymous@79:45",
+      "init": "Array.from({length:33},()=>({x:.5,y:.5,visibility:1}))",
+      "usageLines": [
+        81,
+        82,
+        85,
+        88
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 82,
+      "column": 31,
+      "name": "valid",
+      "kind": "variable",
+      "scope": "anonymous@79:45",
+      "init": "{score:scoreEl.textContent,trunk:trunkAngleEl.textContent,knee:kneeAngleEl.textContent,level:loadLevelEl.textContent}",
+      "usageLines": [
+        90
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 83,
+      "column": 44,
+      "name": "retained",
+      "kind": "variable",
+      "scope": "anonymous@79:45",
+      "init": "scoreEl.textContent",
+      "usageLines": [
+        90
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 83,
+      "column": 93,
+      "name": "missingRetained",
+      "kind": "variable",
+      "scope": "anonymous@79:45",
+      "init": "scoreEl.textContent",
+      "usageLines": [
+        90
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 84,
+      "column": 12,
+      "name": "shortError",
+      "kind": "variable",
+      "scope": "anonymous@79:45",
+      "init": "undefined",
+      "usageLines": [
+        84,
+        90
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 84,
+      "column": 51,
+      "name": "error",
+      "kind": "catch",
+      "scope": "anonymous@79:45/catch@84",
+      "init": "捕捉した例外",
+      "usageLines": [
+        84
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 85,
+      "column": 49,
+      "name": "invalid",
+      "kind": "variable",
+      "scope": "anonymous@79:45",
+      "init": "{score:scoreEl.textContent,trunk:trunkAngleEl.textContent,level:loadLevelEl.textContent}",
+      "usageLines": [
+        90
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 86,
+      "column": 14,
+      "name": "colors",
+      "kind": "variable",
+      "scope": "anonymous@79:45",
+      "init": "[]",
+      "usageLines": [
+        88,
+        90
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 86,
+      "column": 25,
+      "name": "strokes",
+      "kind": "variable",
+      "scope": "anonymous@79:45",
+      "init": "[]",
+      "usageLines": [
+        88,
+        90
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 86,
+      "column": 37,
+      "name": "originalStroke",
+      "kind": "variable",
+      "scope": "anonymous@79:45",
+      "init": "ctx.stroke",
+      "usageLines": [
+        87,
+        89
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 86,
+      "column": 68,
+      "name": "strokeCount",
+      "kind": "variable",
+      "scope": "anonymous@79:45",
+      "init": "0",
+      "usageLines": [
+        87,
+        88
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 88,
+      "column": 23,
+      "name": "angle",
+      "kind": "variable",
+      "scope": "anonymous@79:45",
+      "init": "undefined",
+      "usageLines": [
+        88
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 88,
+      "column": 165,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@88:165",
+      "init": "呼出時の引数",
+      "usageLines": [
+        88
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 98,
+      "column": 18,
+      "name": "id",
+      "kind": "variable",
+      "scope": "anonymous@95:107",
+      "init": "undefined",
+      "usageLines": [
+        98
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 98,
+      "column": 21,
+      "name": "value",
+      "kind": "variable",
+      "scope": "anonymous@95:107",
+      "init": "undefined",
+      "usageLines": [
+        98
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 99,
+      "column": 16,
+      "name": "id",
+      "kind": "variable",
+      "scope": "anonymous@95:107",
+      "init": "undefined",
+      "usageLines": [
+        99
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 103,
+      "column": 14,
+      "name": "states",
+      "kind": "variable",
+      "scope": "anonymous@102:42",
+      "init": "[]",
+      "usageLines": [
+        107,
+        108
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 103,
+      "column": 32,
+      "name": "a",
+      "kind": "variable",
+      "scope": "anonymous@102:42/for@103",
+      "init": "1",
+      "usageLines": [
+        103,
+        105,
+        107
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 103,
+      "column": 53,
+      "name": "b",
+      "kind": "variable",
+      "scope": "anonymous@102:42/for@103/for@103",
+      "init": "1",
+      "usageLines": [
+        103,
+        106,
+        107
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 110,
+      "column": 17,
+      "name": "state",
+      "kind": "variable",
+      "scope": "anonymous@95:107",
+      "init": "undefined",
+      "usageLines": [
+        110
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 112,
+      "column": 141,
+      "name": "error",
+      "kind": "catch",
+      "scope": "anonymous@112:50/catch@112",
+      "init": "捕捉した例外",
+      "usageLines": [
+        112
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 115,
+      "column": 12,
+      "name": "denied",
+      "kind": "variable",
+      "scope": "anonymous@114:111",
+      "init": "await browser.newContext()",
+      "usageLines": [
+        115,
+        116,
+        123
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 115,
+      "column": 47,
+      "name": "q",
+      "kind": "variable",
+      "scope": "anonymous@114:111",
+      "init": "await denied.newPage()",
+      "usageLines": [
+        117,
+        118,
+        120,
+        121,
+        122
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 116,
+      "column": 26,
+      "name": "request",
+      "kind": "parameter",
+      "scope": "anonymous@116:26",
+      "init": "呼出時の引数",
+      "usageLines": [
+        116
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 117,
+      "column": 23,
+      "name": "error",
+      "kind": "parameter",
+      "scope": "anonymous@117:23",
+      "init": "呼出時の引数",
+      "usageLines": [
+        117
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 118,
+      "column": 26,
+      "name": "dialog",
+      "kind": "parameter",
+      "scope": "anonymous@118:20",
+      "init": "呼出時の引数",
+      "usageLines": [
+        118
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 127,
+      "column": 120,
+      "name": "resolve",
+      "kind": "parameter",
+      "scope": "anonymous@127:120",
+      "init": "呼出時の引数",
+      "usageLines": [
+        127
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 130,
+      "column": 13,
+      "name": "error",
+      "kind": "parameter",
+      "scope": "anonymous@130:13",
+      "init": "呼出時の引数",
+      "usageLines": [
+        130
+      ]
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 132,
+      "column": 49,
+      "name": "x",
+      "kind": "parameter",
+      "scope": "anonymous@132:49",
+      "init": "呼出時の引数",
+      "usageLines": [
+        132
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 22,
+      "column": 0,
+      "endLine": 24,
+      "name": "applyMirror",
+      "scope": "top",
+      "async": false,
+      "args": [],
+      "source": "function applyMirror() {\n    videoContainer.classList.toggle('mirrored', mirrorToggle.checked);\n}"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 31,
+      "column": 40,
+      "endLine": 36,
+      "name": "anonymous@31",
+      "scope": "top",
+      "async": false,
+      "args": [],
+      "source": "() => {\n    try {\n        localStorage.setItem(MIRROR_KEY, mirrorToggle.checked ? '1' : '0');\n    } catch (e) { /* 保存できなくても表示切替は行う */ }\n    applyMirror();\n}"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 51,
+      "column": 0,
+      "endLine": 56,
+      "name": "calculateAngle",
+      "scope": "top",
+      "async": false,
+      "args": [
+        "a",
+        "b",
+        "c"
+      ],
+      "source": "function calculateAngle(a, b, c) {\n    const radians = Math.atan2(c.y - b.y, c.x - b.x) - Math.atan2(a.y - b.y, a.x - b.x);\n    let angle = Math.abs(radians * 180 / Math.PI);\n    if (angle > 180) angle = 360 - angle;\n    return angle;\n}"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 59,
+      "column": 0,
+      "endLine": 64,
+      "name": "calculateTrunkAngle",
+      "scope": "top",
+      "async": false,
+      "args": [
+        "shoulder",
+        "hip"
+      ],
+      "source": "function calculateTrunkAngle(shoulder, hip) {\n    const dx = hip.x - shoulder.x;\n    const dy = hip.y - shoulder.y;\n    const angle = Math.atan2(dx, dy) * 180 / Math.PI;\n    return Math.abs(angle);\n}"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 70,
+      "column": 0,
+      "endLine": 94,
+      "name": "estimateLoadLevel",
+      "scope": "top",
+      "async": false,
+      "args": [
+        "trunkAngle",
+        "kneeAngle"
+      ],
+      "source": "function estimateLoadLevel(trunkAngle, kneeAngle) {\n    let loadScore = 0;\n\n    // 体幹角度の寄与（0〜60度の範囲想定）\n    // 閾値は「傾きが大きいほど危険」の段階評価として設定\n    if (trunkAngle < 15) {\n        loadScore += 0;\n    } else if (trunkAngle < 30) {\n        loadScore += 30;\n    } else if (trunkAngle < 45) {\n        loadScore += 60;\n    } else {\n        loadScore += 100;\n    }\n\n    // 膝角度の補正（深く曲げるほど負荷を軽減）\n    // しゃがみ動作を促すため、膝が曲がるほど加点を減らす\n    if (kneeAngle < 120) {\n        loadScore -= 20; // 良いスクワット姿勢\n    } else if (kneeAngle < 150) {\n        loadScore -= 10;\n    }\n\n    return Math.max(0, Math.min(100, loadScore));\n}"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 97,
+      "column": 0,
+      "endLine": 101,
+      "name": "getStatusClass",
+      "scope": "top",
+      "async": false,
+      "args": [
+        "value",
+        "thresholds"
+      ],
+      "source": "function getStatusClass(value, thresholds) {\n    if (value < thresholds[0]) return 'good';\n    if (value < thresholds[1]) return 'warning';\n    return 'danger';\n}"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 104,
+      "column": 0,
+      "endLine": 162,
+      "name": "updateUI",
+      "scope": "top",
+      "async": false,
+      "args": [
+        "landmarks"
+      ],
+      "source": "function updateUI(landmarks) {\n    if (!landmarks || landmarks.length < 33) return;\n\n    // MediaPipe Poseのランドマーク番号\n    const LEFT_SHOULDER = 11;\n    const RIGHT_SHOULDER = 12;\n    const LEFT_HIP = 23;\n    const RIGHT_HIP = 24;\n    const LEFT_KNEE = 25;\n    const RIGHT_KNEE = 26;\n    const LEFT_ANKLE = 27;\n    const RIGHT_ANKLE = 28;\n\n    // 中点（左右の平均）を計算\n    const shoulder = {\n        x: (landmarks[LEFT_SHOULDER].x + landmarks[RIGHT_SHOULDER].x) / 2,\n        y: (landmarks[LEFT_SHOULDER].y + landmarks[RIGHT_SHOULDER].y) / 2\n    };\n    const hip = {\n        x: (landmarks[LEFT_HIP].x + landmarks[RIGHT_HIP].x) / 2,\n        y: (landmarks[LEFT_HIP].y + landmarks[RIGHT_HIP].y) / 2\n    };\n\n    // 体幹角度を計算\n    const trunkAngle = calculateTrunkAngle(shoulder, hip);\n\n    // 膝角度を計算（左膝を基準）\n    const kneeAngle = calculateAngle(\n        landmarks[LEFT_HIP],\n        landmarks[LEFT_KNEE],\n        landmarks[LEFT_ANKLE]\n    );\n\n    // 負荷レベルを計算\n    const loadLevel = estimateLoadLevel(trunkAngle, kneeAngle);\n\n    // 総合スコア（負荷の逆数）を計算\n    // 数値が高いほど「姿勢が良い」ことを直感的に示すため\n    const score = Math.round(100 - loadLevel);\n\n    // UIを更新\n    const trunkStatus = getStatusClass(trunkAngle, [20, 40]);\n    const loadStatus = getStatusClass(loadLevel, [30, 60]);\n\n    const levelText = loadLevel < 30 ? '良い' : loadLevel < 60 ? '注意' : '危険';\n\n    scoreEl.textContent = score;\n    scoreEl.className = `score-value status-${loadStatus}`;\n\n    loadLevelEl.textContent = levelText;\n    loadLevelEl.className = `status-pill pill-${loadStatus}`;\n    loadBarEl.style.width = `${loadLevel}%`;\n    loadBarEl.className = `metric-bar-fill bg-${loadStatus}`;\n\n    trunkAngleEl.textContent = `${Math.round(trunkAngle)}°`;\n    trunkAngleEl.className = `metric-value status-${trunkStatus}`;\n\n    kneeAngleEl.textContent = `${Math.round(kneeAngle)}°`;\n}"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 165,
+      "column": 0,
+      "endLine": 245,
+      "name": "drawSkeleton",
+      "scope": "top",
+      "async": false,
+      "args": [
+        "landmarks"
+      ],
+      "source": "function drawSkeleton(landmarks) {\n    if (!landmarks) return;\n\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\n\n    // 骨格ラインを描画\n    const connections = [\n        [11, 12], // 肩\n        [11, 13], [13, 15], // 左腕\n        [12, 14], [14, 16], // 右腕\n        [11, 23], [12, 24], // 胴体\n        [23, 24], // 腰\n        [23, 25], [25, 27], // 左脚\n        [24, 26], [26, 28], // 右脚\n    ];\n\n    // 体幹角度に応じた色分け用に負荷を計算\n    const LEFT_SHOULDER = 11;\n    const RIGHT_SHOULDER = 12;\n    const LEFT_HIP = 23;\n    const RIGHT_HIP = 24;\n\n    const shoulder = {\n        x: (landmarks[LEFT_SHOULDER].x + landmarks[RIGHT_SHOULDER].x) / 2,\n        y: (landmarks[LEFT_SHOULDER].y + landmarks[RIGHT_SHOULDER].y) / 2\n    };\n    const hip = {\n        x: (landmarks[LEFT_HIP].x + landmarks[RIGHT_HIP].x) / 2,\n        y: (landmarks[LEFT_HIP].y + landmarks[RIGHT_HIP].y) / 2\n    };\n    const trunkAngle = calculateTrunkAngle(shoulder, hip);\n\n    // 体幹角度に応じた色\n    let lineColor = '#4ade80'; // 緑\n    if (trunkAngle > 40) {\n        lineColor = '#f87171'; // 赤\n    } else if (trunkAngle > 20) {\n        lineColor = '#facc15'; // 黄\n    }\n\n    ctx.strokeStyle = lineColor;\n    ctx.lineWidth = 4;\n    ctx.lineCap = 'round';\n\n    connections.forEach(([i, j]) => {\n        const p1 = landmarks[i];\n        const p2 = landmarks[j];\n        if (p1.visibility > 0.5 && p2.visibility > 0.5) {\n            ctx.beginPath();\n            ctx.moveTo(p1.x * canvas.width, p1.y * canvas.height);\n            ctx.lineTo(p2.x * canvas.width, p2.y * canvas.height);\n            ctx.stroke();\n        }\n    });\n\n    // 関節点を描画\n    ctx.fillStyle = '#fff';\n    landmarks.forEach((landmark, i) => {\n        if (landmark.visibility > 0.5 && i >= 11 && i <= 28) {\n            ctx.beginPath();\n            ctx.arc(\n                landmark.x * canvas.width,\n                landmark.y * canvas.height,\n                6, 0, 2 * Math.PI\n            );\n            ctx.fill();\n        }\n    });\n\n    // 腰付近を強調表示（負荷インジケータ）\n    const hipX = hip.x * canvas.width;\n    const hipY = hip.y * canvas.height;\n\n    ctx.beginPath();\n    ctx.arc(hipX, hipY, 20, 0, 2 * Math.PI);\n    ctx.fillStyle = lineColor + '40'; // 半透明\n    ctx.fill();\n    ctx.strokeStyle = lineColor;\n    ctx.lineWidth = 3;\n    ctx.stroke();\n}"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 209,
+      "column": 24,
+      "endLine": 218,
+      "name": "anonymous@209",
+      "scope": "drawSkeleton",
+      "async": false,
+      "args": [
+        "[i, j]"
+      ],
+      "source": "([i, j]) => {\n        const p1 = landmarks[i];\n        const p2 = landmarks[j];\n        if (p1.visibility > 0.5 && p2.visibility > 0.5) {\n            ctx.beginPath();\n            ctx.moveTo(p1.x * canvas.width, p1.y * canvas.height);\n            ctx.lineTo(p2.x * canvas.width, p2.y * canvas.height);\n            ctx.stroke();\n        }\n    }"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 222,
+      "column": 22,
+      "endLine": 232,
+      "name": "anonymous@222",
+      "scope": "drawSkeleton",
+      "async": false,
+      "args": [
+        "landmark",
+        "i"
+      ],
+      "source": "(landmark, i) => {\n        if (landmark.visibility > 0.5 && i >= 11 && i <= 28) {\n            ctx.beginPath();\n            ctx.arc(\n                landmark.x * canvas.width,\n                landmark.y * canvas.height,\n                6, 0, 2 * Math.PI\n            );\n            ctx.fill();\n        }\n    }"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 248,
+      "column": 0,
+      "endLine": 256,
+      "name": "onResults",
+      "scope": "top",
+      "async": false,
+      "args": [
+        "results"
+      ],
+      "source": "function onResults(results) {\n    canvas.width = video.videoWidth;\n    canvas.height = video.videoHeight;\n\n    if (results.poseLandmarks) {\n        drawSkeleton(results.poseLandmarks);\n        updateUI(results.poseLandmarks);\n    }\n}"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 259,
+      "column": 0,
+      "endLine": 275,
+      "name": "initPose",
+      "scope": "top",
+      "async": false,
+      "args": [],
+      "source": "function initPose() {\n    pose = new Pose({\n        locateFile: (file) => {\n            return `./vendor/mediapipe/pose/${file}`;\n        }\n    });\n\n    pose.setOptions({\n        modelComplexity: 1,\n        smoothLandmarks: true,\n        enableSegmentation: false,\n        minDetectionConfidence: 0.5,\n        minTrackingConfidence: 0.5\n    });\n\n    pose.onResults(onResults);\n}"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 261,
+      "column": 20,
+      "endLine": 263,
+      "name": "anonymous@261",
+      "scope": "initPose",
+      "async": false,
+      "args": [
+        "file"
+      ],
+      "source": "(file) => {\n            return `./vendor/mediapipe/pose/${file}`;\n        }"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 278,
+      "column": 0,
+      "endLine": 315,
+      "name": "startCamera",
+      "scope": "top",
+      "async": true,
+      "args": [],
+      "source": "async function startCamera() {\n    if (isCameraRunning) return;\n    startBtn.disabled = true;\n    startBtnLabel.textContent = '起動中...';\n    videoIdle.hidden = true;\n    videoError.hidden = true;\n    loading.style.display = 'block';\n\n    try {\n        initPose();\n\n        camera = new Camera(video, {\n            onFrame: async () => {\n                await pose.send({ image: video });\n            },\n            width: 640,\n            height: 480\n        });\n\n        await camera.start();\n        isCameraRunning = true;\n        loading.style.display = 'none';\n        startBtnLabel.textContent = 'カメラ起動中';\n        stopBtn.disabled = false;\n    } catch (error) {\n        console.error('Camera error:', error);\n        loading.style.display = 'none';\n        startBtn.disabled = false;\n        startBtnLabel.textContent = 'カメラを起動';\n        // モーダル(alert)は使わず、映像エリア内に原因と対処を表示する\n        if (error && (error.name === 'NotFoundError' || error.name === 'DevicesNotFoundError')) {\n            videoErrorText.textContent = 'カメラが見つかりませんでした。接続を確認して、もう一度お試しください。';\n        } else {\n            videoErrorText.textContent = 'ブラウザのアドレスバーからカメラへのアクセスを許可して、もう一度お試しください。';\n        }\n        videoError.hidden = false;\n    }\n}"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 290,
+      "column": 21,
+      "endLine": 292,
+      "name": "anonymous@290",
+      "scope": "startCamera",
+      "async": true,
+      "args": [],
+      "source": "async () => {\n                await pose.send({ image: video });\n            }"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 318,
+      "column": 0,
+      "endLine": 359,
+      "name": "stopCamera",
+      "scope": "top",
+      "async": false,
+      "args": [],
+      "source": "function stopCamera() {\n    if (!isCameraRunning) return;\n\n    try {\n        if (camera && typeof camera.stop === 'function') {\n            camera.stop();\n        }\n    } catch (error) {\n        console.warn('Camera stop error:', error);\n    }\n\n    const stream = video.srcObject;\n    if (stream && typeof stream.getTracks === 'function') {\n        stream.getTracks().forEach((track) => track.stop());\n    }\n    video.srcObject = null;\n\n    if (pose && typeof pose.close === 'function') {\n        pose.close();\n    }\n\n    ctx.clearRect(0, 0, canvas.width, canvas.height);\n    scoreEl.textContent = '--';\n    scoreEl.className = 'score-value';\n    loadLevelEl.textContent = '--';\n    loadLevelEl.className = 'status-pill';\n    loadBarEl.style.width = '0%';\n    loadBarEl.className = 'metric-bar-fill';\n    trunkAngleEl.textContent = '--°';\n    trunkAngleEl.className = 'metric-value';\n    kneeAngleEl.textContent = '--°';\n    kneeAngleEl.className = 'metric-value';\n\n    videoError.hidden = true;\n    videoIdle.hidden = false;\n\n    isCameraRunning = false;\n    stopBtn.disabled = true;\n    startBtn.disabled = false;\n    startBtnLabel.textContent = 'カメラを起動';\n    loading.style.display = 'none';\n}"
+    },
+    {
+      "category": "application",
+      "file": "script.js",
+      "line": 331,
+      "column": 35,
+      "endLine": 331,
+      "name": "anonymous@331",
+      "scope": "stopCamera",
+      "async": false,
+      "args": [
+        "track"
+      ],
+      "source": "(track) => track.stop()"
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 310,
+      "column": 0,
+      "endLine": 314,
+      "name": "getV",
+      "scope": "top",
+      "async": false,
+      "args": [
+        "id"
+      ],
+      "source": "function getV(id) {\n  const el = document.getElementById(id);\n  if(el.type === 'checkbox') return el.checked ? 1 : 0;\n  return parseInt(el.value);\n}"
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 316,
+      "column": 0,
+      "endLine": 364,
+      "name": "calcRULA",
+      "scope": "top",
+      "async": false,
+      "args": [],
+      "source": "function calcRULA() {\n  let upper = Math.max(1, Math.min(6, getV('a1') + getV('a1_adj1') + getV('a1_adj2') - getV('a1_adj3')));\n  document.getElementById('box_upper').innerText = upper;\n  \n  let lower = Math.max(1, Math.min(3, getV('a2') + getV('a2_adj')));\n  document.getElementById('box_lower').innerText = lower;\n  \n  let wrist = Math.max(1, Math.min(4, getV('a3') + getV('a3_adj')));\n  document.getElementById('box_wrist').innerText = wrist;\n  \n  let twist = getV('a4');\n  document.getElementById('box_twist').innerText = twist;\n\n  let scoreA = tableA_data[upper-1][lower-1][wrist-1][twist-1];\n  document.getElementById('box_scoreA').innerText = scoreA;\n\n  let muscA = getV('a6'); document.getElementById('box_muscA').innerText = muscA;\n  let frcA = getV('a7');  document.getElementById('box_frcA').innerText = frcA;\n  let finalA = scoreA + muscA + frcA;\n  document.getElementById('box_finalA').innerText = finalA;\n\n  let neck = Math.max(1, Math.min(6, getV('b9') + getV('b9_adj1') + getV('b9_adj2')));\n  document.getElementById('box_neck').innerText = neck;\n\n  let trunk = Math.max(1, Math.min(6, getV('b10') + getV('b10_adj1') + getV('b10_adj2')));\n  document.getElementById('box_trunk').innerText = trunk;\n\n  let leg = getV('b11');\n  document.getElementById('box_leg').innerText = leg;\n\n  let scoreB = tableB_data[neck-1][trunk-1][leg-1];\n  document.getElementById('box_scoreB').innerText = scoreB;\n\n  let muscB = getV('b13'); document.getElementById('box_muscB').innerText = muscB;\n  let frcB = getV('b14');  document.getElementById('box_frcB').innerText = frcB;\n  let finalB = scoreB + muscB + frcB;\n  document.getElementById('box_finalB').innerText = finalB;\n\n  document.querySelectorAll('td').forEach(td => td.classList.remove('highlight'));\n  \n  document.getElementById(`ta_${upper}_${lower}_${wrist}_${twist}`).classList.add('highlight');\n  document.getElementById(`tb_${neck}_${trunk}_${leg}`).classList.add('highlight');\n  \n  let idxA = Math.max(1, Math.min(8, finalA));\n  let idxB = Math.max(1, Math.min(7, finalB));\n  document.getElementById(`tc_${idxA}_${idxB}`).classList.add('highlight');\n  \n  document.getElementById('final_rula_score').innerText = tableC_data[idxA-1][idxB-1];\n}"
+    },
+    {
+      "category": "application",
+      "file": "RULAworkseet.html",
+      "line": 354,
+      "column": 42,
+      "endLine": 354,
+      "name": "anonymous@354",
+      "scope": "calcRULA",
+      "async": false,
+      "args": [
+        "td"
+      ],
+      "source": "td => td.classList.remove('highlight')"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 4,
+      "column": 0,
+      "endLine": 79,
+      "name": "inventory",
+      "scope": "top",
+      "async": false,
+      "args": [],
+      "source": "function inventory() {\n  const rows = [], functions = [], tables = {};\n  for (const file of ['script.js', 'RULAworkseet.html', 'docs/verification/inventory.cjs', 'docs/verification/verify.cjs']) {\n    const raw = fs.readFileSync(path.join(root, file), 'utf8');\n    const scripts = file.endsWith('.html') ? [...raw.matchAll(/<script\\b[^>]*>([\\s\\S]*?)<\\/script>/gi)].map(m => ({code:m[1], offset:raw.slice(0,m.index + m[0].indexOf('>') + 1).split('\\n').length - 1})) : [{code:raw, offset:0}];\n    const category = file.startsWith('docs/') ? 'verification' : 'application';\n    for (const {code, offset} of scripts) {\n      const ast = acorn.parse(code, {ecmaVersion:'latest', locations:true});\n      function bind(n, kind, scope, init) {\n        if (!n) return;\n        if (n.type === 'Identifier') rows.push({category,file,line:n.loc.start.line+offset,column:n.loc.start.column,name:n.name,kind,scope,init:init ? code.slice(init.start,init.end) : kind==='parameter' ? '呼出時の引数' : kind==='catch' ? '捕捉した例外' : 'undefined'});\n        else if (n.type === 'ArrayPattern') n.elements.forEach(x => bind(x,kind,scope));\n        else if (n.type === 'ObjectPattern') n.properties.forEach(x => bind(x.value || x.argument,kind,scope));\n        else if (n.type === 'RestElement') bind(n.argument,kind,scope);\n        else if (n.type === 'AssignmentPattern') bind(n.left,kind,scope,n.right);\n      }\n      function walk(n, scope='top') {\n        if (!n || typeof n !== 'object') return;\n        if (['FunctionDeclaration','FunctionExpression','ArrowFunctionExpression'].includes(n.type)) {\n          const name = n.id?.name || 'anonymous@'+(n.loc.start.line+offset)+(category==='verification' ? ':'+n.loc.start.column : '');\n          functions.push({category,file,line:n.loc.start.line+offset,column:n.loc.start.column,endLine:n.loc.end.line+offset,name,scope,async:!!n.async,args:n.params.map(x=>code.slice(x.start,x.end)),source:code.slice(n.start,n.end)});\n          scope = name; n.params.forEach(x => bind(x,'parameter',scope));\n        } else if (n.type === 'ForStatement') scope += '/for@'+(n.loc.start.line+offset);\n        if (n.type === 'VariableDeclarator') {\n          bind(n.id,'variable',scope,n.init);\n          if (category==='application' && /^table[ABC]_data$/.test(n.id.name)) tables[n.id.name] = JSON.parse(code.slice(n.init.start,n.init.end));\n        }\n        if (n.type === 'CatchClause') bind(n.param,'catch',scope+'/catch@'+(n.loc.start.line+offset));\n        for (const [key,value] of Object.entries(n)) {\n          if (['loc','start','end','id','params','param'].includes(key)) continue;\n          if (Array.isArray(value)) value.forEach(x => walk(x,scope));\n          else if (value && typeof value==='object') walk(value,scope);\n        }\n      }\n      walk(ast);\n      // Build all lexical declarations before resolving references (including forward uses).\n      const references=[], declared=new WeakSet();\n      function declare(n, env) {\n        if(!n)return;\n        if(n.type==='Identifier') {\n          declared.add(n);\n          env.bindings.set(n.name,rows.find(row=>row.file===file && row.line===n.loc.start.line+offset && row.column===n.loc.start.column && row.name===n.name) || null);\n        } else if(n.type==='ArrayPattern')n.elements.forEach(x=>declare(x,env));\n        else if(n.type==='ObjectPattern')n.properties.forEach(x=>declare(x.value || x.argument,env));\n        else if(n.type==='RestElement')declare(n.argument,env);\n        else if(n.type==='AssignmentPattern')declare(n.left,env);\n      }\n      function lexical(n, env, parent, key) {\n        if(!n || typeof n!=='object')return;\n        if(n.type==='FunctionDeclaration')declare(n.id,env);\n        if(['Program','BlockStatement','ForStatement','ForOfStatement','ForInStatement','CatchClause','FunctionDeclaration','FunctionExpression','ArrowFunctionExpression'].includes(n.type)) {\n          env={parent:env,bindings:new Map(),functionScope:n.type==='Program' || n.type.includes('Function')};\n          if(n.type.includes('Function')){if(n.type==='FunctionExpression')declare(n.id,env);n.params.forEach(x=>declare(x,env));}\n          if(n.type==='CatchClause')declare(n.param,env);\n        }\n        if(n.type==='VariableDeclaration') {\n          let target=env; if(n.kind==='var')while(target.parent && !target.functionScope)target=target.parent;\n          n.declarations.forEach(x=>declare(x.id,target));\n        }\n        if(n.type==='Identifier' && !declared.has(n) && !(parent?.type==='MemberExpression' && key==='property' && !parent.computed) && !(parent?.type==='Property' && key==='key' && !parent.computed) && !(['LabeledStatement','BreakStatement','ContinueStatement'].includes(parent?.type) && key==='label'))references.push({n,env});\n        for(const [field,value] of Object.entries(n)) {\n          if(['loc','start','end'].includes(field))continue;\n          if(Array.isArray(value))value.forEach(x=>lexical(x,env,n,field));\n          else if(value && typeof value==='object')lexical(value,env,n,field);\n        }\n      }\n      lexical(ast,null);\n      for(const {n,env} of references) {\n        let target=env;while(target && !target.bindings.has(n.name))target=target.parent;\n        const row=target?.bindings.get(n.name);if(row){row.usageLines ||= [];row.usageLines.push(n.loc.start.line+offset);}\n      }\n    }\n  }\n  for (const row of rows) row.usageLines = [...new Set(row.usageLines || [])];\n  return {counting:'variables + parameters + catch bindings; functions include anonymous callbacks; usageLines resolve lexical bindings, exclude declarations and noncomputed property keys, include shorthand references', rows, functions, tables};\n}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 8,
+      "column": 108,
+      "endLine": 8,
+      "name": "anonymous@8:108",
+      "scope": "inventory",
+      "async": false,
+      "args": [
+        "m"
+      ],
+      "source": "m => ({code:m[1], offset:raw.slice(0,m.index + m[0].indexOf('>') + 1).split('\\n').length - 1})"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 12,
+      "column": 6,
+      "endLine": 19,
+      "name": "bind",
+      "scope": "inventory",
+      "async": false,
+      "args": [
+        "n",
+        "kind",
+        "scope",
+        "init"
+      ],
+      "source": "function bind(n, kind, scope, init) {\n        if (!n) return;\n        if (n.type === 'Identifier') rows.push({category,file,line:n.loc.start.line+offset,column:n.loc.start.column,name:n.name,kind,scope,init:init ? code.slice(init.start,init.end) : kind==='parameter' ? '呼出時の引数' : kind==='catch' ? '捕捉した例外' : 'undefined'});\n        else if (n.type === 'ArrayPattern') n.elements.forEach(x => bind(x,kind,scope));\n        else if (n.type === 'ObjectPattern') n.properties.forEach(x => bind(x.value || x.argument,kind,scope));\n        else if (n.type === 'RestElement') bind(n.argument,kind,scope);\n        else if (n.type === 'AssignmentPattern') bind(n.left,kind,scope,n.right);\n      }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 15,
+      "column": 63,
+      "endLine": 15,
+      "name": "anonymous@15:63",
+      "scope": "bind",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x => bind(x,kind,scope)"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 16,
+      "column": 66,
+      "endLine": 16,
+      "name": "anonymous@16:66",
+      "scope": "bind",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x => bind(x.value || x.argument,kind,scope)"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 20,
+      "column": 6,
+      "endLine": 37,
+      "name": "walk",
+      "scope": "inventory",
+      "async": false,
+      "args": [
+        "n",
+        "scope='top'"
+      ],
+      "source": "function walk(n, scope='top') {\n        if (!n || typeof n !== 'object') return;\n        if (['FunctionDeclaration','FunctionExpression','ArrowFunctionExpression'].includes(n.type)) {\n          const name = n.id?.name || 'anonymous@'+(n.loc.start.line+offset)+(category==='verification' ? ':'+n.loc.start.column : '');\n          functions.push({category,file,line:n.loc.start.line+offset,column:n.loc.start.column,endLine:n.loc.end.line+offset,name,scope,async:!!n.async,args:n.params.map(x=>code.slice(x.start,x.end)),source:code.slice(n.start,n.end)});\n          scope = name; n.params.forEach(x => bind(x,'parameter',scope));\n        } else if (n.type === 'ForStatement') scope += '/for@'+(n.loc.start.line+offset);\n        if (n.type === 'VariableDeclarator') {\n          bind(n.id,'variable',scope,n.init);\n          if (category==='application' && /^table[ABC]_data$/.test(n.id.name)) tables[n.id.name] = JSON.parse(code.slice(n.init.start,n.init.end));\n        }\n        if (n.type === 'CatchClause') bind(n.param,'catch',scope+'/catch@'+(n.loc.start.line+offset));\n        for (const [key,value] of Object.entries(n)) {\n          if (['loc','start','end','id','params','param'].includes(key)) continue;\n          if (Array.isArray(value)) value.forEach(x => walk(x,scope));\n          else if (value && typeof value==='object') walk(value,scope);\n        }\n      }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 24,
+      "column": 170,
+      "endLine": 24,
+      "name": "anonymous@24:170",
+      "scope": "walk",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>code.slice(x.start,x.end)"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 25,
+      "column": 41,
+      "endLine": 25,
+      "name": "anonymous@25:41",
+      "scope": "walk",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x => bind(x,'parameter',scope)"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 34,
+      "column": 50,
+      "endLine": 34,
+      "name": "anonymous@34:50",
+      "scope": "walk",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x => walk(x,scope)"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 41,
+      "column": 6,
+      "endLine": 50,
+      "name": "declare",
+      "scope": "inventory",
+      "async": false,
+      "args": [
+        "n",
+        "env"
+      ],
+      "source": "function declare(n, env) {\n        if(!n)return;\n        if(n.type==='Identifier') {\n          declared.add(n);\n          env.bindings.set(n.name,rows.find(row=>row.file===file && row.line===n.loc.start.line+offset && row.column===n.loc.start.column && row.name===n.name) || null);\n        } else if(n.type==='ArrayPattern')n.elements.forEach(x=>declare(x,env));\n        else if(n.type==='ObjectPattern')n.properties.forEach(x=>declare(x.value || x.argument,env));\n        else if(n.type==='RestElement')declare(n.argument,env);\n        else if(n.type==='AssignmentPattern')declare(n.left,env);\n      }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 45,
+      "column": 44,
+      "endLine": 45,
+      "name": "anonymous@45:44",
+      "scope": "declare",
+      "async": false,
+      "args": [
+        "row"
+      ],
+      "source": "row=>row.file===file && row.line===n.loc.start.line+offset && row.column===n.loc.start.column && row.name===n.name"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 46,
+      "column": 61,
+      "endLine": 46,
+      "name": "anonymous@46:61",
+      "scope": "declare",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>declare(x,env)"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 47,
+      "column": 62,
+      "endLine": 47,
+      "name": "anonymous@47:62",
+      "scope": "declare",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>declare(x.value || x.argument,env)"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 51,
+      "column": 6,
+      "endLine": 69,
+      "name": "lexical",
+      "scope": "inventory",
+      "async": false,
+      "args": [
+        "n",
+        "env",
+        "parent",
+        "key"
+      ],
+      "source": "function lexical(n, env, parent, key) {\n        if(!n || typeof n!=='object')return;\n        if(n.type==='FunctionDeclaration')declare(n.id,env);\n        if(['Program','BlockStatement','ForStatement','ForOfStatement','ForInStatement','CatchClause','FunctionDeclaration','FunctionExpression','ArrowFunctionExpression'].includes(n.type)) {\n          env={parent:env,bindings:new Map(),functionScope:n.type==='Program' || n.type.includes('Function')};\n          if(n.type.includes('Function')){if(n.type==='FunctionExpression')declare(n.id,env);n.params.forEach(x=>declare(x,env));}\n          if(n.type==='CatchClause')declare(n.param,env);\n        }\n        if(n.type==='VariableDeclaration') {\n          let target=env; if(n.kind==='var')while(target.parent && !target.functionScope)target=target.parent;\n          n.declarations.forEach(x=>declare(x.id,target));\n        }\n        if(n.type==='Identifier' && !declared.has(n) && !(parent?.type==='MemberExpression' && key==='property' && !parent.computed) && !(parent?.type==='Property' && key==='key' && !parent.computed) && !(['LabeledStatement','BreakStatement','ContinueStatement'].includes(parent?.type) && key==='label'))references.push({n,env});\n        for(const [field,value] of Object.entries(n)) {\n          if(['loc','start','end'].includes(field))continue;\n          if(Array.isArray(value))value.forEach(x=>lexical(x,env,n,field));\n          else if(value && typeof value==='object')lexical(value,env,n,field);\n        }\n      }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 56,
+      "column": 110,
+      "endLine": 56,
+      "name": "anonymous@56:110",
+      "scope": "lexical",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>declare(x,env)"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 61,
+      "column": 33,
+      "endLine": 61,
+      "name": "anonymous@61:33",
+      "scope": "lexical",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>declare(x.id,target)"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 66,
+      "column": 48,
+      "endLine": 66,
+      "name": "anonymous@66:48",
+      "scope": "lexical",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>lexical(x,env,n,field)"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 82,
+      "column": 98,
+      "endLine": 82,
+      "name": "anonymous@82:98",
+      "scope": "top",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>x.category===category"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/inventory.cjs",
+      "line": 82,
+      "column": 169,
+      "endLine": 82,
+      "name": "anonymous@82:169",
+      "scope": "top",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>x.category===category"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 8,
+      "column": 0,
+      "endLine": 8,
+      "name": "hashes",
+      "scope": "top",
+      "async": false,
+      "args": [],
+      "source": "function hashes() { return Object.fromEntries(appFiles.map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')])); }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 8,
+      "column": 59,
+      "endLine": 8,
+      "name": "anonymous@8:59",
+      "scope": "hashes",
+      "async": false,
+      "args": [
+        "file"
+      ],
+      "source": "file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 10,
+      "column": 0,
+      "endLine": 13,
+      "name": "check",
+      "scope": "top",
+      "async": true,
+      "args": [
+        "name",
+        "action"
+      ],
+      "source": "async function check(name, action) {\n  try { await action(); result.assertions.push({name,status:'passed'}); }\n  catch (error) { result.assertions.push({name,status:'failed',error:String(error.stack || error)}); }\n}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 14,
+      "column": 0,
+      "endLine": 129,
+      "name": "main",
+      "scope": "top",
+      "async": true,
+      "args": [],
+      "source": "async function main() {\n  await check('AST: original 122 bindings / 20 functions and all original tables',()=>{\n    const data = inventory();\n    assert.equal(data.rows.filter(x=>x.category==='application').length,122);\n    assert.equal(data.functions.filter(x=>x.category==='application').length,20);\n    assert.equal(data.tables.tableC_data.length,8); assert.ok(data.tables.tableC_data.every(x=>x.length===7));\n    fs.writeFileSync(path.join(__dirname,'inventory.json'),JSON.stringify(data,null,2)+'\\n');\n  });\n  await check('math: trunk/knee thresholds, rounding, normalized aspect, degenerate and NaN',()=>{\n    const element = ()=>({classList:{toggle(){},add(){},remove(){}},style:{},querySelector:()=>element(),addEventListener(){},getContext:()=>({}),checked:true});\n    const context = vm.createContext({document:{getElementById:()=>element(),querySelector:()=>element()},localStorage:{getItem:()=>null},console});\n    vm.runInContext(fs.readFileSync(path.join(root,'script.js'),'utf8'),context);\n    for (const [t,k,expected] of [[0,180,0],[14.999,180,0],[15,180,30],[29.999,180,30],[30,180,60],[44.999,180,60],[45,180,100],[180,180,100],[30,119.999,40],[30,120,50],[30,149.999,50],[30,150,60],[0,119,0],[45,149,90],[NaN,NaN,100],[-10,-10,0],[Infinity,Infinity,100]]) assert.equal(vm.runInContext(`estimateLoadLevel(${t},${k})`,context),expected);\n    assert.equal(vm.runInContext('calculateAngle({x:0,y:0},{x:0,y:1},{x:0,y:2})',context),180);\n    assert.equal(vm.runInContext('calculateAngle({x:0,y:0},{x:0,y:0},{x:0,y:0})',context),0);\n    assert.equal(vm.runInContext('calculateTrunkAngle({x:.25,y:.25},{x:.5,y:.5})',context),45);\n    assert.ok(Math.abs(vm.runInContext('calculateTrunkAngle({x:160,y:120},{x:320,y:240})',context)-53.13010235415598)<1e-10);\n    assert.equal(vm.runInContext('Math.round(29.6)',context),30); assert.equal(vm.runInContext('estimateLoadLevel(29.6,150)',context),30);\n    assert.equal(vm.runInContext('getStatusClass(20,[20,40])',context),'warning'); assert.equal(vm.runInContext('getStatusClass(40,[20,40])',context),'danger');\n  });\n  // Python owns the socket assignment; no preselected port, and no unrelated processes are killed.\n  const server = spawn(process.env.PYTHON || 'python3',['-u','-m','http.server','0','--bind','127.0.0.1','--directory',root],{stdio:['ignore','pipe','pipe']});\n  let browser;\n  try {\n    const base = await new Promise((resolve,reject)=>{\n      const timer = setTimeout(()=>reject(new Error('HTTP server did not report its port')),10000);\n      server.stdout.on('data',chunk=>{const port=String(chunk).match(/port (\\d+)/);if(port){clearTimeout(timer);resolve('http://127.0.0.1:'+port[1]);}});\n      server.once('error',error=>{clearTimeout(timer);reject(error);}); server.once('exit',code=>{clearTimeout(timer);reject(new Error('HTTP server exited: '+code));});\n    });\n    result.environment.python = (await new Promise(resolve=>{let text='';const child=spawn(process.env.PYTHON || 'python3',['--version']);child.stdout.on('data',x=>text+=x);child.once('close',()=>resolve(text.trim()));}));\n    await check('HTTP: each app page/CSS/script and every bundled MediaPipe asset returns 200',async()=>{\n      for (const file of [...appFiles,...fs.readdirSync(path.join(root,'vendor/mediapipe/pose')).map(x=>'vendor/mediapipe/pose/'+x),'vendor/mediapipe/camera_utils/camera_utils.js',...fs.readdirSync(path.join(root,'vendor/fonts')).map(x=>'vendor/fonts/'+x)]) assert.equal((await fetch(base+'/'+file)).status,200,file);\n    });\n    const args = ['--use-fake-device-for-media-stream','--use-fake-ui-for-media-stream'];\n    if (process.env.CHROMIUM_NO_SANDBOX==='1') args.push('--no-sandbox');\n    browser = await chromium.launch({headless:true,args,...(process.env.CHROMIUM_PATH ? {executablePath:process.env.CHROMIUM_PATH} : {})});\n    result.environment.chromium = browser.version(); result.environment.chromiumPath = process.env.CHROMIUM_PATH || 'Playwright-managed'; result.environment.noSandbox = process.env.CHROMIUM_NO_SANDBOX==='1';\n    const context = await browser.newContext({permissions:['camera'],viewport:{width:1280,height:960}}), page = await context.newPage();\n    let stage = 'initial';\n    page.on('pageerror',error=>result.pageErrors.push({stage,message:error.message}));\n    page.on('dialog',async dialog=>{result.dialogs.push({stage,type:dialog.type(),message:dialog.message()});await dialog.dismiss();});\n    context.on('request',request=>{if(new URL(request.url()).origin!==base)result.externalRequests.push(request.url());else result.localRequests.push(new URL(request.url()).pathname);});\n    context.on('response',response=>{if(response.status()>=400&&!response.url().endsWith('/favicon.ico'))result.httpFailures.push({url:response.url(),status:response.status()});});\n    await page.goto(base);\n    await check('browser: idle, mirror transform/persistence, 390px viewport',async()=>{\n      assert.equal(await page.locator('#video-idle').isVisible(),true); assert.equal(await page.locator('#stop-btn').isDisabled(),true);\n      assert.equal(await page.locator('#mirror-toggle').isChecked(),true);\n      assert.match(await page.locator('#webcam').evaluate(x=>getComputedStyle(x).transform),/-1/);\n      await page.locator('#mirror-toggle').uncheck(); await page.reload(); assert.equal(await page.locator('#mirror-toggle').isChecked(),false);\n      assert.equal(await page.locator('#webcam').evaluate(x=>getComputedStyle(x).transform),'none');\n      await page.setViewportSize({width:390,height:844});assert.equal(await page.locator('#start-btn').isVisible(),true);await page.setViewportSize({width:1280,height:960});\n    });\n    await page.evaluate(()=>{window.testCallbacks=0;const original=onResults;onResults=r=>{window.testCallbacks++;original(r);};});\n    await check('browser: real MediaPipe/WASM fake camera start, stop and restart',async()=>{\n      for (const cycle of [1,2]) {\n        stage='camera cycle '+cycle; await page.evaluate(()=>window.testCallbacks=0); await page.locator('#start-btn').click();\n        await page.waitForFunction(()=>window.testCallbacks>=3,null,{timeout:90000});\n        assert.equal(await page.locator('#stop-btn').isEnabled(),true);\n        await page.evaluate(()=>window.testTracks=video.srcObject.getTracks()); await page.locator('#stop-btn').click();\n        assert.equal(await page.evaluate(()=>window.testTracks.every(x=>x.readyState==='ended') && video.srcObject===null),true);\n        assert.equal(await page.locator('#score').textContent(),'--'); assert.equal(await page.locator('#start-btn').isEnabled(),true);assert.equal(await page.locator('#video-idle').isVisible(),true);\n      }\n    });\n    stage='synthetic input';\n    await check('browser: UI, missing/short landmarks, invalid coordinates, visibility and skeleton boundary',async()=>{\n      result.synthetic = await page.evaluate(()=>{\n        const points=Array.from({length:33},()=>({x:.5,y:.5,visibility:1}));\n        points[11]=points[12]={x:.25,y:.25,visibility:1};points[25]={x:.5,y:.75,visibility:1};points[27]={x:.5,y:1,visibility:1};\n        updateUI(points);const valid={score:scoreEl.textContent,trunk:trunkAngleEl.textContent,knee:kneeAngleEl.textContent,level:loadLevelEl.textContent};\n        updateUI(null); updateUI([]); const retained=scoreEl.textContent;onResults({});const missingRetained=scoreEl.textContent;\n        let shortError;try{drawSkeleton([]);}catch(error){shortError=error.name;}\n        points[11].x=NaN; updateUI(points);const invalid={score:scoreEl.textContent,trunk:trunkAngleEl.textContent,level:loadLevelEl.textContent};\n        const colors=[], strokes=[], originalStroke=ctx.stroke; let strokeCount=0;\n        ctx.stroke=function(){strokeCount++;originalStroke.call(ctx);};\n        try {for(const angle of [20,20.001,40,40.001]){strokeCount=0;points[11]=points[12]={x:.5-Math.tan(angle*Math.PI/180)*.25,y:.25,visibility:.5};points.forEach(x=>x.visibility=.5);drawSkeleton(points);colors.push(ctx.strokeStyle);strokes.push(strokeCount);}}\n        finally {ctx.stroke=originalStroke;}\n        return {valid,retained,missingRetained,shortError,invalid,colors,strokes};\n      });\n      assert.deepEqual(result.synthetic.valid,{score:'0',trunk:'45°',knee:'180°',level:'危険'});assert.equal(result.synthetic.retained,'0');assert.equal(result.synthetic.missingRetained,'0');assert.equal(result.synthetic.shortError,'TypeError');\n      assert.deepEqual(result.synthetic.invalid,{score:'0',trunk:'NaN°',level:'危険'}); assert.deepEqual(result.synthetic.colors,['#4ade80','#facc15','#facc15','#f87171']);assert.deepEqual(result.synthetic.strokes,[1,1,1,1]);\n    });\n    await check('browser: explanation link and return, worksheet default/maximum, 56 Table C index states',async()=>{\n      await page.goto(base+'/rula.html');assert.equal(await page.locator('a[href=\"index.html\"]').count(),1);\n      await page.goto(base+'/RULAworkseet.html'); assert.equal(await page.locator('#final_rula_score').innerText(),'1');\n      for (const [id,value] of Object.entries({a1:'4',a2:'2',a3:'3',a4:'2',a6:'1',a7:'3',b9:'4',b10:'4',b11:'2',b13:'1',b14:'3'})) await page.locator('#'+id).selectOption(value);\n      for(const id of ['a1_adj1','a1_adj2','a2_adj','a3_adj','b9_adj1','b9_adj2','b10_adj1','b10_adj2'])await page.locator('#'+id).check();\n      assert.equal(await page.locator('#box_finalA').innerText(),'13');assert.equal(await page.locator('#box_finalB').innerText(),'13');assert.equal(await page.locator('#final_rula_score').innerText(),'7');assert.equal(await page.locator('#tc_8_7.highlight').count(),1);assert.equal(await page.locator('td.highlight').count(),3);\n      await page.reload();assert.equal(await page.locator('#final_rula_score').innerText(),'1');\n      result.tableC = await page.evaluate(()=>{\n        const states=[];for(let a=1;a<=8;a++)for(let b=1;b<=7;b++){\n          // Fault-injected muscle scores exercise every final index, not claimed as normal UI input.\n          document.getElementById('a6').add(new Option(String(a-1),String(a-1)));document.getElementById('a6').value=String(a-1);\n          document.getElementById('b13').add(new Option(String(b-1),String(b-1)));document.getElementById('b13').value=String(b-1);calcRULA();\n          states.push({a,b,score:Number(document.getElementById('final_rula_score').innerText),highlight:document.getElementById(`tc_${a}_${b}`).classList.contains('highlight'),count:document.querySelectorAll('td.highlight').length});\n        }return states;\n      });\n      for (const state of result.tableC) {assert.equal(state.score,inventory().tables.tableC_data[state.a-1][state.b-1]);assert.equal(state.highlight,true);assert.equal(state.count,3);}\n      assert.equal(result.tableC[0].score,1);assert.equal(result.tableC[55].score,7);\n      result.worksheetInvalid=await page.evaluate(()=>{document.getElementById('a1').value='invalid';try{calcRULA();return 'no error';}catch(error){return error.name;}});assert.equal(result.worksheetInvalid,'TypeError');\n    });\n    await check('browser: injected denied/missing errors show inline UI; vendor alerts recorded and dismissed',async()=>{\n      const denied=await browser.newContext(), q=await denied.newPage();\n      denied.on('request',request=>{if(new URL(request.url()).origin!==base)result.externalRequests.push(request.url());});\n      q.on('pageerror',error=>result.pageErrors.push({stage:'injected camera error',message:error.message}));\n      q.on('dialog',async dialog=>{result.dialogs.push({stage:'injected camera error',type:dialog.type(),message:dialog.message()});await dialog.dismiss();});\n      try {\n        await q.addInitScript(()=>navigator.mediaDevices.getUserMedia=()=>Promise.reject(new DOMException('test denied','NotAllowedError')));await q.goto(base);\n        await q.locator('#start-btn').click();await q.locator('#video-error').waitFor({state:'visible'}); assert.match(await q.locator('#video-error-text').innerText(),/アクセスを許可/);assert.equal(await q.locator('#start-btn').isEnabled(),true);\n        await q.evaluate(()=>navigator.mediaDevices.getUserMedia=()=>Promise.reject(new DOMException('test missing','NotFoundError')));await q.locator('#start-btn').click();await q.waitForFunction(()=>document.getElementById('video-error-text').innerText.includes('カメラが見つかりませんでした'));\n      } finally {await denied.close();}\n    });\n    await check('browser: zero external requests and zero HTTP asset failures',()=>{assert.deepEqual(result.externalRequests,[]);assert.deepEqual(result.httpFailures,[]);});\n  } finally {\n    if(browser)await browser.close(); if(server.pid && server.exitCode===null){server.kill('SIGTERM');await new Promise(resolve=>server.once('close',resolve));}\n  }\n}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 15,
+      "column": 82,
+      "endLine": 21,
+      "name": "anonymous@15:82",
+      "scope": "main",
+      "async": false,
+      "args": [],
+      "source": "()=>{\n    const data = inventory();\n    assert.equal(data.rows.filter(x=>x.category==='application').length,122);\n    assert.equal(data.functions.filter(x=>x.category==='application').length,20);\n    assert.equal(data.tables.tableC_data.length,8); assert.ok(data.tables.tableC_data.every(x=>x.length===7));\n    fs.writeFileSync(path.join(__dirname,'inventory.json'),JSON.stringify(data,null,2)+'\\n');\n  }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 17,
+      "column": 34,
+      "endLine": 17,
+      "name": "anonymous@17:34",
+      "scope": "anonymous@15:82",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>x.category==='application'"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 18,
+      "column": 39,
+      "endLine": 18,
+      "name": "anonymous@18:39",
+      "scope": "anonymous@15:82",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>x.category==='application'"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 19,
+      "column": 92,
+      "endLine": 19,
+      "name": "anonymous@19:92",
+      "scope": "anonymous@15:82",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>x.length===7"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 22,
+      "column": 93,
+      "endLine": 33,
+      "name": "anonymous@22:93",
+      "scope": "main",
+      "async": false,
+      "args": [],
+      "source": "()=>{\n    const element = ()=>({classList:{toggle(){},add(){},remove(){}},style:{},querySelector:()=>element(),addEventListener(){},getContext:()=>({}),checked:true});\n    const context = vm.createContext({document:{getElementById:()=>element(),querySelector:()=>element()},localStorage:{getItem:()=>null},console});\n    vm.runInContext(fs.readFileSync(path.join(root,'script.js'),'utf8'),context);\n    for (const [t,k,expected] of [[0,180,0],[14.999,180,0],[15,180,30],[29.999,180,30],[30,180,60],[44.999,180,60],[45,180,100],[180,180,100],[30,119.999,40],[30,120,50],[30,149.999,50],[30,150,60],[0,119,0],[45,149,90],[NaN,NaN,100],[-10,-10,0],[Infinity,Infinity,100]]) assert.equal(vm.runInContext(`estimateLoadLevel(${t},${k})`,context),expected);\n    assert.equal(vm.runInContext('calculateAngle({x:0,y:0},{x:0,y:1},{x:0,y:2})',context),180);\n    assert.equal(vm.runInContext('calculateAngle({x:0,y:0},{x:0,y:0},{x:0,y:0})',context),0);\n    assert.equal(vm.runInContext('calculateTrunkAngle({x:.25,y:.25},{x:.5,y:.5})',context),45);\n    assert.ok(Math.abs(vm.runInContext('calculateTrunkAngle({x:160,y:120},{x:320,y:240})',context)-53.13010235415598)<1e-10);\n    assert.equal(vm.runInContext('Math.round(29.6)',context),30); assert.equal(vm.runInContext('estimateLoadLevel(29.6,150)',context),30);\n    assert.equal(vm.runInContext('getStatusClass(20,[20,40])',context),'warning'); assert.equal(vm.runInContext('getStatusClass(40,[20,40])',context),'danger');\n  }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 23,
+      "column": 20,
+      "endLine": 23,
+      "name": "anonymous@23:20",
+      "scope": "anonymous@22:93",
+      "async": false,
+      "args": [],
+      "source": "()=>({classList:{toggle(){},add(){},remove(){}},style:{},querySelector:()=>element(),addEventListener(){},getContext:()=>({}),checked:true})"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 23,
+      "column": 43,
+      "endLine": 23,
+      "name": "anonymous@23:43",
+      "scope": "anonymous@23:20",
+      "async": false,
+      "args": [],
+      "source": "(){}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 23,
+      "column": 51,
+      "endLine": 23,
+      "name": "anonymous@23:51",
+      "scope": "anonymous@23:20",
+      "async": false,
+      "args": [],
+      "source": "(){}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 23,
+      "column": 62,
+      "endLine": 23,
+      "name": "anonymous@23:62",
+      "scope": "anonymous@23:20",
+      "async": false,
+      "args": [],
+      "source": "(){}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 23,
+      "column": 91,
+      "endLine": 23,
+      "name": "anonymous@23:91",
+      "scope": "anonymous@23:20",
+      "async": false,
+      "args": [],
+      "source": "()=>element()"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 23,
+      "column": 121,
+      "endLine": 23,
+      "name": "anonymous@23:121",
+      "scope": "anonymous@23:20",
+      "async": false,
+      "args": [],
+      "source": "(){}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 23,
+      "column": 137,
+      "endLine": 23,
+      "name": "anonymous@23:137",
+      "scope": "anonymous@23:20",
+      "async": false,
+      "args": [],
+      "source": "()=>({})"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 24,
+      "column": 63,
+      "endLine": 24,
+      "name": "anonymous@24:63",
+      "scope": "anonymous@22:93",
+      "async": false,
+      "args": [],
+      "source": "()=>element()"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 24,
+      "column": 91,
+      "endLine": 24,
+      "name": "anonymous@24:91",
+      "scope": "anonymous@22:93",
+      "async": false,
+      "args": [],
+      "source": "()=>element()"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 24,
+      "column": 128,
+      "endLine": 24,
+      "name": "anonymous@24:128",
+      "scope": "anonymous@22:93",
+      "async": false,
+      "args": [],
+      "source": "()=>null"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 38,
+      "column": 35,
+      "endLine": 42,
+      "name": "anonymous@38:35",
+      "scope": "main",
+      "async": false,
+      "args": [
+        "resolve",
+        "reject"
+      ],
+      "source": "(resolve,reject)=>{\n      const timer = setTimeout(()=>reject(new Error('HTTP server did not report its port')),10000);\n      server.stdout.on('data',chunk=>{const port=String(chunk).match(/port (\\d+)/);if(port){clearTimeout(timer);resolve('http://127.0.0.1:'+port[1]);}});\n      server.once('error',error=>{clearTimeout(timer);reject(error);}); server.once('exit',code=>{clearTimeout(timer);reject(new Error('HTTP server exited: '+code));});\n    }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 39,
+      "column": 31,
+      "endLine": 39,
+      "name": "anonymous@39:31",
+      "scope": "anonymous@38:35",
+      "async": false,
+      "args": [],
+      "source": "()=>reject(new Error('HTTP server did not report its port'))"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 40,
+      "column": 30,
+      "endLine": 40,
+      "name": "anonymous@40:30",
+      "scope": "anonymous@38:35",
+      "async": false,
+      "args": [
+        "chunk"
+      ],
+      "source": "chunk=>{const port=String(chunk).match(/port (\\d+)/);if(port){clearTimeout(timer);resolve('http://127.0.0.1:'+port[1]);}}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 41,
+      "column": 26,
+      "endLine": 41,
+      "name": "anonymous@41:26",
+      "scope": "anonymous@38:35",
+      "async": false,
+      "args": [
+        "error"
+      ],
+      "source": "error=>{clearTimeout(timer);reject(error);}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 41,
+      "column": 91,
+      "endLine": 41,
+      "name": "anonymous@41:91",
+      "scope": "anonymous@38:35",
+      "async": false,
+      "args": [
+        "code"
+      ],
+      "source": "code=>{clearTimeout(timer);reject(new Error('HTTP server exited: '+code));}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 43,
+      "column": 51,
+      "endLine": 43,
+      "name": "anonymous@43:51",
+      "scope": "main",
+      "async": false,
+      "args": [
+        "resolve"
+      ],
+      "source": "resolve=>{let text='';const child=spawn(process.env.PYTHON || 'python3',['--version']);child.stdout.on('data',x=>text+=x);child.once('close',()=>resolve(text.trim()));}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 43,
+      "column": 161,
+      "endLine": 43,
+      "name": "anonymous@43:161",
+      "scope": "anonymous@43:51",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>text+=x"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 43,
+      "column": 192,
+      "endLine": 43,
+      "name": "anonymous@43:192",
+      "scope": "anonymous@43:51",
+      "async": false,
+      "args": [],
+      "source": "()=>resolve(text.trim())"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 44,
+      "column": 95,
+      "endLine": 46,
+      "name": "anonymous@44:95",
+      "scope": "main",
+      "async": true,
+      "args": [],
+      "source": "async()=>{\n      for (const file of [...appFiles,...fs.readdirSync(path.join(root,'vendor/mediapipe/pose')).map(x=>'vendor/mediapipe/pose/'+x),'vendor/mediapipe/camera_utils/camera_utils.js',...fs.readdirSync(path.join(root,'vendor/fonts')).map(x=>'vendor/fonts/'+x)]) assert.equal((await fetch(base+'/'+file)).status,200,file);\n    }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 45,
+      "column": 101,
+      "endLine": 45,
+      "name": "anonymous@45:101",
+      "scope": "anonymous@44:95",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>'vendor/mediapipe/pose/'+x"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 45,
+      "column": 234,
+      "endLine": 45,
+      "name": "anonymous@45:234",
+      "scope": "anonymous@44:95",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>'vendor/fonts/'+x"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 53,
+      "column": 24,
+      "endLine": 53,
+      "name": "anonymous@53:24",
+      "scope": "main",
+      "async": false,
+      "args": [
+        "error"
+      ],
+      "source": "error=>result.pageErrors.push({stage,message:error.message})"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 54,
+      "column": 21,
+      "endLine": 54,
+      "name": "anonymous@54:21",
+      "scope": "main",
+      "async": true,
+      "args": [
+        "dialog"
+      ],
+      "source": "async dialog=>{result.dialogs.push({stage,type:dialog.type(),message:dialog.message()});await dialog.dismiss();}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 55,
+      "column": 25,
+      "endLine": 55,
+      "name": "anonymous@55:25",
+      "scope": "main",
+      "async": false,
+      "args": [
+        "request"
+      ],
+      "source": "request=>{if(new URL(request.url()).origin!==base)result.externalRequests.push(request.url());else result.localRequests.push(new URL(request.url()).pathname);}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 56,
+      "column": 26,
+      "endLine": 56,
+      "name": "anonymous@56:26",
+      "scope": "main",
+      "async": false,
+      "args": [
+        "response"
+      ],
+      "source": "response=>{if(response.status()>=400&&!response.url().endsWith('/favicon.ico'))result.httpFailures.push({url:response.url(),status:response.status()});}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 58,
+      "column": 78,
+      "endLine": 65,
+      "name": "anonymous@58:78",
+      "scope": "main",
+      "async": true,
+      "args": [],
+      "source": "async()=>{\n      assert.equal(await page.locator('#video-idle').isVisible(),true); assert.equal(await page.locator('#stop-btn').isDisabled(),true);\n      assert.equal(await page.locator('#mirror-toggle').isChecked(),true);\n      assert.match(await page.locator('#webcam').evaluate(x=>getComputedStyle(x).transform),/-1/);\n      await page.locator('#mirror-toggle').uncheck(); await page.reload(); assert.equal(await page.locator('#mirror-toggle').isChecked(),false);\n      assert.equal(await page.locator('#webcam').evaluate(x=>getComputedStyle(x).transform),'none');\n      await page.setViewportSize({width:390,height:844});assert.equal(await page.locator('#start-btn').isVisible(),true);await page.setViewportSize({width:1280,height:960});\n    }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 61,
+      "column": 58,
+      "endLine": 61,
+      "name": "anonymous@61:58",
+      "scope": "anonymous@58:78",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>getComputedStyle(x).transform"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 63,
+      "column": 58,
+      "endLine": 63,
+      "name": "anonymous@63:58",
+      "scope": "anonymous@58:78",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>getComputedStyle(x).transform"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 66,
+      "column": 24,
+      "endLine": 66,
+      "name": "anonymous@66:24",
+      "scope": "main",
+      "async": false,
+      "args": [],
+      "source": "()=>{window.testCallbacks=0;const original=onResults;onResults=r=>{window.testCallbacks++;original(r);};}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 66,
+      "column": 87,
+      "endLine": 66,
+      "name": "anonymous@66:87",
+      "scope": "anonymous@66:24",
+      "async": false,
+      "args": [
+        "r"
+      ],
+      "source": "r=>{window.testCallbacks++;original(r);}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 67,
+      "column": 83,
+      "endLine": 76,
+      "name": "anonymous@67:83",
+      "scope": "main",
+      "async": true,
+      "args": [],
+      "source": "async()=>{\n      for (const cycle of [1,2]) {\n        stage='camera cycle '+cycle; await page.evaluate(()=>window.testCallbacks=0); await page.locator('#start-btn').click();\n        await page.waitForFunction(()=>window.testCallbacks>=3,null,{timeout:90000});\n        assert.equal(await page.locator('#stop-btn').isEnabled(),true);\n        await page.evaluate(()=>window.testTracks=video.srcObject.getTracks()); await page.locator('#stop-btn').click();\n        assert.equal(await page.evaluate(()=>window.testTracks.every(x=>x.readyState==='ended') && video.srcObject===null),true);\n        assert.equal(await page.locator('#score').textContent(),'--'); assert.equal(await page.locator('#start-btn').isEnabled(),true);assert.equal(await page.locator('#video-idle').isVisible(),true);\n      }\n    }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 69,
+      "column": 57,
+      "endLine": 69,
+      "name": "anonymous@69:57",
+      "scope": "anonymous@67:83",
+      "async": false,
+      "args": [],
+      "source": "()=>window.testCallbacks=0"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 70,
+      "column": 35,
+      "endLine": 70,
+      "name": "anonymous@70:35",
+      "scope": "anonymous@67:83",
+      "async": false,
+      "args": [],
+      "source": "()=>window.testCallbacks>=3"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 72,
+      "column": 28,
+      "endLine": 72,
+      "name": "anonymous@72:28",
+      "scope": "anonymous@67:83",
+      "async": false,
+      "args": [],
+      "source": "()=>window.testTracks=video.srcObject.getTracks()"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 73,
+      "column": 41,
+      "endLine": 73,
+      "name": "anonymous@73:41",
+      "scope": "anonymous@67:83",
+      "async": false,
+      "args": [],
+      "source": "()=>window.testTracks.every(x=>x.readyState==='ended') && video.srcObject===null"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 73,
+      "column": 69,
+      "endLine": 73,
+      "name": "anonymous@73:69",
+      "scope": "anonymous@73:41",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>x.readyState==='ended'"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 78,
+      "column": 110,
+      "endLine": 94,
+      "name": "anonymous@78:110",
+      "scope": "main",
+      "async": true,
+      "args": [],
+      "source": "async()=>{\n      result.synthetic = await page.evaluate(()=>{\n        const points=Array.from({length:33},()=>({x:.5,y:.5,visibility:1}));\n        points[11]=points[12]={x:.25,y:.25,visibility:1};points[25]={x:.5,y:.75,visibility:1};points[27]={x:.5,y:1,visibility:1};\n        updateUI(points);const valid={score:scoreEl.textContent,trunk:trunkAngleEl.textContent,knee:kneeAngleEl.textContent,level:loadLevelEl.textContent};\n        updateUI(null); updateUI([]); const retained=scoreEl.textContent;onResults({});const missingRetained=scoreEl.textContent;\n        let shortError;try{drawSkeleton([]);}catch(error){shortError=error.name;}\n        points[11].x=NaN; updateUI(points);const invalid={score:scoreEl.textContent,trunk:trunkAngleEl.textContent,level:loadLevelEl.textContent};\n        const colors=[], strokes=[], originalStroke=ctx.stroke; let strokeCount=0;\n        ctx.stroke=function(){strokeCount++;originalStroke.call(ctx);};\n        try {for(const angle of [20,20.001,40,40.001]){strokeCount=0;points[11]=points[12]={x:.5-Math.tan(angle*Math.PI/180)*.25,y:.25,visibility:.5};points.forEach(x=>x.visibility=.5);drawSkeleton(points);colors.push(ctx.strokeStyle);strokes.push(strokeCount);}}\n        finally {ctx.stroke=originalStroke;}\n        return {valid,retained,missingRetained,shortError,invalid,colors,strokes};\n      });\n      assert.deepEqual(result.synthetic.valid,{score:'0',trunk:'45°',knee:'180°',level:'危険'});assert.equal(result.synthetic.retained,'0');assert.equal(result.synthetic.missingRetained,'0');assert.equal(result.synthetic.shortError,'TypeError');\n      assert.deepEqual(result.synthetic.invalid,{score:'0',trunk:'NaN°',level:'危険'}); assert.deepEqual(result.synthetic.colors,['#4ade80','#facc15','#facc15','#f87171']);assert.deepEqual(result.synthetic.strokes,[1,1,1,1]);\n    }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 79,
+      "column": 45,
+      "endLine": 91,
+      "name": "anonymous@79:45",
+      "scope": "anonymous@78:110",
+      "async": false,
+      "args": [],
+      "source": "()=>{\n        const points=Array.from({length:33},()=>({x:.5,y:.5,visibility:1}));\n        points[11]=points[12]={x:.25,y:.25,visibility:1};points[25]={x:.5,y:.75,visibility:1};points[27]={x:.5,y:1,visibility:1};\n        updateUI(points);const valid={score:scoreEl.textContent,trunk:trunkAngleEl.textContent,knee:kneeAngleEl.textContent,level:loadLevelEl.textContent};\n        updateUI(null); updateUI([]); const retained=scoreEl.textContent;onResults({});const missingRetained=scoreEl.textContent;\n        let shortError;try{drawSkeleton([]);}catch(error){shortError=error.name;}\n        points[11].x=NaN; updateUI(points);const invalid={score:scoreEl.textContent,trunk:trunkAngleEl.textContent,level:loadLevelEl.textContent};\n        const colors=[], strokes=[], originalStroke=ctx.stroke; let strokeCount=0;\n        ctx.stroke=function(){strokeCount++;originalStroke.call(ctx);};\n        try {for(const angle of [20,20.001,40,40.001]){strokeCount=0;points[11]=points[12]={x:.5-Math.tan(angle*Math.PI/180)*.25,y:.25,visibility:.5};points.forEach(x=>x.visibility=.5);drawSkeleton(points);colors.push(ctx.strokeStyle);strokes.push(strokeCount);}}\n        finally {ctx.stroke=originalStroke;}\n        return {valid,retained,missingRetained,shortError,invalid,colors,strokes};\n      }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 80,
+      "column": 44,
+      "endLine": 80,
+      "name": "anonymous@80:44",
+      "scope": "anonymous@79:45",
+      "async": false,
+      "args": [],
+      "source": "()=>({x:.5,y:.5,visibility:1})"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 87,
+      "column": 19,
+      "endLine": 87,
+      "name": "anonymous@87:19",
+      "scope": "anonymous@79:45",
+      "async": false,
+      "args": [],
+      "source": "function(){strokeCount++;originalStroke.call(ctx);}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 88,
+      "column": 165,
+      "endLine": 88,
+      "name": "anonymous@88:165",
+      "scope": "anonymous@79:45",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>x.visibility=.5"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 95,
+      "column": 107,
+      "endLine": 113,
+      "name": "anonymous@95:107",
+      "scope": "main",
+      "async": true,
+      "args": [],
+      "source": "async()=>{\n      await page.goto(base+'/rula.html');assert.equal(await page.locator('a[href=\"index.html\"]').count(),1);\n      await page.goto(base+'/RULAworkseet.html'); assert.equal(await page.locator('#final_rula_score').innerText(),'1');\n      for (const [id,value] of Object.entries({a1:'4',a2:'2',a3:'3',a4:'2',a6:'1',a7:'3',b9:'4',b10:'4',b11:'2',b13:'1',b14:'3'})) await page.locator('#'+id).selectOption(value);\n      for(const id of ['a1_adj1','a1_adj2','a2_adj','a3_adj','b9_adj1','b9_adj2','b10_adj1','b10_adj2'])await page.locator('#'+id).check();\n      assert.equal(await page.locator('#box_finalA').innerText(),'13');assert.equal(await page.locator('#box_finalB').innerText(),'13');assert.equal(await page.locator('#final_rula_score').innerText(),'7');assert.equal(await page.locator('#tc_8_7.highlight').count(),1);assert.equal(await page.locator('td.highlight').count(),3);\n      await page.reload();assert.equal(await page.locator('#final_rula_score').innerText(),'1');\n      result.tableC = await page.evaluate(()=>{\n        const states=[];for(let a=1;a<=8;a++)for(let b=1;b<=7;b++){\n          // Fault-injected muscle scores exercise every final index, not claimed as normal UI input.\n          document.getElementById('a6').add(new Option(String(a-1),String(a-1)));document.getElementById('a6').value=String(a-1);\n          document.getElementById('b13').add(new Option(String(b-1),String(b-1)));document.getElementById('b13').value=String(b-1);calcRULA();\n          states.push({a,b,score:Number(document.getElementById('final_rula_score').innerText),highlight:document.getElementById(`tc_${a}_${b}`).classList.contains('highlight'),count:document.querySelectorAll('td.highlight').length});\n        }return states;\n      });\n      for (const state of result.tableC) {assert.equal(state.score,inventory().tables.tableC_data[state.a-1][state.b-1]);assert.equal(state.highlight,true);assert.equal(state.count,3);}\n      assert.equal(result.tableC[0].score,1);assert.equal(result.tableC[55].score,7);\n      result.worksheetInvalid=await page.evaluate(()=>{document.getElementById('a1').value='invalid';try{calcRULA();return 'no error';}catch(error){return error.name;}});assert.equal(result.worksheetInvalid,'TypeError');\n    }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 102,
+      "column": 42,
+      "endLine": 109,
+      "name": "anonymous@102:42",
+      "scope": "anonymous@95:107",
+      "async": false,
+      "args": [],
+      "source": "()=>{\n        const states=[];for(let a=1;a<=8;a++)for(let b=1;b<=7;b++){\n          // Fault-injected muscle scores exercise every final index, not claimed as normal UI input.\n          document.getElementById('a6').add(new Option(String(a-1),String(a-1)));document.getElementById('a6').value=String(a-1);\n          document.getElementById('b13').add(new Option(String(b-1),String(b-1)));document.getElementById('b13').value=String(b-1);calcRULA();\n          states.push({a,b,score:Number(document.getElementById('final_rula_score').innerText),highlight:document.getElementById(`tc_${a}_${b}`).classList.contains('highlight'),count:document.querySelectorAll('td.highlight').length});\n        }return states;\n      }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 112,
+      "column": 50,
+      "endLine": 112,
+      "name": "anonymous@112:50",
+      "scope": "anonymous@95:107",
+      "async": false,
+      "args": [],
+      "source": "()=>{document.getElementById('a1').value='invalid';try{calcRULA();return 'no error';}catch(error){return error.name;}}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 114,
+      "column": 111,
+      "endLine": 124,
+      "name": "anonymous@114:111",
+      "scope": "main",
+      "async": true,
+      "args": [],
+      "source": "async()=>{\n      const denied=await browser.newContext(), q=await denied.newPage();\n      denied.on('request',request=>{if(new URL(request.url()).origin!==base)result.externalRequests.push(request.url());});\n      q.on('pageerror',error=>result.pageErrors.push({stage:'injected camera error',message:error.message}));\n      q.on('dialog',async dialog=>{result.dialogs.push({stage:'injected camera error',type:dialog.type(),message:dialog.message()});await dialog.dismiss();});\n      try {\n        await q.addInitScript(()=>navigator.mediaDevices.getUserMedia=()=>Promise.reject(new DOMException('test denied','NotAllowedError')));await q.goto(base);\n        await q.locator('#start-btn').click();await q.locator('#video-error').waitFor({state:'visible'}); assert.match(await q.locator('#video-error-text').innerText(),/アクセスを許可/);assert.equal(await q.locator('#start-btn').isEnabled(),true);\n        await q.evaluate(()=>navigator.mediaDevices.getUserMedia=()=>Promise.reject(new DOMException('test missing','NotFoundError')));await q.locator('#start-btn').click();await q.waitForFunction(()=>document.getElementById('video-error-text').innerText.includes('カメラが見つかりませんでした'));\n      } finally {await denied.close();}\n    }"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 116,
+      "column": 26,
+      "endLine": 116,
+      "name": "anonymous@116:26",
+      "scope": "anonymous@114:111",
+      "async": false,
+      "args": [
+        "request"
+      ],
+      "source": "request=>{if(new URL(request.url()).origin!==base)result.externalRequests.push(request.url());}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 117,
+      "column": 23,
+      "endLine": 117,
+      "name": "anonymous@117:23",
+      "scope": "anonymous@114:111",
+      "async": false,
+      "args": [
+        "error"
+      ],
+      "source": "error=>result.pageErrors.push({stage:'injected camera error',message:error.message})"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 118,
+      "column": 20,
+      "endLine": 118,
+      "name": "anonymous@118:20",
+      "scope": "anonymous@114:111",
+      "async": true,
+      "args": [
+        "dialog"
+      ],
+      "source": "async dialog=>{result.dialogs.push({stage:'injected camera error',type:dialog.type(),message:dialog.message()});await dialog.dismiss();}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 120,
+      "column": 30,
+      "endLine": 120,
+      "name": "anonymous@120:30",
+      "scope": "anonymous@114:111",
+      "async": false,
+      "args": [],
+      "source": "()=>navigator.mediaDevices.getUserMedia=()=>Promise.reject(new DOMException('test denied','NotAllowedError'))"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 120,
+      "column": 70,
+      "endLine": 120,
+      "name": "anonymous@120:70",
+      "scope": "anonymous@120:30",
+      "async": false,
+      "args": [],
+      "source": "()=>Promise.reject(new DOMException('test denied','NotAllowedError'))"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 122,
+      "column": 25,
+      "endLine": 122,
+      "name": "anonymous@122:25",
+      "scope": "anonymous@114:111",
+      "async": false,
+      "args": [],
+      "source": "()=>navigator.mediaDevices.getUserMedia=()=>Promise.reject(new DOMException('test missing','NotFoundError'))"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 122,
+      "column": 65,
+      "endLine": 122,
+      "name": "anonymous@122:65",
+      "scope": "anonymous@122:25",
+      "async": false,
+      "args": [],
+      "source": "()=>Promise.reject(new DOMException('test missing','NotFoundError'))"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 122,
+      "column": 197,
+      "endLine": 122,
+      "name": "anonymous@122:197",
+      "scope": "anonymous@114:111",
+      "async": false,
+      "args": [],
+      "source": "()=>document.getElementById('video-error-text').innerText.includes('カメラが見つかりませんでした')"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 125,
+      "column": 79,
+      "endLine": 125,
+      "name": "anonymous@125:79",
+      "scope": "main",
+      "async": false,
+      "args": [],
+      "source": "()=>{assert.deepEqual(result.externalRequests,[]);assert.deepEqual(result.httpFailures,[]);}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 127,
+      "column": 120,
+      "endLine": 127,
+      "name": "anonymous@127:120",
+      "scope": "main",
+      "async": false,
+      "args": [
+        "resolve"
+      ],
+      "source": "resolve=>server.once('close',resolve)"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 130,
+      "column": 13,
+      "endLine": 130,
+      "name": "anonymous@130:13",
+      "scope": "top",
+      "async": false,
+      "args": [
+        "error"
+      ],
+      "source": "error=>result.assertions.push({name:'runner prerequisites',status:'failed',error:String(error.stack || error)})"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 130,
+      "column": 134,
+      "endLine": 135,
+      "name": "anonymous@130:134",
+      "scope": "top",
+      "async": false,
+      "args": [],
+      "source": "()=>{\n  result.finishedAt=new Date().toISOString();result.sourceHashes=before;result.appFilesUnchanged=JSON.stringify(before)===JSON.stringify(hashes());\n  result.assertionStatus=result.assertions.every(x=>x.status==='passed')&&result.appFilesUnchanged?'passed':'failed';result.applicationExceptionFree=result.pageErrors.length===0;\n  fs.writeFileSync(path.join(__dirname,'results.json'),JSON.stringify(result,null,2)+'\\n');console.log(JSON.stringify({assertionStatus:result.assertionStatus,assertions:result.assertions,pageErrors:result.pageErrors,applicationExceptionFree:result.applicationExceptionFree,appFilesUnchanged:result.appFilesUnchanged},null,2));\n  if(result.assertionStatus==='failed')process.exitCode=1;\n}"
+    },
+    {
+      "category": "verification",
+      "file": "docs/verification/verify.cjs",
+      "line": 132,
+      "column": 49,
+      "endLine": 132,
+      "name": "anonymous@132:49",
+      "scope": "anonymous@130:134",
+      "async": false,
+      "args": [
+        "x"
+      ],
+      "source": "x=>x.status==='passed'"
+    }
+  ],
+  "tables": {
+    "tableA_data": [
+      [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        [
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            5
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        [
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        [
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        [
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            6
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            7
+          ]
+        ],
+        [
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ]
+      ]
+    ],
+    "tableB_data": [
+      [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      [
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      [
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          9
+        ]
+      ]
+    ],
+    "tableC_data": [
+      [
+        1,
+        2,
+        3,
+        3,
+        4,
+        5,
+        5
+      ],
+      [
+        2,
+        2,
+        3,
+        4,
+        4,
+        5,
+        5
+      ],
+      [
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        6
+      ],
+      [
+        3,
+        3,
+        3,
+        4,
+        5,
+        6,
+        6
+      ],
+      [
+        4,
+        4,
+        4,
+        5,
+        6,
+        7,
+        7
+      ],
+      [
+        4,
+        4,
+        5,
+        6,
+        6,
+        7,
+        7
+      ],
+      [
+        5,
+        5,
+        6,
+        6,
+        7,
+        7,
+        7
+      ],
+      [
+        5,
+        5,
+        6,
+        7,
+        7,
+        7,
+        7
+      ]
+    ]
+  }
+}

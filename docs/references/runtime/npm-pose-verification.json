@@ -1,0 +1,82 @@
+{
+  "package": "pose",
+  "version": "0.5.1675469404",
+  "url": "https://registry.npmjs.org/@mediapipe/pose/-/pose-0.5.1675469404.tgz",
+  "tarball_saved": false,
+  "bytes": 40985403,
+  "sha256": "8bb349a7b3a3ba699df23be804ddd3b3eab810b50b15406894be257859388a84",
+  "dist_integrity_verified": true,
+  "dist_shasum_verified": true,
+  "vendor_comparison": [
+    {
+      "file": "vendor/mediapipe/pose/pose.js",
+      "bytes": 47089,
+      "sha256": "fcb703afcce65d0a1c540f6a70c3bb45fc84521498c21a9d4160265dde648ab4",
+      "tarball_member_sha256": "fcb703afcce65d0a1c540f6a70c3bb45fc84521498c21a9d4160265dde648ab4",
+      "identical": true
+    },
+    {
+      "file": "vendor/mediapipe/pose/pose_landmark_full.tflite",
+      "bytes": 6440512,
+      "sha256": "e9a5c5cb17f736fafd4c2ec1da3b3d331d6edbe8a0d32395855aeb2cdfd64b9f",
+      "tarball_member_sha256": "e9a5c5cb17f736fafd4c2ec1da3b3d331d6edbe8a0d32395855aeb2cdfd64b9f",
+      "identical": true
+    },
+    {
+      "file": "vendor/mediapipe/pose/pose_solution_packed_assets.data",
+      "bytes": 2962288,
+      "sha256": "a63c614bef30d35947f13be361820b1e4e3bec9cfeebf4d11216a18373108e85",
+      "tarball_member_sha256": "a63c614bef30d35947f13be361820b1e4e3bec9cfeebf4d11216a18373108e85",
+      "identical": true
+    },
+    {
+      "file": "vendor/mediapipe/pose/pose_solution_packed_assets_loader.js",
+      "bytes": 8002,
+      "sha256": "d7aa29b7d8e11b5c97a58d719e982dd15c2de72995d95112d60492b854840a36",
+      "tarball_member_sha256": "d7aa29b7d8e11b5c97a58d719e982dd15c2de72995d95112d60492b854840a36",
+      "identical": true
+    },
+    {
+      "file": "vendor/mediapipe/pose/pose_solution_simd_wasm_bin.data",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tarball_member_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "file": "vendor/mediapipe/pose/pose_solution_simd_wasm_bin.js",
+      "bytes": 276478,
+      "sha256": "3983d1dca31d945d81abb70b18dd61f28ef4736e112463d7cfb1cbadef588127",
+      "tarball_member_sha256": "3983d1dca31d945d81abb70b18dd61f28ef4736e112463d7cfb1cbadef588127",
+      "identical": true
+    },
+    {
+      "file": "vendor/mediapipe/pose/pose_solution_simd_wasm_bin.wasm",
+      "bytes": 6104372,
+      "sha256": "195a929430e2ce130b3efb82e64ba27c8e68cb0f6bad870b715688060ea6f7e2",
+      "tarball_member_sha256": "195a929430e2ce130b3efb82e64ba27c8e68cb0f6bad870b715688060ea6f7e2",
+      "identical": true
+    },
+    {
+      "file": "vendor/mediapipe/pose/pose_solution_wasm_bin.js",
+      "bytes": 276473,
+      "sha256": "3fcfd9574a04fcf4a0b9271b9b4429c6b9a70278300a5e54c45ddf2001e41422",
+      "tarball_member_sha256": "3fcfd9574a04fcf4a0b9271b9b4429c6b9a70278300a5e54c45ddf2001e41422",
+      "identical": true
+    },
+    {
+      "file": "vendor/mediapipe/pose/pose_solution_wasm_bin.wasm",
+      "bytes": 5994571,
+      "sha256": "a5589369289e1f1e007c106e8ffb26e85a5be762c6db9551ed36213f8f58378d",
+      "tarball_member_sha256": "a5589369289e1f1e007c106e8ffb26e85a5be762c6db9551ed36213f8f58378d",
+      "identical": true
+    },
+    {
+      "file": "vendor/mediapipe/pose/pose_web.binarypb",
+      "bytes": 1007,
+      "sha256": "dc8efd1c2d62007b34278467407fda5f70847f41310e0e39f0f59fc17b1d01f7",
+      "tarball_member_sha256": "dc8efd1c2d62007b34278467407fda5f70847f41310e0e39f0f59fc17b1d01f7",
+      "identical": true
+    }
+  ]
+}

@@ -1,0 +1,3753 @@
+{
+  "source_file": "fetch_sources.py",
+  "source_sha256": "35eb08f719b4e34892045ad011adaff6ab141114917103261a4d859a3939cafc",
+  "source_lines": 82,
+  "created_date_jst": "2026-10-13",
+  "method": "Python標準ast。Name(Store)/arg/Import/ImportFrom/FunctionDef/ExceptHandler.nameを全抽出し、lexical scope内でLoadを解決。別ast.walkのbinding multisetと照合。",
+  "scope_policy_ja": "module配下のif/for/with/tryは新scopeを作らない。functionとlist comprehensionは別scope。listcomp最初のiterableは親scopeで評価。except変数は例外suite後にPythonが削除。属性名・dict key・keyword引数名は変数束縛ではない。",
+  "coverage": {
+    "binding_events": 60,
+    "unique_symbols": 59,
+    "function_definitions": 3,
+    "independent_ast_binding_events": 60,
+    "binding_multiset_match": true,
+    "semantic_rows_exact_match": true,
+    "unexplained_symbols": [],
+    "load_occurrences": 154,
+    "load_multiset_match": true,
+    "variable_symbols_excluding_function_names": 56,
+    "function_binding_symbols": 3
+  },
+  "excluded_ja": [
+    "sources.json、npm-*-verification.json等の生成データ",
+    "npmのindex.d.ts等第三者配布物",
+    "保存した公式原稿（python-http-server.pyを含む）",
+    "README/research-notes等の説明文書",
+    "Python組込名と__name__/__file__等の実行環境提供名は本ソースに定義されないため外部参照一覧へ分離"
+  ],
+  "bindings": [
+    {
+      "id": "module:base64@4:0:import",
+      "scope": "module",
+      "name": "base64",
+      "line": 4,
+      "column_zero_based": 0,
+      "kind": "import",
+      "definition_text": "import base64",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:concurrent@4:0:import",
+      "scope": "module",
+      "name": "concurrent",
+      "line": 4,
+      "column_zero_based": 0,
+      "kind": "import",
+      "definition_text": "import concurrent.futures",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:datetime@4:0:import",
+      "scope": "module",
+      "name": "datetime",
+      "line": 4,
+      "column_zero_based": 0,
+      "kind": "import",
+      "definition_text": "import datetime",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:hashlib@4:0:import",
+      "scope": "module",
+      "name": "hashlib",
+      "line": 4,
+      "column_zero_based": 0,
+      "kind": "import",
+      "definition_text": "import hashlib",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:io@4:0:import",
+      "scope": "module",
+      "name": "io",
+      "line": 4,
+      "column_zero_based": 0,
+      "kind": "import",
+      "definition_text": "import io",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:json@4:0:import",
+      "scope": "module",
+      "name": "json",
+      "line": 4,
+      "column_zero_based": 0,
+      "kind": "import",
+      "definition_text": "import json",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:tarfile@4:0:import",
+      "scope": "module",
+      "name": "tarfile",
+      "line": 4,
+      "column_zero_based": 0,
+      "kind": "import",
+      "definition_text": "import tarfile",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:urllib@4:0:import",
+      "scope": "module",
+      "name": "urllib",
+      "line": 4,
+      "column_zero_based": 0,
+      "kind": "import",
+      "definition_text": "import urllib.request",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:Path@5:0:import",
+      "scope": "module",
+      "name": "Path",
+      "line": 5,
+      "column_zero_based": 0,
+      "kind": "import",
+      "definition_text": "from pathlib import Path",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:ROOT@6:0:assignment",
+      "scope": "module",
+      "name": "ROOT",
+      "line": 6,
+      "column_zero_based": 0,
+      "kind": "assignment",
+      "definition_text": "ROOT",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:MDN@7:0:assignment",
+      "scope": "module",
+      "name": "MDN",
+      "line": 7,
+      "column_zero_based": 0,
+      "kind": "assignment",
+      "definition_text": "MDN",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:DOTNET@8:0:assignment",
+      "scope": "module",
+      "name": "DOTNET",
+      "line": 8,
+      "column_zero_based": 0,
+      "kind": "assignment",
+      "definition_text": "DOTNET",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:PYTHON@9:0:assignment",
+      "scope": "module",
+      "name": "PYTHON",
+      "line": 9,
+      "column_zero_based": 0,
+      "kind": "assignment",
+      "definition_text": "PYTHON",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:IBM@10:0:assignment",
+      "scope": "module",
+      "name": "IBM",
+      "line": 10,
+      "column_zero_based": 0,
+      "kind": "assignment",
+      "definition_text": "IBM",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:POWERSHELL@11:0:assignment",
+      "scope": "module",
+      "name": "POWERSHELL",
+      "line": 11,
+      "column_zero_based": 0,
+      "kind": "assignment",
+      "definition_text": "POWERSHELL",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:MDN_PATHS@12:0:assignment",
+      "scope": "module",
+      "name": "MDN_PATHS",
+      "line": 12,
+      "column_zero_based": 0,
+      "kind": "assignment",
+      "definition_text": "MDN_PATHS",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:SOURCES@38:0:assignment",
+      "scope": "module",
+      "name": "SOURCES",
+      "line": 38,
+      "column_zero_based": 0,
+      "kind": "assignment",
+      "definition_text": "SOURCES",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module/<listcomp@38>:f@38:39:assignment",
+      "scope": "module/<listcomp@38>",
+      "name": "f",
+      "line": 38,
+      "column_zero_based": 39,
+      "kind": "comprehension_target",
+      "definition_text": "f",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module/<listcomp@38>:p@38:41:assignment",
+      "scope": "module/<listcomp@38>",
+      "name": "p",
+      "line": 38,
+      "column_zero_based": 41,
+      "kind": "comprehension_target",
+      "definition_text": "p",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:get@48:0:function_definition",
+      "scope": "module",
+      "name": "get",
+      "line": 48,
+      "column_zero_based": 0,
+      "kind": "function_definition",
+      "definition_text": "def get(url)",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "get:url@48:8:parameter",
+      "scope": "get",
+      "name": "url",
+      "line": 48,
+      "column_zero_based": 8,
+      "kind": "parameter",
+      "definition_text": "url",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "get:r@49:49:context_manager_target",
+      "scope": "get",
+      "name": "r",
+      "line": 49,
+      "column_zero_based": 49,
+      "kind": "context_manager_target",
+      "definition_text": "r",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:stamp@51:0:function_definition",
+      "scope": "module",
+      "name": "stamp",
+      "line": 51,
+      "column_zero_based": 0,
+      "kind": "function_definition",
+      "definition_text": "def stamp()",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:save_one@53:0:function_definition",
+      "scope": "module",
+      "name": "save_one",
+      "line": 53,
+      "column_zero_based": 0,
+      "kind": "function_definition",
+      "definition_text": "def save_one(item)",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "save_one:item@53:13:parameter",
+      "scope": "save_one",
+      "name": "item",
+      "line": 53,
+      "column_zero_based": 13,
+      "kind": "parameter",
+      "definition_text": "item",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "save_one:f@54:1:assignment",
+      "scope": "save_one",
+      "name": "f",
+      "line": 54,
+      "column_zero_based": 1,
+      "kind": "assignment",
+      "definition_text": "f",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "save_one:repo@54:3:assignment",
+      "scope": "save_one",
+      "name": "repo",
+      "line": 54,
+      "column_zero_based": 3,
+      "kind": "assignment",
+      "definition_text": "repo",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "save_one:commit@54:8:assignment",
+      "scope": "save_one",
+      "name": "commit",
+      "line": 54,
+      "column_zero_based": 8,
+      "kind": "assignment",
+      "definition_text": "commit",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "save_one:path@54:15:assignment",
+      "scope": "save_one",
+      "name": "path",
+      "line": 54,
+      "column_zero_based": 15,
+      "kind": "assignment",
+      "definition_text": "path",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "save_one:url@55:1:assignment",
+      "scope": "save_one",
+      "name": "url",
+      "line": 55,
+      "column_zero_based": 1,
+      "kind": "assignment",
+      "definition_text": "url",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "save_one:rec@56:1:assignment",
+      "scope": "save_one",
+      "name": "rec",
+      "line": 56,
+      "column_zero_based": 1,
+      "kind": "assignment",
+      "definition_text": "rec",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "save_one:raw@58:2:assignment",
+      "scope": "save_one",
+      "name": "raw",
+      "line": 58,
+      "column_zero_based": 2,
+      "kind": "assignment",
+      "definition_text": "raw",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "save_one:status@58:6:assignment",
+      "scope": "save_one",
+      "name": "status",
+      "line": 58,
+      "column_zero_based": 6,
+      "kind": "assignment",
+      "definition_text": "status",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "save_one:mime@58:13:assignment",
+      "scope": "save_one",
+      "name": "mime",
+      "line": 58,
+      "column_zero_based": 13,
+      "kind": "assignment",
+      "definition_text": "mime",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "save_one:e@60:1:exception_target",
+      "scope": "save_one",
+      "name": "e",
+      "line": 60,
+      "column_zero_based": 1,
+      "kind": "exception_target",
+      "definition_text": "except Exception as e",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:pool@63:62:context_manager_target",
+      "scope": "module",
+      "name": "pool",
+      "line": 63,
+      "column_zero_based": 62,
+      "kind": "context_manager_target",
+      "definition_text": "pool",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:records@63:68:assignment",
+      "scope": "module",
+      "name": "records",
+      "line": 63,
+      "column_zero_based": 68,
+      "kind": "assignment",
+      "definition_text": "records",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:name@64:5:loop_target",
+      "scope": "module",
+      "name": "name",
+      "line": 64,
+      "column_zero_based": 5,
+      "kind": "loop_target",
+      "definition_text": "name",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:version@64:10:loop_target",
+      "scope": "module",
+      "name": "version",
+      "line": 64,
+      "column_zero_based": 10,
+      "kind": "loop_target",
+      "definition_text": "version",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:prefix@64:18:loop_target",
+      "scope": "module",
+      "name": "prefix",
+      "line": 64,
+      "column_zero_based": 18,
+      "kind": "loop_target",
+      "definition_text": "prefix",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:url@65:2:assignment",
+      "scope": "module",
+      "name": "url",
+      "line": 65,
+      "column_zero_based": 2,
+      "kind": "assignment",
+      "definition_text": "url",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:raw@66:2:assignment",
+      "scope": "module",
+      "name": "raw",
+      "line": 66,
+      "column_zero_based": 2,
+      "kind": "assignment",
+      "definition_text": "raw",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:status@66:6:assignment",
+      "scope": "module",
+      "name": "status",
+      "line": 66,
+      "column_zero_based": 6,
+      "kind": "assignment",
+      "definition_text": "status",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:mime@66:13:assignment",
+      "scope": "module",
+      "name": "mime",
+      "line": 66,
+      "column_zero_based": 13,
+      "kind": "assignment",
+      "definition_text": "mime",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:meta@66:28:assignment",
+      "scope": "module",
+      "name": "meta",
+      "line": 66,
+      "column_zero_based": 28,
+      "kind": "assignment",
+      "definition_text": "meta",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:filename@66:50:assignment",
+      "scope": "module",
+      "name": "filename",
+      "line": 66,
+      "column_zero_based": 50,
+      "kind": "assignment",
+      "definition_text": "filename",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:archive@68:2:assignment",
+      "scope": "module",
+      "name": "archive",
+      "line": 68,
+      "column_zero_based": 2,
+      "kind": "assignment",
+      "definition_text": "archive",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:astatus@68:10:assignment",
+      "scope": "module",
+      "name": "astatus",
+      "line": 68,
+      "column_zero_based": 10,
+      "kind": "assignment",
+      "definition_text": "astatus",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:amime@68:18:assignment",
+      "scope": "module",
+      "name": "amime",
+      "line": 68,
+      "column_zero_based": 18,
+      "kind": "assignment",
+      "definition_text": "amime",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:alg@69:2:assignment",
+      "scope": "module",
+      "name": "alg",
+      "line": 69,
+      "column_zero_based": 2,
+      "kind": "assignment",
+      "definition_text": "alg",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:b64@69:6:assignment",
+      "scope": "module",
+      "name": "b64",
+      "line": 69,
+      "column_zero_based": 6,
+      "kind": "assignment",
+      "definition_text": "b64",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:dist@72:2:assignment",
+      "scope": "module",
+      "name": "dist",
+      "line": 72,
+      "column_zero_based": 2,
+      "kind": "assignment",
+      "definition_text": "dist",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:tf@73:64:context_manager_target",
+      "scope": "module",
+      "name": "tf",
+      "line": 73,
+      "column_zero_based": 64,
+      "kind": "context_manager_target",
+      "definition_text": "tf",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:member@74:7:loop_target",
+      "scope": "module",
+      "name": "member",
+      "line": 74,
+      "column_zero_based": 7,
+      "kind": "loop_target",
+      "definition_text": "member",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:data@75:4:assignment",
+      "scope": "module",
+      "name": "data",
+      "line": 75,
+      "column_zero_based": 4,
+      "kind": "assignment",
+      "definition_text": "data",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:f@75:40:assignment",
+      "scope": "module",
+      "name": "f",
+      "line": 75,
+      "column_zero_based": 40,
+      "kind": "assignment",
+      "definition_text": "f",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:local@77:7:loop_target",
+      "scope": "module",
+      "name": "local",
+      "line": 77,
+      "column_zero_based": 7,
+      "kind": "loop_target",
+      "definition_text": "local",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:data@78:4:assignment",
+      "scope": "module",
+      "name": "data",
+      "line": 78,
+      "column_zero_based": 4,
+      "kind": "assignment",
+      "definition_text": "data",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:actual@78:55:assignment",
+      "scope": "module",
+      "name": "actual",
+      "line": 78,
+      "column_zero_based": 55,
+      "kind": "assignment",
+      "definition_text": "actual",
+      "source_file": "fetch_sources.py"
+    },
+    {
+      "id": "module:rec@82:5:loop_target",
+      "scope": "module",
+      "name": "rec",
+      "line": 82,
+      "column_zero_based": 5,
+      "kind": "loop_target",
+      "definition_text": "rec",
+      "source_file": "fetch_sources.py"
+    }
+  ],
+  "symbols": [
+    {
+      "id": "module:base64",
+      "name": "base64",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:base64@4:0:import",
+          "scope": "module",
+          "name": "base64",
+          "line": 4,
+          "column_zero_based": 0,
+          "kind": "import",
+          "definition_text": "import base64",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        4
+      ],
+      "use_lines": [
+        70
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "base64",
+          "line": 70,
+          "column_zero_based": 9,
+          "resolved_symbol": "module:base64"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "module",
+      "meaning_ja": "digestをBase64文字列へ変換",
+      "unit_or_basis_ja": "単位なし",
+      "initial_value_ja": "import base64",
+      "expected_range_or_members_ja": "Python標準ライブラリmodule",
+      "update_condition_ja": "import時だけ束縛。再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:concurrent",
+      "name": "concurrent",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:concurrent@4:0:import",
+          "scope": "module",
+          "name": "concurrent",
+          "line": 4,
+          "column_zero_based": 0,
+          "kind": "import",
+          "definition_text": "import concurrent.futures",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        4
+      ],
+      "use_lines": [
+        63
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "concurrent",
+          "line": 63,
+          "column_zero_based": 6,
+          "resolved_symbol": "module:concurrent"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "module",
+      "meaning_ja": "concurrent.futuresのThreadPoolExecutorを参照",
+      "unit_or_basis_ja": "単位なし",
+      "initial_value_ja": "import concurrent.futures。ドット付きimportは先頭module名を束縛",
+      "expected_range_or_members_ja": "Python標準ライブラリmodule",
+      "update_condition_ja": "import時だけ束縛。再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:datetime",
+      "name": "datetime",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:datetime@4:0:import",
+          "scope": "module",
+          "name": "datetime",
+          "line": 4,
+          "column_zero_based": 0,
+          "kind": "import",
+          "definition_text": "import datetime",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        4
+      ],
+      "use_lines": [
+        52,
+        56,
+        67,
+        76
+      ],
+      "load_occurrences": [
+        {
+          "scope": "stamp",
+          "name": "datetime",
+          "line": 52,
+          "column_zero_based": 8,
+          "resolved_symbol": "module:datetime"
+        },
+        {
+          "scope": "stamp",
+          "name": "datetime",
+          "line": 52,
+          "column_zero_based": 30,
+          "resolved_symbol": "module:datetime"
+        },
+        {
+          "scope": "save_one",
+          "name": "datetime",
+          "line": 56,
+          "column_zero_based": 125,
+          "resolved_symbol": "module:datetime"
+        },
+        {
+          "scope": "save_one",
+          "name": "datetime",
+          "line": 56,
+          "column_zero_based": 147,
+          "resolved_symbol": "module:datetime"
+        },
+        {
+          "scope": "save_one",
+          "name": "datetime",
+          "line": 56,
+          "column_zero_based": 165,
+          "resolved_symbol": "module:datetime"
+        },
+        {
+          "scope": "module",
+          "name": "datetime",
+          "line": 67,
+          "column_zero_based": 116,
+          "resolved_symbol": "module:datetime"
+        },
+        {
+          "scope": "module",
+          "name": "datetime",
+          "line": 67,
+          "column_zero_based": 138,
+          "resolved_symbol": "module:datetime"
+        },
+        {
+          "scope": "module",
+          "name": "datetime",
+          "line": 67,
+          "column_zero_based": 156,
+          "resolved_symbol": "module:datetime"
+        },
+        {
+          "scope": "module",
+          "name": "datetime",
+          "line": 76,
+          "column_zero_based": 153,
+          "resolved_symbol": "module:datetime"
+        },
+        {
+          "scope": "module",
+          "name": "datetime",
+          "line": 76,
+          "column_zero_based": 175,
+          "resolved_symbol": "module:datetime"
+        },
+        {
+          "scope": "module",
+          "name": "datetime",
+          "line": 76,
+          "column_zero_based": 193,
+          "resolved_symbol": "module:datetime"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "module",
+      "meaning_ja": "UTC時刻・JST日付を生成",
+      "unit_or_basis_ja": "単位なし",
+      "initial_value_ja": "import datetime",
+      "expected_range_or_members_ja": "Python標準ライブラリmodule",
+      "update_condition_ja": "import時だけ束縛。再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:hashlib",
+      "name": "hashlib",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:hashlib@4:0:import",
+          "scope": "module",
+          "name": "hashlib",
+          "line": 4,
+          "column_zero_based": 0,
+          "kind": "import",
+          "definition_text": "import hashlib",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        4
+      ],
+      "use_lines": [
+        59,
+        67,
+        70,
+        71,
+        72,
+        76,
+        79
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "hashlib",
+          "line": 59,
+          "column_zero_based": 67,
+          "resolved_symbol": "module:hashlib"
+        },
+        {
+          "scope": "module",
+          "name": "hashlib",
+          "line": 67,
+          "column_zero_based": 241,
+          "resolved_symbol": "module:hashlib"
+        },
+        {
+          "scope": "module",
+          "name": "hashlib",
+          "line": 70,
+          "column_zero_based": 26,
+          "resolved_symbol": "module:hashlib"
+        },
+        {
+          "scope": "module",
+          "name": "hashlib",
+          "line": 71,
+          "column_zero_based": 9,
+          "resolved_symbol": "module:hashlib"
+        },
+        {
+          "scope": "module",
+          "name": "hashlib",
+          "line": 72,
+          "column_zero_based": 123,
+          "resolved_symbol": "module:hashlib"
+        },
+        {
+          "scope": "module",
+          "name": "hashlib",
+          "line": 76,
+          "column_zero_based": 265,
+          "resolved_symbol": "module:hashlib"
+        },
+        {
+          "scope": "module",
+          "name": "hashlib",
+          "line": 79,
+          "column_zero_based": 112,
+          "resolved_symbol": "module:hashlib"
+        },
+        {
+          "scope": "module",
+          "name": "hashlib",
+          "line": 79,
+          "column_zero_based": 169,
+          "resolved_symbol": "module:hashlib"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "module",
+      "meaning_ja": "SHA-1/SHA-256とintegrity指定algorithmのhashを計算",
+      "unit_or_basis_ja": "単位なし",
+      "initial_value_ja": "import hashlib",
+      "expected_range_or_members_ja": "Python標準ライブラリmodule",
+      "update_condition_ja": "import時だけ束縛。再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:io",
+      "name": "io",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:io@4:0:import",
+          "scope": "module",
+          "name": "io",
+          "line": 4,
+          "column_zero_based": 0,
+          "kind": "import",
+          "definition_text": "import io",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        4
+      ],
+      "use_lines": [
+        73
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "io",
+          "line": 73,
+          "column_zero_based": 28,
+          "resolved_symbol": "module:io"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "module",
+      "meaning_ja": "tarball bytesをメモリー上のBytesIOへ渡す",
+      "unit_or_basis_ja": "単位なし",
+      "initial_value_ja": "import io",
+      "expected_range_or_members_ja": "Python標準ライブラリmodule",
+      "update_condition_ja": "import時だけ束縛。再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:json",
+      "name": "json",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:json@4:0:import",
+          "scope": "module",
+          "name": "json",
+          "line": 4,
+          "column_zero_based": 0,
+          "kind": "import",
+          "definition_text": "import json",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        4
+      ],
+      "use_lines": [
+        66,
+        80,
+        81
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "json",
+          "line": 66,
+          "column_zero_based": 33,
+          "resolved_symbol": "module:json"
+        },
+        {
+          "scope": "module",
+          "name": "json",
+          "line": 80,
+          "column_zero_based": 50,
+          "resolved_symbol": "module:json"
+        },
+        {
+          "scope": "module",
+          "name": "json",
+          "line": 81,
+          "column_zero_based": 34,
+          "resolved_symbol": "module:json"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "module",
+      "meaning_ja": "メタデータ解析・JSON生成",
+      "unit_or_basis_ja": "単位なし",
+      "initial_value_ja": "import json",
+      "expected_range_or_members_ja": "Python標準ライブラリmodule",
+      "update_condition_ja": "import時だけ束縛。再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:tarfile",
+      "name": "tarfile",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:tarfile@4:0:import",
+          "scope": "module",
+          "name": "tarfile",
+          "line": 4,
+          "column_zero_based": 0,
+          "kind": "import",
+          "definition_text": "import tarfile",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        4
+      ],
+      "use_lines": [
+        73
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "tarfile",
+          "line": 73,
+          "column_zero_based": 7,
+          "resolved_symbol": "module:tarfile"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "module",
+      "meaning_ja": "gzip圧縮tarballを読む",
+      "unit_or_basis_ja": "単位なし",
+      "initial_value_ja": "import tarfile",
+      "expected_range_or_members_ja": "Python標準ライブラリmodule",
+      "update_condition_ja": "import時だけ束縛。再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:urllib",
+      "name": "urllib",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:urllib@4:0:import",
+          "scope": "module",
+          "name": "urllib",
+          "line": 4,
+          "column_zero_based": 0,
+          "kind": "import",
+          "definition_text": "import urllib.request",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        4
+      ],
+      "use_lines": [
+        49
+      ],
+      "load_occurrences": [
+        {
+          "scope": "get",
+          "name": "urllib",
+          "line": 49,
+          "column_zero_based": 6,
+          "resolved_symbol": "module:urllib"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "module",
+      "meaning_ja": "urllib.request.urlopenでHTTP取得",
+      "unit_or_basis_ja": "単位なし",
+      "initial_value_ja": "import urllib.request。ドット付きimportは先頭module名を束縛",
+      "expected_range_or_members_ja": "Python標準ライブラリmodule",
+      "update_condition_ja": "import時だけ束縛。再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:Path",
+      "name": "Path",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:Path@5:0:import",
+          "scope": "module",
+          "name": "Path",
+          "line": 5,
+          "column_zero_based": 0,
+          "kind": "import",
+          "definition_text": "from pathlib import Path",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        5
+      ],
+      "use_lines": [
+        6
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "Path",
+          "line": 6,
+          "column_zero_based": 7,
+          "resolved_symbol": "module:Path"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "type[pathlib.Path]",
+      "meaning_ja": "パスの構築・解決・親フォルダー参照・ファイル読み書きに使うクラス",
+      "unit_or_basis_ja": "OSのファイルパス",
+      "initial_value_ja": "pathlibからimportしたPathクラス",
+      "expected_range_or_members_ja": "標準pathlib.Path",
+      "update_condition_ja": "import時だけ束縛。再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:ROOT",
+      "name": "ROOT",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:ROOT@6:0:assignment",
+          "scope": "module",
+          "name": "ROOT",
+          "line": 6,
+          "column_zero_based": 0,
+          "kind": "assignment",
+          "definition_text": "ROOT",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        6
+      ],
+      "use_lines": [
+        58,
+        66,
+        75,
+        77,
+        79,
+        80,
+        81
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "ROOT",
+          "line": 58,
+          "column_zero_based": 29,
+          "resolved_symbol": "module:ROOT"
+        },
+        {
+          "scope": "module",
+          "name": "ROOT",
+          "line": 66,
+          "column_zero_based": 85,
+          "resolved_symbol": "module:ROOT"
+        },
+        {
+          "scope": "module",
+          "name": "ROOT",
+          "line": 75,
+          "column_zero_based": 77,
+          "resolved_symbol": "module:ROOT"
+        },
+        {
+          "scope": "module",
+          "name": "ROOT",
+          "line": 77,
+          "column_zero_based": 24,
+          "resolved_symbol": "module:ROOT"
+        },
+        {
+          "scope": "module",
+          "name": "ROOT",
+          "line": 79,
+          "column_zero_based": 69,
+          "resolved_symbol": "module:ROOT"
+        },
+        {
+          "scope": "module",
+          "name": "ROOT",
+          "line": 80,
+          "column_zero_based": 3,
+          "resolved_symbol": "module:ROOT"
+        },
+        {
+          "scope": "module",
+          "name": "ROOT",
+          "line": 81,
+          "column_zero_based": 2,
+          "resolved_symbol": "module:ROOT"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "pathlib.Path",
+      "meaning_ja": "この取得スクリプトの所在フォルダー。原稿と記録の保存先",
+      "unit_or_basis_ja": "絶対ファイルパス",
+      "initial_value_ja": "Path(__file__).resolve().parent",
+      "expected_range_or_members_ja": "通常docs/references/runtime。別の配置ならその所在",
+      "update_condition_ja": "module読込時。再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:MDN",
+      "name": "MDN",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:MDN@7:0:assignment",
+          "scope": "module",
+          "name": "MDN",
+          "line": 7,
+          "column_zero_based": 0,
+          "kind": "assignment",
+          "definition_text": "MDN",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        7
+      ],
+      "use_lines": [
+        38
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module/<listcomp@38>",
+          "name": "MDN",
+          "line": 38,
+          "column_zero_based": 28,
+          "resolved_symbol": "module:MDN"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "mdn/content の取得元を固定するgit commit ID",
+      "unit_or_basis_ja": "40桁の16進commit ID",
+      "initial_value_ja": "19370346042efad9e179fbf1f55deeeadee98c40",
+      "expected_range_or_members_ja": "この固定値。ライブラリ版や資料取得日とは異なる",
+      "update_condition_ja": "module読込時。変更は固定取得元を更新するとき",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:DOTNET",
+      "name": "DOTNET",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:DOTNET@8:0:assignment",
+          "scope": "module",
+          "name": "DOTNET",
+          "line": 8,
+          "column_zero_based": 0,
+          "kind": "assignment",
+          "definition_text": "DOTNET",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        8
+      ],
+      "use_lines": [
+        39,
+        41
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "DOTNET",
+          "line": 39,
+          "column_zero_based": 44,
+          "resolved_symbol": "module:DOTNET"
+        },
+        {
+          "scope": "module",
+          "name": "DOTNET",
+          "line": 41,
+          "column_zero_based": 53,
+          "resolved_symbol": "module:DOTNET"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "dotnet/dotnet-api-docs の取得元を固定するgit commit ID",
+      "unit_or_basis_ja": "40桁の16進commit ID",
+      "initial_value_ja": "b3f744389f83f55a54e9d9e4cad4b1fef80f5757",
+      "expected_range_or_members_ja": "この固定値。ライブラリ版や資料取得日とは異なる",
+      "update_condition_ja": "module読込時。変更は固定取得元を更新するとき",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:PYTHON",
+      "name": "PYTHON",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:PYTHON@9:0:assignment",
+          "scope": "module",
+          "name": "PYTHON",
+          "line": 9,
+          "column_zero_based": 0,
+          "kind": "assignment",
+          "definition_text": "PYTHON",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        9
+      ],
+      "use_lines": [
+        42,
+        43,
+        44
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "PYTHON",
+          "line": 42,
+          "column_zero_based": 44,
+          "resolved_symbol": "module:PYTHON"
+        },
+        {
+          "scope": "module",
+          "name": "PYTHON",
+          "line": 43,
+          "column_zero_based": 43,
+          "resolved_symbol": "module:PYTHON"
+        },
+        {
+          "scope": "module",
+          "name": "PYTHON",
+          "line": 44,
+          "column_zero_based": 36,
+          "resolved_symbol": "module:PYTHON"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "python/cpython の取得元を固定するgit commit ID",
+      "unit_or_basis_ja": "40桁の16進commit ID",
+      "initial_value_ja": "58ed60b7415e218ce3d608302e39b5e55bfb0e88",
+      "expected_range_or_members_ja": "この固定値。ライブラリ版や資料取得日とは異なる",
+      "update_condition_ja": "module読込時。変更は固定取得元を更新するとき",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:IBM",
+      "name": "IBM",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:IBM@10:0:assignment",
+          "scope": "module",
+          "name": "IBM",
+          "line": 10,
+          "column_zero_based": 0,
+          "kind": "assignment",
+          "definition_text": "IBM",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        10
+      ],
+      "use_lines": [
+        45
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "IBM",
+          "line": 45,
+          "column_zero_based": 36,
+          "resolved_symbol": "module:IBM"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "IBM/plex の取得元を固定するgit commit ID",
+      "unit_or_basis_ja": "40桁の16進commit ID",
+      "initial_value_ja": "763c36ef9117782905ae010056dfbe8fd2653a25",
+      "expected_range_or_members_ja": "この固定値。ライブラリ版や資料取得日とは異なる",
+      "update_condition_ja": "module読込時。変更は固定取得元を更新するとき",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:POWERSHELL",
+      "name": "POWERSHELL",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:POWERSHELL@11:0:assignment",
+          "scope": "module",
+          "name": "POWERSHELL",
+          "line": 11,
+          "column_zero_based": 0,
+          "kind": "assignment",
+          "definition_text": "POWERSHELL",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        11
+      ],
+      "use_lines": [
+        40,
+        46
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "POWERSHELL",
+          "line": 40,
+          "column_zero_based": 55,
+          "resolved_symbol": "module:POWERSHELL"
+        },
+        {
+          "scope": "module",
+          "name": "POWERSHELL",
+          "line": 46,
+          "column_zero_based": 69,
+          "resolved_symbol": "module:POWERSHELL"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "MicrosoftDocs/PowerShell-Docs の取得元を固定するgit commit ID",
+      "unit_or_basis_ja": "40桁の16進commit ID",
+      "initial_value_ja": "a3de8f22552170e70852470d46cd52cd9ca471ec",
+      "expected_range_or_members_ja": "この固定値。ライブラリ版や資料取得日とは異なる",
+      "update_condition_ja": "module読込時。変更は固定取得元を更新するとき",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:MDN_PATHS",
+      "name": "MDN_PATHS",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:MDN_PATHS@12:0:assignment",
+          "scope": "module",
+          "name": "MDN_PATHS",
+          "line": 12,
+          "column_zero_based": 0,
+          "kind": "assignment",
+          "definition_text": "MDN_PATHS",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        12
+      ],
+      "use_lines": [
+        38
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "MDN_PATHS",
+          "line": 38,
+          "column_zero_based": 46,
+          "resolved_symbol": "module:MDN_PATHS"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "dict[str,str]",
+      "meaning_ja": "保存ファイル名とMDNリポジトリ内原稿パスの対応表",
+      "unit_or_basis_ja": "相対パス",
+      "initial_value_ja": "12–37行の固定dict、24件",
+      "expected_range_or_members_ja": "定義済みMDN原稿24件",
+      "update_condition_ja": "module読込時。実行中の更新なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:SOURCES",
+      "name": "SOURCES",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:SOURCES@38:0:assignment",
+          "scope": "module",
+          "name": "SOURCES",
+          "line": 38,
+          "column_zero_based": 0,
+          "kind": "assignment",
+          "definition_text": "SOURCES",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        38
+      ],
+      "use_lines": [
+        63
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "SOURCES",
+          "line": 63,
+          "column_zero_based": 99,
+          "resolved_symbol": "module:SOURCES"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "list[tuple[str,str,str,str]]",
+      "meaning_ja": "一般公式原稿の取得一覧。各要素は保存名/repository/commit/upstream path",
+      "unit_or_basis_ja": "32件の原稿指定",
+      "initial_value_ja": "MDN24件の内包表記と他提供元8件を連結",
+      "expected_range_or_members_ja": "固定32件。npm指定版の取得はこの一覧の外",
+      "update_condition_ja": "module読込時生成。実行中の更新なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module/<listcomp@38>:f",
+      "name": "f",
+      "scope": "module/<listcomp@38>",
+      "definition_events": [
+        {
+          "id": "module/<listcomp@38>:f@38:39:assignment",
+          "scope": "module/<listcomp@38>",
+          "name": "f",
+          "line": 38,
+          "column_zero_based": 39,
+          "kind": "comprehension_target",
+          "definition_text": "f",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        38
+      ],
+      "use_lines": [
+        38
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module/<listcomp@38>",
+          "name": "f",
+          "line": 38,
+          "column_zero_based": 12,
+          "resolved_symbol": "module/<listcomp@38>:f"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "MDN_PATHSの保存ファイル名。SOURCES要素の第一欄へ渡す",
+      "unit_or_basis_ja": "相対ファイル名",
+      "initial_value_ja": "MDN_PATHS.items()の各key",
+      "expected_range_or_members_ja": "MDN_PATHSの24key",
+      "update_condition_ja": "内包表記の各反復で更新。moduleのfへは漏れない",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module/<listcomp@38>:p",
+      "name": "p",
+      "scope": "module/<listcomp@38>",
+      "definition_events": [
+        {
+          "id": "module/<listcomp@38>:p@38:41:assignment",
+          "scope": "module/<listcomp@38>",
+          "name": "p",
+          "line": 38,
+          "column_zero_based": 41,
+          "kind": "comprehension_target",
+          "definition_text": "p",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        38
+      ],
+      "use_lines": [
+        38
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module/<listcomp@38>",
+          "name": "p",
+          "line": 38,
+          "column_zero_based": 32,
+          "resolved_symbol": "module/<listcomp@38>:p"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "MDN_PATHSの取得元原稿パス。SOURCES要素の第四欄へ渡す",
+      "unit_or_basis_ja": "リポジトリ内相対パス",
+      "initial_value_ja": "MDN_PATHS.items()の各value",
+      "expected_range_or_members_ja": "MDN_PATHSの24value",
+      "update_condition_ja": "内包表記の各反復で更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:get",
+      "name": "get",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:get@48:0:function_definition",
+          "scope": "module",
+          "name": "get",
+          "line": 48,
+          "column_zero_based": 0,
+          "kind": "function_definition",
+          "definition_text": "def get(url)",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        48
+      ],
+      "use_lines": [
+        58,
+        66,
+        68
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "get",
+          "line": 58,
+          "column_zero_based": 18,
+          "resolved_symbol": "module:get"
+        },
+        {
+          "scope": "module",
+          "name": "get",
+          "line": 66,
+          "column_zero_based": 18,
+          "resolved_symbol": "module:get"
+        },
+        {
+          "scope": "module",
+          "name": "get",
+          "line": 68,
+          "column_zero_based": 24,
+          "resolved_symbol": "module:get"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "function",
+      "meaning_ja": "URLから応答bytes/status/Content-Typeを取得",
+      "unit_or_basis_ja": "単位なし",
+      "initial_value_ja": "def getで作られる関数オブジェクト",
+      "expected_range_or_members_ja": "下記関数表参照",
+      "update_condition_ja": "module読込時の関数定義。再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "get:url",
+      "name": "url",
+      "scope": "get",
+      "definition_events": [
+        {
+          "id": "get:url@48:8:parameter",
+          "scope": "get",
+          "name": "url",
+          "line": 48,
+          "column_zero_based": 8,
+          "kind": "parameter",
+          "definition_text": "url",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        48
+      ],
+      "use_lines": [
+        49
+      ],
+      "load_occurrences": [
+        {
+          "scope": "get",
+          "name": "url",
+          "line": 49,
+          "column_zero_based": 29,
+          "resolved_symbol": "get:url"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "取得するHTTP/HTTPS URL",
+      "unit_or_basis_ja": "URL文字列",
+      "initial_value_ja": "呼出元の引数",
+      "expected_range_or_members_ja": "本スクリプトでは固定公式GitHub raw/npm registry/tarball URL。関数自身は制限しない",
+      "update_condition_ja": "呼出ごとに束縛。関数内再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "get:r",
+      "name": "r",
+      "scope": "get",
+      "definition_events": [
+        {
+          "id": "get:r@49:49:context_manager_target",
+          "scope": "get",
+          "name": "r",
+          "line": 49,
+          "column_zero_based": 49,
+          "kind": "context_manager_target",
+          "definition_text": "r",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        49
+      ],
+      "use_lines": [
+        50
+      ],
+      "load_occurrences": [
+        {
+          "scope": "get",
+          "name": "r",
+          "line": 50,
+          "column_zero_based": 9,
+          "resolved_symbol": "get:r"
+        },
+        {
+          "scope": "get",
+          "name": "r",
+          "line": 50,
+          "column_zero_based": 19,
+          "resolved_symbol": "get:r"
+        },
+        {
+          "scope": "get",
+          "name": "r",
+          "line": 50,
+          "column_zero_based": 29,
+          "resolved_symbol": "get:r"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "HTTPResponse相当",
+      "meaning_ja": "urlopenの応答。本文・status・Content-Type取得元",
+      "unit_or_basis_ja": "HTTP応答",
+      "initial_value_ja": "urlopen(url,timeout=45)成功時の応答",
+      "expected_range_or_members_ja": "正常応答。非正常HTTP/接続エラーでは通常urlopenが例外",
+      "update_condition_ja": "with進入時に束縛。退出時にcloseされる",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:stamp",
+      "name": "stamp",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:stamp@51:0:function_definition",
+          "scope": "module",
+          "name": "stamp",
+          "line": 51,
+          "column_zero_based": 0,
+          "kind": "function_definition",
+          "definition_text": "def stamp()",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        51
+      ],
+      "use_lines": [
+        56,
+        67,
+        76
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "stamp",
+          "line": 56,
+          "column_zero_based": 96,
+          "resolved_symbol": "module:stamp"
+        },
+        {
+          "scope": "module",
+          "name": "stamp",
+          "line": 67,
+          "column_zero_based": 89,
+          "resolved_symbol": "module:stamp"
+        },
+        {
+          "scope": "module",
+          "name": "stamp",
+          "line": 76,
+          "column_zero_based": 126,
+          "resolved_symbol": "module:stamp"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "function",
+      "meaning_ja": "現在UTC時刻をISO形式文字列へする",
+      "unit_or_basis_ja": "単位なし",
+      "initial_value_ja": "def stampで作られる関数オブジェクト",
+      "expected_range_or_members_ja": "下記関数表参照",
+      "update_condition_ja": "module読込時の関数定義。再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:save_one",
+      "name": "save_one",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:save_one@53:0:function_definition",
+          "scope": "module",
+          "name": "save_one",
+          "line": 53,
+          "column_zero_based": 0,
+          "kind": "function_definition",
+          "definition_text": "def save_one(item)",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        53
+      ],
+      "use_lines": [
+        63
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "save_one",
+          "line": 63,
+          "column_zero_based": 90,
+          "resolved_symbol": "module:save_one"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "function",
+      "meaning_ja": "一般公式原稿一件を保存して取得記録を返す",
+      "unit_or_basis_ja": "単位なし",
+      "initial_value_ja": "def save_oneで作られる関数オブジェクト",
+      "expected_range_or_members_ja": "下記関数表参照",
+      "update_condition_ja": "module読込時の関数定義。再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "save_one:item",
+      "name": "item",
+      "scope": "save_one",
+      "definition_events": [
+        {
+          "id": "save_one:item@53:13:parameter",
+          "scope": "save_one",
+          "name": "item",
+          "line": 53,
+          "column_zero_based": 13,
+          "kind": "parameter",
+          "definition_text": "item",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        53
+      ],
+      "use_lines": [
+        54
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "item",
+          "line": 54,
+          "column_zero_based": 22,
+          "resolved_symbol": "save_one:item"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "tuple[str,str,str,str]",
+      "meaning_ja": "保存名/repository/commit/upstream pathをまとめた取得指定",
+      "unit_or_basis_ja": "4要素",
+      "initial_value_ja": "ThreadPoolExecutor.mapがSOURCESの各要素を渡す",
+      "expected_range_or_members_ja": "本実装の32tuple。要素数4を解体で要求",
+      "update_condition_ja": "関数呼出ごと",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "save_one:f",
+      "name": "f",
+      "scope": "save_one",
+      "definition_events": [
+        {
+          "id": "save_one:f@54:1:assignment",
+          "scope": "save_one",
+          "name": "f",
+          "line": 54,
+          "column_zero_based": 1,
+          "kind": "assignment",
+          "definition_text": "f",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        54
+      ],
+      "use_lines": [
+        56,
+        58
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "f",
+          "line": 56,
+          "column_zero_based": 13,
+          "resolved_symbol": "save_one:f"
+        },
+        {
+          "scope": "save_one",
+          "name": "f",
+          "line": 58,
+          "column_zero_based": 34,
+          "resolved_symbol": "save_one:f"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "保存する原稿ファイル名",
+      "unit_or_basis_ja": "相対ファイル名",
+      "initial_value_ja": "item[0]",
+      "expected_range_or_members_ja": "SOURCESで指定したファイル名",
+      "update_condition_ja": "54行のtuple解体時。以降再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "save_one:repo",
+      "name": "repo",
+      "scope": "save_one",
+      "definition_events": [
+        {
+          "id": "save_one:repo@54:3:assignment",
+          "scope": "save_one",
+          "name": "repo",
+          "line": 54,
+          "column_zero_based": 3,
+          "kind": "assignment",
+          "definition_text": "repo",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        54
+      ],
+      "use_lines": [
+        55
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "repo",
+          "line": 55,
+          "column_zero_based": 42,
+          "resolved_symbol": "save_one:repo"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "公式GitHubのowner/repository",
+      "unit_or_basis_ja": "repository名",
+      "initial_value_ja": "item[1]",
+      "expected_range_or_members_ja": "SOURCESにある提供元5repository",
+      "update_condition_ja": "54行のtuple解体時。以降再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "save_one:commit",
+      "name": "commit",
+      "scope": "save_one",
+      "definition_events": [
+        {
+          "id": "save_one:commit@54:8:assignment",
+          "scope": "save_one",
+          "name": "commit",
+          "line": 54,
+          "column_zero_based": 8,
+          "kind": "assignment",
+          "definition_text": "commit",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        54
+      ],
+      "use_lines": [
+        55,
+        56
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "commit",
+          "line": 55,
+          "column_zero_based": 49,
+          "resolved_symbol": "save_one:commit"
+        },
+        {
+          "scope": "save_one",
+          "name": "commit",
+          "line": 56,
+          "column_zero_based": 55,
+          "resolved_symbol": "save_one:commit"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "原稿を固定するgit commit",
+      "unit_or_basis_ja": "40桁16進ID",
+      "initial_value_ja": "item[2]",
+      "expected_range_or_members_ja": "固定した5commit",
+      "update_condition_ja": "54行のtuple解体時。以降再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "save_one:path",
+      "name": "path",
+      "scope": "save_one",
+      "definition_events": [
+        {
+          "id": "save_one:path@54:15:assignment",
+          "scope": "save_one",
+          "name": "path",
+          "line": 54,
+          "column_zero_based": 15,
+          "kind": "assignment",
+          "definition_text": "path",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        54
+      ],
+      "use_lines": [
+        55,
+        56
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "path",
+          "line": 55,
+          "column_zero_based": 58,
+          "resolved_symbol": "save_one:path"
+        },
+        {
+          "scope": "save_one",
+          "name": "path",
+          "line": 56,
+          "column_zero_based": 41,
+          "resolved_symbol": "save_one:path"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "取得元repository内の原稿パス",
+      "unit_or_basis_ja": "相対パス",
+      "initial_value_ja": "item[3]",
+      "expected_range_or_members_ja": "SOURCESの指定path",
+      "update_condition_ja": "54行のtuple解体時。以降再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "save_one:url",
+      "name": "url",
+      "scope": "save_one",
+      "definition_events": [
+        {
+          "id": "save_one:url@55:1:assignment",
+          "scope": "save_one",
+          "name": "url",
+          "line": 55,
+          "column_zero_based": 1,
+          "kind": "assignment",
+          "definition_text": "url",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        55
+      ],
+      "use_lines": [
+        56,
+        58
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "url",
+          "line": 56,
+          "column_zero_based": 21,
+          "resolved_symbol": "save_one:url"
+        },
+        {
+          "scope": "save_one",
+          "name": "url",
+          "line": 58,
+          "column_zero_based": 22,
+          "resolved_symbol": "save_one:url"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "raw.githubusercontent.comの固定commit原稿URL",
+      "unit_or_basis_ja": "HTTPS URL",
+      "initial_value_ja": "repo/commit/pathを55行で連結",
+      "expected_range_or_members_ja": "https://raw.githubusercontent.com/{repo}/{commit}/{path}",
+      "update_condition_ja": "関数呼出ごと構築。再代入なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "save_one:rec",
+      "name": "rec",
+      "scope": "save_one",
+      "definition_events": [
+        {
+          "id": "save_one:rec@56:1:assignment",
+          "scope": "save_one",
+          "name": "rec",
+          "line": 56,
+          "column_zero_based": 1,
+          "kind": "assignment",
+          "definition_text": "rec",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        56
+      ],
+      "use_lines": [
+        59,
+        60,
+        61
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "rec",
+          "line": 59,
+          "column_zero_based": 2,
+          "resolved_symbol": "save_one:rec"
+        },
+        {
+          "scope": "save_one",
+          "name": "rec",
+          "line": 60,
+          "column_zero_based": 24,
+          "resolved_symbol": "save_one:rec"
+        },
+        {
+          "scope": "save_one",
+          "name": "rec",
+          "line": 61,
+          "column_zero_based": 8,
+          "resolved_symbol": "save_one:rec"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "dict[str,object]",
+      "meaning_ja": "原稿一件の出典・時刻・size/hashまたはerrorを返す記録",
+      "unit_or_basis_ja": "bytesはbyte、時刻はUTC、日付はJST、hashはhex",
+      "initial_value_ja": "file/url/upstream_path/commit/version=None/UTC時刻/JST日付",
+      "expected_range_or_members_ja": "成功:status/content_type/bytes/sha256。失敗:error文字列",
+      "update_condition_ja": "56行作成、59行成功欄追加、60行例外欄追加",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "save_one:raw",
+      "name": "raw",
+      "scope": "save_one",
+      "definition_events": [
+        {
+          "id": "save_one:raw@58:2:assignment",
+          "scope": "save_one",
+          "name": "raw",
+          "line": 58,
+          "column_zero_based": 2,
+          "kind": "assignment",
+          "definition_text": "raw",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        58
+      ],
+      "use_lines": [
+        58,
+        59
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "raw",
+          "line": 58,
+          "column_zero_based": 49,
+          "resolved_symbol": "save_one:raw"
+        },
+        {
+          "scope": "save_one",
+          "name": "raw",
+          "line": 59,
+          "column_zero_based": 55,
+          "resolved_symbol": "save_one:raw"
+        },
+        {
+          "scope": "save_one",
+          "name": "raw",
+          "line": 59,
+          "column_zero_based": 82,
+          "resolved_symbol": "save_one:raw"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "bytes",
+      "meaning_ja": "取得した原稿の無改変本文",
+      "unit_or_basis_ja": "byte列",
+      "initial_value_ja": "get(url)[0]",
+      "expected_range_or_members_ja": "応答本文全体。容量制限は関数内にない",
+      "update_condition_ja": "58行取得成功時だけ束縛",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "save_one:status",
+      "name": "status",
+      "scope": "save_one",
+      "definition_events": [
+        {
+          "id": "save_one:status@58:6:assignment",
+          "scope": "save_one",
+          "name": "status",
+          "line": 58,
+          "column_zero_based": 6,
+          "kind": "assignment",
+          "definition_text": "status",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        58
+      ],
+      "use_lines": [
+        59
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "status",
+          "line": 59,
+          "column_zero_based": 20,
+          "resolved_symbol": "save_one:status"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "int",
+      "meaning_ja": "取得応答のHTTP status",
+      "unit_or_basis_ja": "HTTP status code",
+      "initial_value_ja": "get(url)[1]",
+      "expected_range_or_members_ja": "実取得は200。API値をそのまま記録",
+      "update_condition_ja": "58行取得成功時だけ束縛",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "save_one:mime",
+      "name": "mime",
+      "scope": "save_one",
+      "definition_events": [
+        {
+          "id": "save_one:mime@58:13:assignment",
+          "scope": "save_one",
+          "name": "mime",
+          "line": 58,
+          "column_zero_based": 13,
+          "kind": "assignment",
+          "definition_text": "mime",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        58
+      ],
+      "use_lines": [
+        59
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "mime",
+          "line": 59,
+          "column_zero_based": 40,
+          "resolved_symbol": "save_one:mime"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str | None",
+      "meaning_ja": "応答Content-Type header。原稿の形式情報",
+      "unit_or_basis_ja": "MIME文字列",
+      "initial_value_ja": "get(url)[2]",
+      "expected_range_or_members_ja": "headerの文字列または欠落時None",
+      "update_condition_ja": "58行取得成功時だけ束縛",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "save_one:e",
+      "name": "e",
+      "scope": "save_one",
+      "definition_events": [
+        {
+          "id": "save_one:e@60:1:exception_target",
+          "scope": "save_one",
+          "name": "e",
+          "line": 60,
+          "column_zero_based": 1,
+          "kind": "exception_target",
+          "definition_text": "except Exception as e",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        60
+      ],
+      "use_lines": [
+        60
+      ],
+      "load_occurrences": [
+        {
+          "scope": "save_one",
+          "name": "e",
+          "line": 60,
+          "column_zero_based": 45,
+          "resolved_symbol": "save_one:e"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "Exception",
+      "meaning_ja": "取得または保存失敗を記録するcatch変数",
+      "unit_or_basis_ja": "例外オブジェクト",
+      "initial_value_ja": "try内で発生したException",
+      "expected_range_or_members_ja": "Exception subclass。tuple解体等try前の例外は対象外",
+      "update_condition_ja": "60行のexcept開始時。except終了後にPythonが束縛を削除",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:pool",
+      "name": "pool",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:pool@63:62:context_manager_target",
+          "scope": "module",
+          "name": "pool",
+          "line": 63,
+          "column_zero_based": 62,
+          "kind": "context_manager_target",
+          "definition_text": "pool",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        63
+      ],
+      "use_lines": [
+        63
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "pool",
+          "line": 63,
+          "column_zero_based": 81,
+          "resolved_symbol": "module:pool"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "concurrent.futures.ThreadPoolExecutor",
+      "meaning_ja": "一般公式原稿32件の取得を最大6workerで並列化するexecutor",
+      "unit_or_basis_ja": "worker上限6",
+      "initial_value_ja": "ThreadPoolExecutor(max_workers=6)",
+      "expected_range_or_members_ja": "固定上限6。完了順とrecordsの並びは別",
+      "update_condition_ja": "mainでwith進入時。退出時にworker完了を待ちshutdown",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:records",
+      "name": "records",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:records@63:68:assignment",
+          "scope": "module",
+          "name": "records",
+          "line": 63,
+          "column_zero_based": 68,
+          "kind": "assignment",
+          "definition_text": "records",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        63
+      ],
+      "use_lines": [
+        67,
+        76,
+        81,
+        82
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "records",
+          "line": 67,
+          "column_zero_based": 2,
+          "resolved_symbol": "module:records"
+        },
+        {
+          "scope": "module",
+          "name": "records",
+          "line": 76,
+          "column_zero_based": 4,
+          "resolved_symbol": "module:records"
+        },
+        {
+          "scope": "module",
+          "name": "records",
+          "line": 81,
+          "column_zero_based": 45,
+          "resolved_symbol": "module:records"
+        },
+        {
+          "scope": "module",
+          "name": "records",
+          "line": 82,
+          "column_zero_based": 12,
+          "resolved_symbol": "module:records"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "list[dict[str,object]]",
+      "meaning_ja": "sources.jsonへ保存する全原稿/npm抽出物の取得記録",
+      "unit_or_basis_ja": "件数、各bytesはbyte",
+      "initial_value_ja": "pool.map(save_one,SOURCES)をlist化した32件",
+      "expected_range_or_members_ja": "通常32→38件。map結果順はSOURCES順",
+      "update_condition_ja": "63行作成、各packageのmetadataで67行append、2memberで76行append",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:name",
+      "name": "name",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:name@64:5:loop_target",
+          "scope": "module",
+          "name": "name",
+          "line": 64,
+          "column_zero_based": 5,
+          "kind": "loop_target",
+          "definition_text": "name",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        64
+      ],
+      "use_lines": [
+        65,
+        72,
+        77
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "name",
+          "line": 65,
+          "column_zero_based": 47,
+          "resolved_symbol": "module:name"
+        },
+        {
+          "scope": "module",
+          "name": "name",
+          "line": 72,
+          "column_zero_based": 18,
+          "resolved_symbol": "module:name"
+        },
+        {
+          "scope": "module",
+          "name": "name",
+          "line": 77,
+          "column_zero_based": 61,
+          "resolved_symbol": "module:name"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "取得して同梱物を照合するnpm packageの末尾名",
+      "unit_or_basis_ja": "package名",
+      "initial_value_ja": "64行tupleの各第一要素",
+      "expected_range_or_members_ja": "pose、camera_utils",
+      "update_condition_ja": "64行の2反復で更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:version",
+      "name": "version",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:version@64:10:loop_target",
+          "scope": "module",
+          "name": "version",
+          "line": 64,
+          "column_zero_based": 10,
+          "kind": "loop_target",
+          "definition_text": "version",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        64
+      ],
+      "use_lines": [
+        65,
+        67,
+        72,
+        76
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "version",
+          "line": 65,
+          "column_zero_based": 54,
+          "resolved_symbol": "module:version"
+        },
+        {
+          "scope": "module",
+          "name": "version",
+          "line": 67,
+          "column_zero_based": 64,
+          "resolved_symbol": "module:version"
+        },
+        {
+          "scope": "module",
+          "name": "version",
+          "line": 72,
+          "column_zero_based": 33,
+          "resolved_symbol": "module:version"
+        },
+        {
+          "scope": "module",
+          "name": "version",
+          "line": 76,
+          "column_zero_based": 101,
+          "resolved_symbol": "module:version"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "取得するnpmの固定版",
+      "unit_or_basis_ja": "npm version文字列",
+      "initial_value_ja": "64行tupleの各第二要素",
+      "expected_range_or_members_ja": "pose:0.5.1675469404、camera_utils:0.3.1675466862",
+      "update_condition_ja": "64行の2反復で更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:prefix",
+      "name": "prefix",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:prefix@64:18:loop_target",
+          "scope": "module",
+          "name": "prefix",
+          "line": 64,
+          "column_zero_based": 18,
+          "kind": "loop_target",
+          "definition_text": "prefix",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        64
+      ],
+      "use_lines": [
+        66,
+        75,
+        80
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "prefix",
+          "line": 66,
+          "column_zero_based": 59,
+          "resolved_symbol": "module:prefix"
+        },
+        {
+          "scope": "module",
+          "name": "prefix",
+          "line": 75,
+          "column_zero_based": 42,
+          "resolved_symbol": "module:prefix"
+        },
+        {
+          "scope": "module",
+          "name": "prefix",
+          "line": 80,
+          "column_zero_based": 9,
+          "resolved_symbol": "module:prefix"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "metadata/抽出ファイル/verificationの保存名接頭辞",
+      "unit_or_basis_ja": "ファイル名文字列",
+      "initial_value_ja": "64行tupleの各第三要素",
+      "expected_range_or_members_ja": "npm-pose、npm-camera-utils",
+      "update_condition_ja": "64行の2反復で更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:url",
+      "name": "url",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:url@65:2:assignment",
+          "scope": "module",
+          "name": "url",
+          "line": 65,
+          "column_zero_based": 2,
+          "kind": "assignment",
+          "definition_text": "url",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        65
+      ],
+      "use_lines": [
+        66,
+        67
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "url",
+          "line": 66,
+          "column_zero_based": 22,
+          "resolved_symbol": "module:url"
+        },
+        {
+          "scope": "module",
+          "name": "url",
+          "line": 67,
+          "column_zero_based": 40,
+          "resolved_symbol": "module:url"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "指定版npm registry metadataの取得URL",
+      "unit_or_basis_ja": "HTTPS URL",
+      "initial_value_ja": "65行でname/versionを連結",
+      "expected_range_or_members_ja": "https://registry.npmjs.org/@mediapipe/{name}/{version}",
+      "update_condition_ja": "packageの各反復で更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:raw",
+      "name": "raw",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:raw@66:2:assignment",
+          "scope": "module",
+          "name": "raw",
+          "line": 66,
+          "column_zero_based": 2,
+          "kind": "assignment",
+          "definition_text": "raw",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        66
+      ],
+      "use_lines": [
+        66,
+        67
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "raw",
+          "line": 66,
+          "column_zero_based": 44,
+          "resolved_symbol": "module:raw"
+        },
+        {
+          "scope": "module",
+          "name": "raw",
+          "line": 66,
+          "column_zero_based": 112,
+          "resolved_symbol": "module:raw"
+        },
+        {
+          "scope": "module",
+          "name": "raw",
+          "line": 67,
+          "column_zero_based": 229,
+          "resolved_symbol": "module:raw"
+        },
+        {
+          "scope": "module",
+          "name": "raw",
+          "line": 67,
+          "column_zero_based": 256,
+          "resolved_symbol": "module:raw"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "bytes",
+      "meaning_ja": "registry metadataの原文JSON。原文のまま保存する",
+      "unit_or_basis_ja": "byte列",
+      "initial_value_ja": "get(url)[0]",
+      "expected_range_or_members_ja": "成功応答の全本文。2package分を順に保持",
+      "update_condition_ja": "66行の各package取得で更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:status",
+      "name": "status",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:status@66:6:assignment",
+          "scope": "module",
+          "name": "status",
+          "line": 66,
+          "column_zero_based": 6,
+          "kind": "assignment",
+          "definition_text": "status",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        66
+      ],
+      "use_lines": [
+        67
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "status",
+          "line": 67,
+          "column_zero_based": 212,
+          "resolved_symbol": "module:status"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "int",
+      "meaning_ja": "registry metadata応答のHTTP status",
+      "unit_or_basis_ja": "HTTP status code",
+      "initial_value_ja": "get(url)[1]",
+      "expected_range_or_members_ja": "実取得は200。67行記録へ入る",
+      "update_condition_ja": "66行の各package取得で更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:mime",
+      "name": "mime",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:mime@66:13:assignment",
+          "scope": "module",
+          "name": "mime",
+          "line": 66,
+          "column_zero_based": 13,
+          "kind": "assignment",
+          "definition_text": "mime",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        66
+      ],
+      "use_lines": [],
+      "load_occurrences": [],
+      "unused_as_value": true,
+      "type_inferred": "str | None",
+      "meaning_ja": "registry metadataのContent-Type。取得するが記録/判定には使わない",
+      "unit_or_basis_ja": "MIME文字列",
+      "initial_value_ja": "get(url)[2]",
+      "expected_range_or_members_ja": "header文字列またはNone",
+      "update_condition_ja": "66行の各package取得で更新。読出し使用なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:meta",
+      "name": "meta",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:meta@66:28:assignment",
+          "scope": "module",
+          "name": "meta",
+          "line": 66,
+          "column_zero_based": 28,
+          "kind": "assignment",
+          "definition_text": "meta",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        66
+      ],
+      "use_lines": [
+        68,
+        69,
+        71,
+        72,
+        76
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "meta",
+          "line": 68,
+          "column_zero_based": 28,
+          "resolved_symbol": "module:meta"
+        },
+        {
+          "scope": "module",
+          "name": "meta",
+          "line": 69,
+          "column_zero_based": 10,
+          "resolved_symbol": "module:meta"
+        },
+        {
+          "scope": "module",
+          "name": "meta",
+          "line": 71,
+          "column_zero_based": 44,
+          "resolved_symbol": "module:meta"
+        },
+        {
+          "scope": "module",
+          "name": "meta",
+          "line": 72,
+          "column_zero_based": 47,
+          "resolved_symbol": "module:meta"
+        },
+        {
+          "scope": "module",
+          "name": "meta",
+          "line": 76,
+          "column_zero_based": 35,
+          "resolved_symbol": "module:meta"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "dict[str,object]",
+      "meaning_ja": "registry JSONを解析したpackage metadata。tarball/integrity/shasumを読む",
+      "unit_or_basis_ja": "distのURL/hash文字列",
+      "initial_value_ja": "json.loads(raw)",
+      "expected_range_or_members_ja": "期待するdistキーを持つdict。コードにschema検査なし",
+      "update_condition_ja": "66行の各packageで更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:filename",
+      "name": "filename",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:filename@66:50:assignment",
+          "scope": "module",
+          "name": "filename",
+          "line": 66,
+          "column_zero_based": 50,
+          "kind": "assignment",
+          "definition_text": "filename",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        66
+      ],
+      "use_lines": [
+        66,
+        67
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "filename",
+          "line": 66,
+          "column_zero_based": 90,
+          "resolved_symbol": "module:filename"
+        },
+        {
+          "scope": "module",
+          "name": "filename",
+          "line": 67,
+          "column_zero_based": 27,
+          "resolved_symbol": "module:filename"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "registry metadata原文の保存名",
+      "unit_or_basis_ja": "相対ファイル名",
+      "initial_value_ja": "prefix+\"-metadata.json\"",
+      "expected_range_or_members_ja": "npm-pose-metadata.json、npm-camera-utils-metadata.json",
+      "update_condition_ja": "66行の各packageで更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:archive",
+      "name": "archive",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:archive@68:2:assignment",
+          "scope": "module",
+          "name": "archive",
+          "line": 68,
+          "column_zero_based": 2,
+          "kind": "assignment",
+          "definition_text": "archive",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        68
+      ],
+      "use_lines": [
+        70,
+        71,
+        72,
+        73
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "archive",
+          "line": 70,
+          "column_zero_based": 42,
+          "resolved_symbol": "module:archive"
+        },
+        {
+          "scope": "module",
+          "name": "archive",
+          "line": 71,
+          "column_zero_based": 22,
+          "resolved_symbol": "module:archive"
+        },
+        {
+          "scope": "module",
+          "name": "archive",
+          "line": 72,
+          "column_zero_based": 105,
+          "resolved_symbol": "module:archive"
+        },
+        {
+          "scope": "module",
+          "name": "archive",
+          "line": 72,
+          "column_zero_based": 138,
+          "resolved_symbol": "module:archive"
+        },
+        {
+          "scope": "module",
+          "name": "archive",
+          "line": 73,
+          "column_zero_based": 39,
+          "resolved_symbol": "module:archive"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "bytes",
+      "meaning_ja": "指定版package tarball全体。検証後にメモリー上で開く",
+      "unit_or_basis_ja": "byte列",
+      "initial_value_ja": "get(meta[\"dist\"][\"tarball\"])[0]",
+      "expected_range_or_members_ja": "gzip tar archive。tarball本体は保存しない",
+      "update_condition_ja": "68行の各packageで更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:astatus",
+      "name": "astatus",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:astatus@68:10:assignment",
+          "scope": "module",
+          "name": "astatus",
+          "line": 68,
+          "column_zero_based": 10,
+          "kind": "assignment",
+          "definition_text": "astatus",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        68
+      ],
+      "use_lines": [],
+      "load_occurrences": [],
+      "unused_as_value": true,
+      "type_inferred": "int",
+      "meaning_ja": "tarball応答HTTP status。取得するが後段では使わない",
+      "unit_or_basis_ja": "HTTP status code",
+      "initial_value_ja": "get(tarball URL)[1]",
+      "expected_range_or_members_ja": "実取得は200",
+      "update_condition_ja": "68行各packageで更新。読出し使用なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:amime",
+      "name": "amime",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:amime@68:18:assignment",
+          "scope": "module",
+          "name": "amime",
+          "line": 68,
+          "column_zero_based": 18,
+          "kind": "assignment",
+          "definition_text": "amime",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        68
+      ],
+      "use_lines": [],
+      "load_occurrences": [],
+      "unused_as_value": true,
+      "type_inferred": "str | None",
+      "meaning_ja": "tarball応答Content-Type。取得するが後段では使わない",
+      "unit_or_basis_ja": "MIME文字列",
+      "initial_value_ja": "get(tarball URL)[2]",
+      "expected_range_or_members_ja": "header文字列またはNone",
+      "update_condition_ja": "68行各packageで更新。読出し使用なし",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:alg",
+      "name": "alg",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:alg@69:2:assignment",
+          "scope": "module",
+          "name": "alg",
+          "line": 69,
+          "column_zero_based": 2,
+          "kind": "assignment",
+          "definition_text": "alg",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        69
+      ],
+      "use_lines": [
+        70
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "alg",
+          "line": 70,
+          "column_zero_based": 38,
+          "resolved_symbol": "module:alg"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "dist.integrityのhash algorithm。hashlib.newへ渡す",
+      "unit_or_basis_ja": "hash algorithm名",
+      "initial_value_ja": "integrity.split(\"-\",1)[0]",
+      "expected_range_or_members_ja": "この指定版ではsha512。関数はmetadata値を使う",
+      "update_condition_ja": "69行各packageで更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:b64",
+      "name": "b64",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:b64@69:6:assignment",
+          "scope": "module",
+          "name": "b64",
+          "line": 69,
+          "column_zero_based": 6,
+          "kind": "assignment",
+          "definition_text": "b64",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        69
+      ],
+      "use_lines": [
+        70
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "b64",
+          "line": 70,
+          "column_zero_based": 71,
+          "resolved_symbol": "module:b64"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "dist.integrityにある期待digest。archiveの計算値と比較する",
+      "unit_or_basis_ja": "Base64 digest文字列",
+      "initial_value_ja": "integrity.split(\"-\",1)[1]",
+      "expected_range_or_members_ja": "metadataの期待SHA-512 digest",
+      "update_condition_ja": "69行各packageで更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:dist",
+      "name": "dist",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:dist@72:2:assignment",
+          "scope": "module",
+          "name": "dist",
+          "line": 72,
+          "column_zero_based": 2,
+          "kind": "assignment",
+          "definition_text": "dist",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        72
+      ],
+      "use_lines": [
+        79,
+        80
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "dist",
+          "line": 79,
+          "column_zero_based": 4,
+          "resolved_symbol": "module:dist"
+        },
+        {
+          "scope": "module",
+          "name": "dist",
+          "line": 80,
+          "column_zero_based": 61,
+          "resolved_symbol": "module:dist"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "dict[str,object]",
+      "meaning_ja": "package版・tarball hash・完全性結果・vendor比較一覧を保存する",
+      "unit_or_basis_ja": "byte数、SHA-256 hex、boolean",
+      "initial_value_ja": "72行dict。通常実行の直前assert成功後にverified=True",
+      "expected_range_or_members_ja": "通常vendor比較はpose10件/camera_utils1件。globで得た全entryを処理",
+      "update_condition_ja": "72行作成、79行vendor_comparisonをappend",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:tf",
+      "name": "tf",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:tf@73:64:context_manager_target",
+          "scope": "module",
+          "name": "tf",
+          "line": 73,
+          "column_zero_based": 64,
+          "kind": "context_manager_target",
+          "definition_text": "tf",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        73
+      ],
+      "use_lines": [
+        75,
+        78
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "tf",
+          "line": 75,
+          "column_zero_based": 9,
+          "resolved_symbol": "module:tf"
+        },
+        {
+          "scope": "module",
+          "name": "tf",
+          "line": 78,
+          "column_zero_based": 9,
+          "resolved_symbol": "module:tf"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "tarfile.TarFile",
+      "meaning_ja": "検証済みtarballを読むarchive handle",
+      "unit_or_basis_ja": "gzip tar member",
+      "initial_value_ja": "tarfile.open(fileobj=io.BytesIO(archive),mode=\"r:gz\")",
+      "expected_range_or_members_ja": "読込mode。filesystemへのextractallはしない",
+      "update_condition_ja": "73行with進入時。退出時close",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:member",
+      "name": "member",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:member@74:7:loop_target",
+          "scope": "module",
+          "name": "member",
+          "line": 74,
+          "column_zero_based": 7,
+          "kind": "loop_target",
+          "definition_text": "member",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        74
+      ],
+      "use_lines": [
+        75,
+        76
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "member",
+          "line": 75,
+          "column_zero_based": 24,
+          "resolved_symbol": "module:member"
+        },
+        {
+          "scope": "module",
+          "name": "member",
+          "line": 75,
+          "column_zero_based": 53,
+          "resolved_symbol": "module:member"
+        },
+        {
+          "scope": "module",
+          "name": "member",
+          "line": 76,
+          "column_zero_based": 74,
+          "resolved_symbol": "module:member"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "保存対象のpackage内テキストmember名",
+      "unit_or_basis_ja": "archive内相対パス",
+      "initial_value_ja": "74行の固定listの各要素",
+      "expected_range_or_members_ja": "package/package.json、package/index.d.ts",
+      "update_condition_ja": "各package内2反復で更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:data",
+      "name": "data",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:data@75:4:assignment",
+          "scope": "module",
+          "name": "data",
+          "line": 75,
+          "column_zero_based": 4,
+          "kind": "assignment",
+          "definition_text": "data",
+          "source_file": "fetch_sources.py"
+        },
+        {
+          "id": "module:data@78:4:assignment",
+          "scope": "module",
+          "name": "data",
+          "line": 78,
+          "column_zero_based": 4,
+          "kind": "assignment",
+          "definition_text": "data",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        75,
+        78
+      ],
+      "use_lines": [
+        75,
+        76,
+        79
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "data",
+          "line": 75,
+          "column_zero_based": 97,
+          "resolved_symbol": "module:data"
+        },
+        {
+          "scope": "module",
+          "name": "data",
+          "line": 76,
+          "column_zero_based": 252,
+          "resolved_symbol": "module:data"
+        },
+        {
+          "scope": "module",
+          "name": "data",
+          "line": 76,
+          "column_zero_based": 280,
+          "resolved_symbol": "module:data"
+        },
+        {
+          "scope": "module",
+          "name": "data",
+          "line": 79,
+          "column_zero_based": 184,
+          "resolved_symbol": "module:data"
+        },
+        {
+          "scope": "module",
+          "name": "data",
+          "line": 79,
+          "column_zero_based": 220,
+          "resolved_symbol": "module:data"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "bytes",
+      "meaning_ja": "tarball内memberの内容。テキスト保存またはvendor比較に使う",
+      "unit_or_basis_ja": "byte列",
+      "initial_value_ja": "75行でpackage.jsonのmember bytes",
+      "expected_range_or_members_ja": "75行:package.json/index.d.ts、78行:各同梱ファイルに対応するmember",
+      "update_condition_ja": "75行の各memberと78行の各vendor反復で再代入",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:f",
+      "name": "f",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:f@75:40:assignment",
+          "scope": "module",
+          "name": "f",
+          "line": 75,
+          "column_zero_based": 40,
+          "kind": "assignment",
+          "definition_text": "f",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        75
+      ],
+      "use_lines": [
+        75,
+        76
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "f",
+          "line": 75,
+          "column_zero_based": 82,
+          "resolved_symbol": "module:f"
+        },
+        {
+          "scope": "module",
+          "name": "f",
+          "line": 76,
+          "column_zero_based": 29,
+          "resolved_symbol": "module:f"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "str",
+      "meaning_ja": "packageから抽出するテキストの保存名。内包表記/関数の同名とは別",
+      "unit_or_basis_ja": "相対ファイル名",
+      "initial_value_ja": "75行でprefix+\"-\"+member basename",
+      "expected_range_or_members_ja": "各packageのpackage.json/index.d.ts用保存名",
+      "update_condition_ja": "75行の各member反復で更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:local",
+      "name": "local",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:local@77:7:loop_target",
+          "scope": "module",
+          "name": "local",
+          "line": 77,
+          "column_zero_based": 7,
+          "kind": "loop_target",
+          "definition_text": "local",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        77
+      ],
+      "use_lines": [
+        78,
+        79
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "local",
+          "line": 78,
+          "column_zero_based": 35,
+          "resolved_symbol": "module:local"
+        },
+        {
+          "scope": "module",
+          "name": "local",
+          "line": 78,
+          "column_zero_based": 62,
+          "resolved_symbol": "module:local"
+        },
+        {
+          "scope": "module",
+          "name": "local",
+          "line": 79,
+          "column_zero_based": 51,
+          "resolved_symbol": "module:local"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "pathlib.Path",
+      "meaning_ja": "vendor内の照合対象ファイルpath",
+      "unit_or_basis_ja": "ファイルパス",
+      "initial_value_ja": "77行sorted(glob(\"*\"))の各Path",
+      "expected_range_or_members_ja": "現同梱pose10file/camera_utils1file。globが将来増えればそのentryも対象",
+      "update_condition_ja": "77行各vendor反復で更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:actual",
+      "name": "actual",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:actual@78:55:assignment",
+          "scope": "module",
+          "name": "actual",
+          "line": 78,
+          "column_zero_based": 55,
+          "kind": "assignment",
+          "definition_text": "actual",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        78
+      ],
+      "use_lines": [
+        79
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "actual",
+          "line": 79,
+          "column_zero_based": 97,
+          "resolved_symbol": "module:actual"
+        },
+        {
+          "scope": "module",
+          "name": "actual",
+          "line": 79,
+          "column_zero_based": 127,
+          "resolved_symbol": "module:actual"
+        },
+        {
+          "scope": "module",
+          "name": "actual",
+          "line": 79,
+          "column_zero_based": 212,
+          "resolved_symbol": "module:actual"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "bytes",
+      "meaning_ja": "vendor照合対象を実際に読んだ内容",
+      "unit_or_basis_ja": "byte列",
+      "initial_value_ja": "local.read_bytes()",
+      "expected_range_or_members_ja": "同梱file全内容。archive内dataとのbytes比較",
+      "update_condition_ja": "78行各vendor反復で更新",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    },
+    {
+      "id": "module:rec",
+      "name": "rec",
+      "scope": "module",
+      "definition_events": [
+        {
+          "id": "module:rec@82:5:loop_target",
+          "scope": "module",
+          "name": "rec",
+          "line": 82,
+          "column_zero_based": 5,
+          "kind": "loop_target",
+          "definition_text": "rec",
+          "source_file": "fetch_sources.py"
+        }
+      ],
+      "definition_lines": [
+        82
+      ],
+      "use_lines": [
+        82
+      ],
+      "load_occurrences": [
+        {
+          "scope": "module",
+          "name": "rec",
+          "line": 82,
+          "column_zero_based": 27,
+          "resolved_symbol": "module:rec"
+        },
+        {
+          "scope": "module",
+          "name": "rec",
+          "line": 82,
+          "column_zero_based": 39,
+          "resolved_symbol": "module:rec"
+        },
+        {
+          "scope": "module",
+          "name": "rec",
+          "line": 82,
+          "column_zero_based": 67,
+          "resolved_symbol": "module:rec"
+        },
+        {
+          "scope": "module",
+          "name": "rec",
+          "line": 82,
+          "column_zero_based": 83,
+          "resolved_symbol": "module:rec"
+        }
+      ],
+      "unused_as_value": false,
+      "type_inferred": "dict[str,object]",
+      "meaning_ja": "最後にConsoleへ概要表示するrecordsの一件",
+      "unit_or_basis_ja": "record一件、bytes欄はbyte",
+      "initial_value_ja": "82行recordsの各要素",
+      "expected_range_or_members_ja": "通常38record。失敗recordはerrorを表示",
+      "update_condition_ja": "82行最終loopの各反復で更新。recordsは変えない",
+      "type_guarantee": "ソースには型注釈・実行時型検査なし。標準APIと代入値から推定。"
+    }
+  ],
+  "functions": [
+    {
+      "name": "get",
+      "line": 48,
+      "end_line": 50,
+      "lexical_parent": "module",
+      "scope": "get",
+      "parameter_names": [
+        "url"
+      ],
+      "role_ja": "一つのURLをtimeout=45秒で開き、全文byte列・HTTP status・Content-Typeを返す。",
+      "arguments": [
+        {
+          "name": "url",
+          "type": "str",
+          "meaning_ja": "取得先URL"
+        }
+      ],
+      "return_ja": "tuple[bytes,int,str|None]。順序はbody/status/Content-Type。",
+      "side_effects_ja": "HTTP/HTTPS通信と本文のメモリー読込。with退出で応答をclose。ファイル保存なし。",
+      "callers_ja": "save_one 58行、mainのregistry取得66行、tarball取得68行。",
+      "error_behavior_ja": "URL/接続/timeout/HTTPError/読込等の例外をそのまま呼出元へ伝える。save_oneのtry内ならerror記録、mainの直接呼出なら未捕捉で処理停止。timeoutはネットワーク操作の待ち時間指定で全スクリプトの総実行上限ではない。"
+    },
+    {
+      "name": "stamp",
+      "line": 51,
+      "end_line": 52,
+      "lexical_parent": "module",
+      "scope": "stamp",
+      "parameter_names": [],
+      "role_ja": "現在時刻をUTCのISO 8601文字列にする。",
+      "arguments": [],
+      "return_ja": "str。例:2026-10-13T00:07:24+00:00（小数秒を含み得る）。",
+      "side_effects_ja": "OS時計の読み取り。通信・保存・状態更新なし。",
+      "callers_ja": "save_oneのrec構築56行、mainのregistry記録67行、archive member記録76行。",
+      "error_behavior_ja": "独自catchなし。datetime等の例外があれば伝播。save_oneでは56行がtryの外なのでその例外も外へ伝わる。"
+    },
+    {
+      "name": "save_one",
+      "line": 53,
+      "end_line": 61,
+      "lexical_parent": "module",
+      "scope": "save_one",
+      "parameter_names": [
+        "item"
+      ],
+      "role_ja": "一般公式原稿一件のURL・出典を作り、無改変bytesを保存し、取得成功/失敗をdictで返す。",
+      "arguments": [
+        {
+          "name": "item",
+          "type": "tuple[str,str,str,str]",
+          "meaning_ja": "保存名/repository/固定commit/upstream path"
+        }
+      ],
+      "return_ja": "dict[str,object]。成功時status/content_type/bytes/sha256、try内失敗時errorを基礎出典へ追加。",
+      "side_effects_ja": "HTTP取得とROOT/fへのwrite_bytes（同名保存物を上書き）。rec dictへの欄追加。map workerで実行。",
+      "callers_ja": "main63行のpool.map(save_one,SOURCES)が各32tupleを渡す。",
+      "error_behavior_ja": "58–59行のget/write/hash/記録更新のExceptionを60行で文字列にして返す。53–56行の引数解体・URL・基礎record構築はtry外で、そこでの例外は伝播しpool.mapの結果読込を止め得る。KeyboardInterrupt/SystemExit等Exception外の例外はcatchしない。"
+    }
+  ],
+  "external_reads": [
+    {
+      "name": "__file__",
+      "use_lines": [
+        6
+      ],
+      "classification": "実行環境特殊名",
+      "binding_in_source": false
+    },
+    {
+      "name": "len",
+      "use_lines": [
+        59,
+        67,
+        72,
+        76,
+        79
+      ],
+      "classification": "Python組込関数/例外クラス",
+      "binding_in_source": false
+    },
+    {
+      "name": "Exception",
+      "use_lines": [
+        60
+      ],
+      "classification": "Python組込関数/例外クラス",
+      "binding_in_source": false
+    },
+    {
+      "name": "str",
+      "use_lines": [
+        60,
+        79
+      ],
+      "classification": "Python組込関数/例外クラス",
+      "binding_in_source": false
+    },
+    {
+      "name": "__name__",
+      "use_lines": [
+        62
+      ],
+      "classification": "実行環境特殊名",
+      "binding_in_source": false
+    },
+    {
+      "name": "list",
+      "use_lines": [
+        63
+      ],
+      "classification": "Python組込関数/例外クラス",
+      "binding_in_source": false
+    },
+    {
+      "name": "dict",
+      "use_lines": [
+        67,
+        76,
+        79
+      ],
+      "classification": "Python組込関数/例外クラス",
+      "binding_in_source": false
+    },
+    {
+      "name": "sorted",
+      "use_lines": [
+        77
+      ],
+      "classification": "Python組込関数/例外クラス",
+      "binding_in_source": false
+    },
+    {
+      "name": "print",
+      "use_lines": [
+        82
+      ],
+      "classification": "Python組込関数/例外クラス",
+      "binding_in_source": false
+    }
+  ],
+  "limits_ja": [
+    "型は実行時型検査の保証ではなく、固定値・標準APIからの推定。",
+    "ASTは分岐内の代入成功/失敗を実行検証しない。main専用名はimport時には未束縛。",
+    "完全性チェックはassertを使う。通常のpython3実行では評価されるが、python -O/-OOはassertを無効にするためこのスクリプトを最適化modeで実行しない。既存取得は通常modeで実行・照合した。",
+    "get/status/mimeは標準urllibの戻りを推定。ネットワーク先の将来応答を保証しない。"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "package": "camera_utils",
+  "version": "0.3.1675466862",
+  "url": "https://registry.npmjs.org/@mediapipe/camera_utils/-/camera_utils-0.3.1675466862.tgz",
+  "tarball_saved": false,
+  "bytes": 4170,
+  "sha256": "e78977d638fa3fc956272eb2fc5a03d27e5b82457cb46c779bf4c6caa4a3bdaa",
+  "dist_integrity_verified": true,
+  "dist_shasum_verified": true,
+  "vendor_comparison": [
+    {
+      "file": "vendor/mediapipe/camera_utils/camera_utils.js",
+      "bytes": 7881,
+      "sha256": "ee14cd241f693504a9ea55fa2f2ed3b24da1f7cf804926716069d0d232434d8e",
+      "tarball_member_sha256": "ee14cd241f693504a9ea55fa2f2ed3b24da1f7cf804926716069d0d232434d8e",
+      "identical": true
+    }
+  ]
+}

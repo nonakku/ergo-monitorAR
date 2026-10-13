@@ -1,0 +1,48 @@
+commit b5125bbee5fee59a65b288525a1b65143eae1a6d
+Author:     Claude <noreply@anthropic.com>
+AuthorDate: Thu Jul 2 13:44:02 2026 +0000
+Commit:     Claude <noreply@anthropic.com>
+CommitDate: Thu Jul 2 13:44:02 2026 +0000
+
+    オフライン版対応：MediaPipe同梱・Google Fonts削除・ローカルサーバ起動スクリプト追加
+    
+    ネット未接続でも完全動作するように以下を変更：
+    
+    - vendor/mediapipe/ に MediaPipe Pose 0.5.1675469404 と
+      Camera Utils 0.3.1675466862 をバージョン固定で同梱
+      （モデルは modelComplexity:1 で使用する pose_landmark_full.tflite のみ）
+    - script.js: locateFile をローカルパスに変更。ボタン更新を
+      .btn-label のみ書き換える方式にし、クリック時にアイコンが
+      消える既存バグを修正
+    - index.html / rula.html: Google Fonts のリンクを削除、
+      CDNスクリプトをローカル参照に置換、drawing_utils（未使用）を削除
+    - アイコン2個（videocam / stop_circle）をインラインSVG化
+    - style.css: 日本語対応システムフォントスタックを追加、
+      .material-symbols-rounded を .btn-icon に置換
+    - serve.ps1 / start-offline.bat: Windows標準PowerShellのみで動く
+      localhost 静的サーバ（管理者権限・Python不要、8000〜8010自動選択）
+    - README-offline.md: 日本語の起動手順（file://直開き不可の説明含む）
+    
+    Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_018ke6A8kT3qajxUwp6ThFob
+
+ .gitattributes                                     |   3 +
+ README-offline.md                                  |  46 +++++
+ index.html                                         |  19 +-
+ rula.html                                          |   3 -
+ script.js                                          |  12 +-
+ serve.ps1                                          |  76 ++++++++
+ start-offline.bat                                  |   4 +
+ style.css                                          |  11 +-
+ vendor/mediapipe/camera_utils/camera_utils.js      |  23 +++
+ vendor/mediapipe/pose/pose.js                      |  99 +++++++++++
+ vendor/mediapipe/pose/pose_landmark_full.tflite    | Bin 0 -> 6440512 bytes
+ .../pose/pose_solution_packed_assets.data          | Bin 0 -> 2962288 bytes
+ .../pose/pose_solution_packed_assets_loader.js     | 191 +++++++++++++++++++++
+ .../pose/pose_solution_simd_wasm_bin.data          |   0
+ .../mediapipe/pose/pose_solution_simd_wasm_bin.js  |  21 +++
+ .../pose/pose_solution_simd_wasm_bin.wasm          | Bin 0 -> 6104372 bytes
+ vendor/mediapipe/pose/pose_solution_wasm_bin.js    |  21 +++
+ vendor/mediapipe/pose/pose_solution_wasm_bin.wasm  | Bin 0 -> 5994571 bytes
+ vendor/mediapipe/pose/pose_web.binarypb            | Bin 0 -> 1007 bytes
+ 19 files changed, 505 insertions(+), 24 deletions(-)

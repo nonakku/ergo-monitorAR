@@ -1,0 +1,20 @@
+commit d6dc93b34932588b77e02378972522195172827f
+Author:     Claude <noreply@anthropic.com>
+AuthorDate: Thu Jul 2 23:50:13 2026 +0000
+Commit:     Claude <noreply@anthropic.com>
+CommitDate: Thu Jul 2 23:50:13 2026 +0000
+
+    HUDを削除し、スコア表示をパネル1箇所に戻す
+    
+    映像上のHUDは削除。離れた位置への「一目で分かる」信号は
+    骨格線の色分け（緑→黄→赤）が既に担っており、ラベル付きの
+    数字を映像に重ねる必然性がなかった。待機ガイダンスに
+    骨格色の意味を明記し、スコアはパネルの読み出し1箇所に統一。
+    
+    Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_018ke6A8kT3qajxUwp6ThFob
+
+ index.html |  21 ++++++------
+ script.js  |  20 ++++--------
+ style.css  | 107 ++++++++++++++++++++++++-------------------------------------
+ 3 files changed, 58 insertions(+), 90 deletions(-)

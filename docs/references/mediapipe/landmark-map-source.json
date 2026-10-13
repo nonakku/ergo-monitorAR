@@ -1,0 +1,75 @@
+{
+  "checked_on": "2026-10-13",
+  "image_kind": "authored explanatory schematic, not official image and not captured app screen",
+  "source": {
+    "repository": "google-ai-edge/mediapipe",
+    "commit": "210cb240955256958c3376c34cfbaf34a5c86308",
+    "upstream_path": "mediapipe/python/solutions/pose.py",
+    "url": "https://raw.githubusercontent.com/google-ai-edge/mediapipe/210cb240955256958c3376c34cfbaf34a5c86308/mediapipe/python/solutions/pose.py",
+    "saved_as": "upstream-pose-landmarks.py.txt",
+    "bytes": 8235,
+    "sha256": "dcf9bdcfc1f42c310e16e544cc55d46b0be0157d468383bec7dbe867c9b3aaf4",
+    "license": "Apache-2.0; see adjacent LICENSE and upstream source header"
+  },
+  "adopted_js": {
+    "file": "vendor/mediapipe/pose/pose.js",
+    "connections_line": 96,
+    "landmarks_line": 97,
+    "version": "0.5.1675469404",
+    "mouth_name_difference": {
+      "9": {
+        "official_python": "MOUTH_LEFT",
+        "adopted_js": "LEFT_RIGHT"
+      },
+      "10": {
+        "official_python": "MOUTH_RIGHT",
+        "adopted_js": "RIGHT_LEFT"
+      }
+    }
+  },
+  "application": {
+    "calculation_points": [
+      11,
+      12,
+      23,
+      24,
+      25,
+      27
+    ],
+    "point_drawing_range": [
+      11,
+      28
+    ],
+    "visibility_drawing_condition": "> 0.5; not used to gate calculations",
+    "code_locations": [
+      "script.js:108-138",
+      "script.js:172-241"
+    ]
+  },
+  "official_image_not_downloaded": {
+    "official_document": "legacy-pose.md:141",
+    "url": "https://mediapipe.dev/images/mobile/pose_tracking_full_body_landmarks.png",
+    "result": "Tunnel connection failed: 403 Forbidden",
+    "alternative_official_url": "https://ai.google.dev/static/edge/mediapipe/images/solutions/pose_landmarks_index.png",
+    "alternative_result": "Tunnel connection failed: 403 Forbidden"
+  },
+  "figures": [
+    "../../images/mediapipe_pose_33_landmarks.svg",
+    "../../images/mediapipe_pose_33_landmarks.png",
+    "../../images/mediapipe_app_angle_points.svg",
+    "../../images/mediapipe_app_angle_points.png"
+  ],
+  "verification": {
+    "status": "code/source correspondence and independent AI reader/audit checks completed",
+    "record": "../../reviews/evidence-doc_landmark-map_20261013.md",
+    "machine_checks": "../../reviews/landmark-map_checks_20261013.json",
+    "actual_camera_precision": "not measured",
+    "human_reader_comprehension": "not tested"
+  },
+  "figure_sha256": {
+    "docs/images/mediapipe_app_angle_points.png": "ae828211cea7a2402920e10260b35ed76ee61a7f999820f9d507767117d75e83",
+    "docs/images/mediapipe_pose_33_landmarks.svg": "2b677b68f7b823ca97f1bd7a3f19bd42f4929393759cb9ea6172cd4e63629594",
+    "docs/images/mediapipe_app_angle_points.svg": "bd3d926b07cd2b034e1f9232c13087c9606d7ff8485c864398253a5b79272265",
+    "docs/images/mediapipe_pose_33_landmarks.png": "85559281c74dbef334ddfdb29762299501130659d964bf6ee4918849d52e1a4d"
+  }
+}

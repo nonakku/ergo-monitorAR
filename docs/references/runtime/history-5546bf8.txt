@@ -1,0 +1,21 @@
+commit 5546bf89dc0c7af1051f621fee44d413723af717
+Author:     Claude <noreply@anthropic.com>
+AuthorDate: Fri Jul 3 00:17:35 2026 +0000
+Commit:     Claude <noreply@anthropic.com>
+CommitDate: Fri Jul 3 00:17:35 2026 +0000
+
+    レイアウトをビューポートに追従させ、無意味な余白を解消
+    
+    - ページを縦フレックス化し、本文領域が余りを吸収して
+      フッターが常に画面最下部に付くように（demo/rula共通）
+    - 映像エリアを固定幅640pxから可変に：横並び時は画面の
+      空き高さに合わせて4:3のまま拡大縮小（切り抜きなし、
+      パネル幅とgapを差し引いた幅が上限）
+    - 本文の上下余白を1.25remに統一し、コンテナ上限幅を
+      1500pxへ拡大（高解像度で映像が伸びる余地を確保）
+    
+    Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_018ke6A8kT3qajxUwp6ThFob
+
+ style.css | 27 ++++++++++++++++++++++++---
+ 1 file changed, 24 insertions(+), 3 deletions(-)

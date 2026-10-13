@@ -1,0 +1,20 @@
+commit c99c40be28d5f64fb928a8a73ac16138549702a1
+Author:     Claude <noreply@anthropic.com>
+AuthorDate: Fri Jul 3 00:22:18 2026 +0000
+Commit:     Claude <noreply@anthropic.com>
+CommitDate: Fri Jul 3 00:22:18 2026 +0000
+
+    可変映像のメディアクエリを横並び成立幅（868px）に修正
+    
+    721〜867pxのビューポートでは映像最小幅480px＋パネル320px＋
+    gap＋余白が収まらず折り返すのに、横並び前提の幅計算
+    （flex-grow無効＋パネル幅の差し引き）が適用されて映像が
+    480pxのまま広がらなかった。ブレークポイントを横並びが
+    実際に成立する868pxに引き上げ、それ未満は従来どおり
+    行幅いっぱいに広がる挙動に戻す。
+    
+    Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_018ke6A8kT3qajxUwp6ThFob
+
+ style.css | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)

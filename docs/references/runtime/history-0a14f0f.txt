@@ -1,0 +1,39 @@
+commit 0a14f0f4b974e8d9fb1fcccdffa4cd20c0531c09
+Author:     Claude <noreply@anthropic.com>
+AuthorDate: Thu Jul 2 17:42:08 2026 +0000
+Commit:     Claude <noreply@anthropic.com>
+CommitDate: Thu Jul 2 17:42:08 2026 +0000
+
+    デザイン・UX刷新：計測器風スタイルとカメラ操作性の改善
+    
+    Webデザイナー視点の見直し：
+    - 全面ミント緑＋グラデーション＋均一な角丸カードを廃止し、
+      ニュートラル基調のフラットな計器盤スタイルへ刷新。
+      色は状態（良い/注意/危険）にのみ使い、ブランド緑と
+      「良い＝緑」の色衝突を解消
+    - スコア・角度は IBM Plex Mono（vendor/fonts/ にローカル同梱、
+      latin 400/600 計約30KB）のタブラー数字で計器風に表示
+    - 負荷メーターに実際の判定閾値（30/60）の目盛りを追加
+    - ヘッダーを左揃えのコンパクトなバーに変更
+    
+    UX視点の改善：
+    - カメラ映像をミラー表示化（自分の姿勢確認に直感的。
+      canvasも同時反転のため骨格の重畳はずれない）
+    - 映像上に大型HUD（スコア＋状態）を追加し、カメラから
+      離れた位置からも読めるように
+    - alert() を廃止し、映像エリア内のインラインエラー表示に
+      変更（カメラ未検出/権限拒否で文言を出し分け）
+    - 待機時に立ち位置ガイダンス（横向き推奨）を表示
+    - スコアの意味（100に近いほど良好）と凡例に閾値を明記
+    - :focus-visible リングと prefers-reduced-motion に対応
+    
+    Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_018ke6A8kT3qajxUwp6ThFob
+
+ README-offline.md                                 |   1 +
+ index.html                                        |  62 ++-
+ script.js                                         |  40 +-
+ style.css                                         | 612 +++++++++++++++-------
+ vendor/fonts/ibm-plex-mono-latin-400-normal.woff2 | Bin 0 -> 14708 bytes
+ vendor/fonts/ibm-plex-mono-latin-600-normal.woff2 | Bin 0 -> 15620 bytes
+ 6 files changed, 497 insertions(+), 218 deletions(-)

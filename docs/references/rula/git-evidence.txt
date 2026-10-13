@@ -1,0 +1,178 @@
+commit b5125bbee5fee59a65b288525a1b65143eae1a6d
+Author:     Claude <noreply@anthropic.com>
+AuthorDate: Thu Jul 2 13:44:02 2026 +0000
+Commit:     Claude <noreply@anthropic.com>
+CommitDate: Thu Jul 2 13:44:02 2026 +0000
+
+    オフライン版対応：MediaPipe同梱・Google Fonts削除・ローカルサーバ起動スクリプト追加
+    
+    ネット未接続でも完全動作するように以下を変更：
+    
+    - vendor/mediapipe/ に MediaPipe Pose 0.5.1675469404 と
+      Camera Utils 0.3.1675466862 をバージョン固定で同梱
+      （モデルは modelComplexity:1 で使用する pose_landmark_full.tflite のみ）
+    - script.js: locateFile をローカルパスに変更。ボタン更新を
+      .btn-label のみ書き換える方式にし、クリック時にアイコンが
+      消える既存バグを修正
+    - index.html / rula.html: Google Fonts のリンクを削除、
+      CDNスクリプトをローカル参照に置換、drawing_utils（未使用）を削除
+    - アイコン2個（videocam / stop_circle）をインラインSVG化
+    - style.css: 日本語対応システムフォントスタックを追加、
+      .material-symbols-rounded を .btn-icon に置換
+    - serve.ps1 / start-offline.bat: Windows標準PowerShellのみで動く
+      localhost 静的サーバ（管理者権限・Python不要、8000〜8010自動選択）
+    - README-offline.md: 日本語の起動手順（file://直開き不可の説明含む）
+    
+    Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_018ke6A8kT3qajxUwp6ThFob
+
+commit 6dde1491ff19af189a4471ac1f931b19d9e85619
+Author:     Hirotaka Nonaka <nonakku@users.noreply.github.com>
+AuthorDate: Thu Jul 2 16:33:44 2026 +0900
+Commit:     Hirotaka Nonaka <nonakku@users.noreply.github.com>
+CommitDate: Thu Jul 2 16:33:44 2026 +0900
+
+    ErgoMonitor AR アプリの初回コミット
+    
+    - index.html: アプリのメインページを作成
+    - rula.html: RULA評価手法の説明ページを作成
+    - script.js: カメラ起動、姿勢評価、UI更新のためのJavaScriptロジックを実装
+    - style.css: アプリ全体のスタイルを定義
+
+--- Initial commit description ---
+commit 6dde1491ff19af189a4471ac1f931b19d9e85619
+Author:     Hirotaka Nonaka <nonakku@users.noreply.github.com>
+AuthorDate: Thu Jul 2 16:33:44 2026 +0900
+Commit:     Hirotaka Nonaka <nonakku@users.noreply.github.com>
+CommitDate: Thu Jul 2 16:33:44 2026 +0900
+
+    ErgoMonitor AR アプリの初回コミット
+    
+    - index.html: アプリのメインページを作成
+    - rula.html: RULA評価手法の説明ページを作成
+    - script.js: カメラ起動、姿勢評価、UI更新のためのJavaScriptロジックを実装
+    - style.css: アプリ全体のスタイルを定義
+
+ RULAworkseet.html | 369 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ index.html        | 103 +++++++++++++++
+ rula.html         |  57 ++++++++
+ script.js         | 320 +++++++++++++++++++++++++++++++++++++++++++++
+ style.css         | 381 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 1230 insertions(+)
+
+--- rula.html historical changes ---
+commit b5125bbee5fee59a65b288525a1b65143eae1a6d
+Author: Claude <noreply@anthropic.com>
+Date:   Thu Jul 2 13:44:02 2026 +0000
+
+    オフライン版対応：MediaPipe同梱・Google Fonts削除・ローカルサーバ起動スクリプト追加
+    
+    ネット未接続でも完全動作するように以下を変更：
+    
+    - vendor/mediapipe/ に MediaPipe Pose 0.5.1675469404 と
+      Camera Utils 0.3.1675466862 をバージョン固定で同梱
+      （モデルは modelComplexity:1 で使用する pose_landmark_full.tflite のみ）
+    - script.js: locateFile をローカルパスに変更。ボタン更新を
+      .btn-label のみ書き換える方式にし、クリック時にアイコンが
+      消える既存バグを修正
+    - index.html / rula.html: Google Fonts のリンクを削除、
+      CDNスクリプトをローカル参照に置換、drawing_utils（未使用）を削除
+    - アイコン2個（videocam / stop_circle）をインラインSVG化
+    - style.css: 日本語対応システムフォントスタックを追加、
+      .material-symbols-rounded を .btn-icon に置換
+    - serve.ps1 / start-offline.bat: Windows標準PowerShellのみで動く
+      localhost 静的サーバ（管理者権限・Python不要、8000〜8010自動選択）
+    - README-offline.md: 日本語の起動手順（file://直開き不可の説明含む）
+    
+    Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_018ke6A8kT3qajxUwp6ThFob
+
+diff --git a/rula.html b/rula.html
+index fa0805c..be11b1f 100644
+--- a/rula.html
++++ b/rula.html
+@@ -4,9 +4,6 @@
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>RULAとは？ - ErgoMonitorMR</title>
+-    <link rel="preconnect" href="https://fonts.googleapis.com">
+-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+ </head>
+ <body class="rula-page">
+
+commit 6dde1491ff19af189a4471ac1f931b19d9e85619
+Author: Hirotaka Nonaka <nonakku@users.noreply.github.com>
+Date:   Thu Jul 2 16:33:44 2026 +0900
+
+    ErgoMonitor AR アプリの初回コミット
+    
+    - index.html: アプリのメインページを作成
+    - rula.html: RULA評価手法の説明ページを作成
+    - script.js: カメラ起動、姿勢評価、UI更新のためのJavaScriptロジックを実装
+    - style.css: アプリ全体のスタイルを定義
+
+diff --git a/rula.html b/rula.html
+new file mode 100644
+index 0000000..fa0805c
+--- /dev/null
++++ b/rula.html
+@@ -0,0 +1,57 @@
++﻿<!DOCTYPE html>
++<html lang="ja">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>RULAとは？ - ErgoMonitorMR</title>
++    <link rel="preconnect" href="https://fonts.googleapis.com">
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;600;700&display=swap" rel="stylesheet">
++    <link rel="stylesheet" href="style.css">
++</head>
++<body class="rula-page">
++    <div class="header">
++        <h1>RULAとは？（簡易説明）</h1>
++        <p>このデモで採用している評価の考え方と計算根拠</p>
++    </div>
++
++    <div class="container">
++        <div class="card">
++            <p><a class="link" href="index.html">← デモに戻る</a></p>
++        </div>
++        <div class="card">
++            <h2>RULAの概要</h2>
++            <p>RULA（Rapid Upper Limb Assessment）は、首・肩・腕・手首など上肢を中心に、作業姿勢の負担を短時間で評価する観察手法です。現場での姿勢改善やリスクの見える化に使われます。</p>
++        </div>
++
++        <div class="card">
++            <h2>このデモでの位置づけ</h2>
++            <p>本デモはRULAの考え方を参考にした<strong>簡易版</strong>です。厳密なRULA計算ではなく、姿勢の傾向を直感的に理解することを目的としています。</p>
++        </div>
++
++        <div class="card">
++            <h2>スコアの考え方（簡易式）</h2>
++            <p>負荷レベルは「体幹の負担点数」から「膝の軽減点数」を引き、0〜100に丸めた値です。</p>
++            <div class="formula">負荷レベル = 体幹の負担点数 − 膝の軽減点数（0〜100に丸める）</div>
++            <div class="formula">スコア = 100 − 負荷レベル</div>
++        </div>
++
++        <div class="card">
++            <h2>点数の決め方（このデモの設定）</h2>
++            <ul>
++                <li>体幹の負担点数: 体幹角度が15°未満=0点、30°未満=30点、45°未満=60点、45°以上=100点</li>
++                <li>膝の軽減点数: 膝角度が120°未満=20点、150°未満=10点、それ以上=0点</li>
++            </ul>
++        </div>
++
++        <div class="card">
++            <h2>参考リンク</h2>
++            <p><a class="link" href="https://ergo.human.cornell.edu/ahRULA.html" target="_blank" rel="noopener">RULA (Rapid Upper Limb Assessment)</a></p>
++        </div>
++    </div>
++
++    <div class="footer">
++        ErgoMonitorMR - RULA説明ページ
++    </div>
++</body>
++</html>

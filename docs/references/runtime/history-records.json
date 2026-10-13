@@ -1,0 +1,58 @@
+[
+  {
+    "file": "history-0a14f0f.txt",
+    "source": "local git show of repository /workspace/ergo-monitorAR",
+    "retrieved_date_jst": "2026-10-13",
+    "bytes": 2259,
+    "sha256": "980069523ee946eb823709913558ebad06eecefe5a5089f80a4b9895cb590f7d"
+  },
+  {
+    "file": "history-5546bf8.txt",
+    "source": "local git show of repository /workspace/ergo-monitorAR",
+    "retrieved_date_jst": "2026-10-13",
+    "bytes": 1083,
+    "sha256": "76cd80d61bb5d084b7923b0e22647b451c330f0f2e7e58d828b1a4739dbf229d"
+  },
+  {
+    "file": "history-b5125bb.txt",
+    "source": "local git show of repository /workspace/ergo-monitorAR",
+    "retrieved_date_jst": "2026-10-13",
+    "bytes": 2951,
+    "sha256": "fd84e8c6a8d9a8bf08df939a09e34017cdfc54398fabe439c35b6e47f3261f8c"
+  },
+  {
+    "file": "history-c99c40b.txt",
+    "source": "local git show of repository /workspace/ergo-monitorAR",
+    "retrieved_date_jst": "2026-10-13",
+    "bytes": 977,
+    "sha256": "04e04587f21355844c4157976a9314f00d75d6a84a35d26a7a823644ac438a31"
+  },
+  {
+    "file": "history-d6dc93b.txt",
+    "source": "local git show of repository /workspace/ergo-monitorAR",
+    "retrieved_date_jst": "2026-10-13",
+    "bytes": 979,
+    "sha256": "d1a623c6b4bc389d0999cefcc65f73a6d56aa9de54dcaed95ef95311c675f640"
+  },
+  {
+    "file": "history-de23eda.txt",
+    "source": "local git show of repository /workspace/ergo-monitorAR",
+    "retrieved_date_jst": "2026-10-13",
+    "bytes": 1351,
+    "sha256": "85263af4bdc817dc78311d4d43928c4f3a0d7dde1aaa0e9f1130607a020e3d6d"
+  },
+  {
+    "file": "history-de9e788.txt",
+    "source": "local git show of repository /workspace/ergo-monitorAR",
+    "retrieved_date_jst": "2026-10-13",
+    "bytes": 843,
+    "sha256": "bcc254492cd6830011df62ebd6ababa0adae4ef1e8ce9a6ba5775b380d0e126d"
+  },
+  {
+    "file": "history-path-guard.diff",
+    "source": "local git show of repository /workspace/ergo-monitorAR",
+    "retrieved_date_jst": "2026-10-13",
+    "bytes": 1954,
+    "sha256": "0d9c8ab916b1456fd7f3a4b0f724e802ff9aff702f5bbb910114886d6645ed14"
+  }
+]
